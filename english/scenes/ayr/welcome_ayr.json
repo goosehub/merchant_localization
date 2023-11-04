@@ -1,0 +1,203 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome to the historic city of Ayr. I'm the guild leader and I run The Divine Collection for The Church.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_is_collection",
+				"text": "What is The Divine Collection?",
+				"class": ""
+			}
+		]
+	},
+	"what_is_collection": {
+		"slug": "what_is_collection",
+		"characterSays": "It is the greatest collection of relics, magical items, rare monsters, and other priceless items.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "illegal",
+				"text": "Aren't those things illegal?",
+				"class": ""
+			}
+		]
+	},
+	"illegal": {
+		"slug": "illegal",
+		"characterSays": "Yes, of course. However the Church of course has divine rights to all property in the Realm. I assure you we keep them very safe.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_do_you_get_items",
+				"text": "How do you get items for the collection?",
+				"class": ""
+			}
+		]
+	},
+	"how_do_you_get_items": {
+		"slug": "how_do_you_get_items",
+		"characterSays": "We purchase them from traveling merchants of course. Speaking of, there's a particular item missing from our collection...",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_is_it",
+				"text": "What is it?",
+				"class": ""
+			}
+		]
+	},
+	"what_is_it": {
+		"slug": "what_is_it",
+		"characterSays": "The Legendary Juggernaut is only found in the far western deserts. However the real challenge is it's weight.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_heavy_is_it",
+				"text": "How heavy is it?",
+				"class": ""
+			}
+		]
+	},
+	"how_heavy_is_it": {
+		"slug": "how_heavy_is_it",
+		"characterSays": "You'll need a small army of packhorses to pull it back to Ayr. But if you do I will pay you 40 gold coins on delivery.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "make_it_100",
+				"text": "Make it 100 gold coins",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "upfront",
+				"text": "I need half up front for expenses",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "rejected",
+				"text": "I'm not interested.",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal": {
+		"slug": "deal",
+		"characterSays": "I recommend heading to the Oasis of Refuge where the human realm meets the orc realm.",
+		"tone": "deal",
+		"callback": "dealAccepted",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"make_it_100": {
+		"slug": "make_it_100",
+		"characterSays": "Deal. I recommend heading to the Oasis of Refuge where the human realm meets the orc realm.",
+		"tone": "deal",
+		"callback": "dealMoreCoin",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"upfront": {
+		"slug": "upfront",
+		"characterSays": "Fair enough I suppose. I recommend heading to the Oasis of Refuge where the human realm meets the orc realm.",
+		"tone": "deal",
+		"callback": "dealUpfront",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"rejected": {
+		"slug": "rejected",
+		"characterSays": "Well, if you change your mind, the offer stands.",
+		"tone": "bothered",
+		"callback": "dealRejected",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"liar": {
+		"slug": "liar",
+		"characterSays": "I see no juggernaut. No payment until it's in front of me.",
+		"tone": "offended",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "The Juggernaut! What an incredible specimen. Here is the agreed payment. The church will remember this holy mission you've completed.",
+		"tone": "ah",
+		"callback": "reward",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

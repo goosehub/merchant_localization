@@ -1,0 +1,163 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome to Ascension merchant. Please stay out of trouble and bother me as little as possible.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "who_are_you",
+				"text": "Who are you?",
+				"class": ""
+			}
+		]
+	},
+	"who_are_you": {
+		"slug": "who_are_you",
+		"characterSays": "I am Audric the <i class=\"green_color\">King of Coin</i>. All merchant guild leaders report directly to me.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_king",
+				"text": "How did you become King of Coin?",
+				"class": ""
+			}
+		]
+	},
+	"how_king": {
+		"slug": "how_king",
+		"characterSays": "I own the East Coast Shipping Company. Common haggling on the street will only get you so far.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "become_king",
+				"text": "How can I become the King of Coin?",
+				"class": ""
+			}
+		]
+	},
+	"become_king": {
+		"slug": "become_king",
+		"characterSays": "Don't be ridiculous. Is that a serious question?",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "insist_become_king",
+				"text": "Yes, I really want to know",
+				"class": ""
+			},
+			{
+				"nextStep": "insist_become_king",
+				"text": "Just tell me you pompous donkey",
+				"class": ""
+			}
+		]
+	},
+	"insist_become_king": {
+		"slug": "insist_become_king",
+		"characterSays": "On the <i class=\"blue_color\">Last Saturday of Winter</i>, merchants travel to Ascension to vote on the <i class=\"green_color\">King of Coin</i>.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_to_run",
+				"text": "How do I run for King of Coin?",
+				"class": ""
+			}
+		]
+	},
+	"how_to_run": {
+		"slug": "how_to_run",
+		"characterSays": "The application fee is five hundred gold coins. Then you'll have to best me in a debate in front of the guild.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_to_get_gold",
+				"text": "How do I get 500 gold coins?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_debate",
+				"text": "How does the debate work?",
+				"class": ""
+			},
+			{
+				"nextStep": "easy",
+				"text": "Easy. I'll be King of Coin soon.",
+				"class": ""
+			}
+		]
+	},
+	"how_to_get_gold": {
+		"slug": "how_to_get_gold",
+		"characterSays": "That's not my problem. Now please be on your way, I am a busy man.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"ask_debate": {
+		"slug": "ask_debate",
+		"characterSays": "I'm not here to hold your hand on replacing me. Buy something or go bother someone else.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"easy": {
+		"slug": "easy",
+		"characterSays": "Sure. Good luck. Now go bother somebody else.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"start_cutscene": {
+		"slug": "start_cutscene",
+		"characterSays": "...",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "start_cutscene",
+				"text": "Let's get started",
+				"class": "green_button",
+				"callback": "startCutscene"
+			}
+		]
+	}
+}

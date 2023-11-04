@@ -1,0 +1,190 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Pardon me. That painting appears to be a Winston Roberts. Is that true?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"take_a_look",
+				"text":"Sure, take a look",
+				"class":""
+			}
+		]
+	},
+	"take_a_look":{
+		"slug":"take_a_look",
+		"characterSays":"Hm... Hmmm... I have some questions about this painting.",
+		"tone":"generic",
+		"callback":"putPaintingOnOffer",
+		"responses":[
+			{
+				"nextStep":"first_question",
+				"text":"Ask away",
+				"class":""
+			}
+		]
+	},
+	"first_question":{
+		"slug":"first_question",
+		"characterSays":"Where did you acquire this?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"second_question",
+				"text":"A merchant in Hollow Lake",
+				"class":"",
+				"callback":"wrongAnswer"
+			},
+			{
+				"nextStep":"second_question",
+				"text":"Purchased at the Riverton auction",
+				"class":"",
+				"callback":"wrongAnswer"
+			},
+			{
+				"nextStep":"second_question",
+				"text":"Bought it from Zehaan in Ingress Rock",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"A stranger sold it to me",
+				"class":"",
+				"callback":"wrongAnswer"
+			}
+		]
+	},
+	"second_question":{
+		"slug":"second_question",
+		"characterSays":"How do you know it's authentic?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"third_question",
+				"text":"I had it verified in Ingress Rock",
+				"class":"",
+				"callback":"wrongAnswer"
+			},
+			{
+				"nextStep":"third_question",
+				"text":"I had it verified in Riverton",
+				"class":"",
+				"callback":"wrongAnswer"
+			},
+			{
+				"nextStep":"third_question",
+				"text":"I was assured by the seller that you verified it",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"Only Winston Roberts could paint this masterpiece",
+				"class":"",
+				"callback":"wrongAnswer"
+			}
+		]
+	},
+	"third_question":{
+		"slug":"third_question",
+		"characterSays":"Will you swear that this is real?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"response_to_questions_accepted",
+				"text":"I swear",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions_accepted",
+				"text":"I swear to god",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions_accepted",
+				"text":"I swear on my reputation",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions_accepted",
+				"text":"I make no promises",
+				"class":""
+			}
+		]
+	},
+	"response_to_questions_decline":{
+		"slug":"response_to_questions_decline",
+		"characterSays":"I'm sorry, but without a clear chain of custody since the last known owner, I can't purchase this for full price.",
+		"tone":"uninterested",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"response_to_questions_accepted":{
+		"slug":"response_to_questions_accepted",
+		"characterSays":"This appears to be legitimate. What would you be willing to sell it for?",
+		"tone":"generic",
+		"callback":"forgeryVerified",
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"not_interested_in_selling_forgery":{
+		"slug":"not_interested_in_selling_forgery",
+		"characterSays":"Unfortunate we couldn't agree on a price.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"forgery_sold":{
+		"slug":"forgery_sold",
+		"characterSays":"Excellent doing business with you.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

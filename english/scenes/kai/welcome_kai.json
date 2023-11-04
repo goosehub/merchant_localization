@@ -1,0 +1,270 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello Merchant. Welcome to Kai, largest city of the Republic of Islands.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "start_request",
+				"text": "Thanks",
+				"class": ""
+			}
+		]
+	},
+	"start_request": {
+		"slug": "start_request",
+		"characterSays": "As Merchant Guild Leader, I can't leave Kai for long periods of time. I need the help of a traveling merchant.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_do_you_need",
+				"text": "What do you need?",
+				"class": ""
+			}
+		]
+	},
+	"what_do_you_need": {
+		"slug": "what_do_you_need",
+		"characterSays": "We have a ceremony to decide Unity Chief for the islands to negotiate spice trade with outside nations.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "explain_ceremony",
+				"text": "How does the ceremony work?",
+				"class": ""
+			}
+		]
+	},
+	"explain_ceremony": {
+		"slug": "explain_ceremony",
+		"characterSays": "In ancient days Unity Chief was decided by throwing gold into a Volcano to prove who willing to sacrifice the most to win.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "sounds_wasteful",
+				"text": "Sounds wasteful",
+				"class": ""
+			}
+		]
+	},
+	"sounds_wasteful": {
+		"slug": "sounds_wasteful",
+		"characterSays": "It was. So it was decided long ago that the gold only needs to be presented.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "richest_person_wins",
+				"text": "So the richest person wins?",
+				"class": ""
+			}
+		]
+	},
+	"richest_person_wins": {
+		"slug": "richest_person_wins",
+		"characterSays": "Exactly. The tiny island of Kona is bountiful in gold. They have held the title for centuries.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "you_want_to_change_that",
+				"text": "You want to change that?",
+				"class": ""
+			}
+		]
+	},
+	"you_want_to_change_that": {
+		"slug": "you_want_to_change_that",
+		"characterSays": "Yes. They have used the title to further enrich themselves and make it even more difficult to unseat them.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_much_gold",
+				"text": "How much gold do you need?",
+				"class": ""
+			}
+		]
+	},
+	"how_much_gold": {
+		"slug": "how_much_gold",
+		"tone": "ah",
+		"characterSays": "I estimate at least eight hundred ingots of gold.",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "where_to_get_gold",
+				"text": "Where are you going to get that much gold?",
+				"class": ""
+			}
+		]
+	},
+	"where_to_get_gold": {
+		"slug": "where_to_get_gold",
+		"tone": "generic",
+		"characterSays": "I need to you get an audience with The Dragon of Kazuujan and request a loan for eight hundred ingots of gold.",
+		"callback": "givePlayerMap",
+		"responses": [
+			{
+				"nextStep": "how_to_convince",
+				"text": "How do I convince him?",
+				"class": ""
+			},
+			{
+				"nextStep": "a_dragon",
+				"text": "A dragon?",
+				"class": ""
+			}
+		]
+	},
+	"a_dragon": {
+		"slug": "a_dragon",
+		"characterSays": "The Dragon of Kazuujan is the wealthiest lender in the Realm. She is our best hope to bring about change.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_to_convince",
+				"text": "How do I convince him?",
+				"class": ""
+			}
+		]
+	},
+	"how_to_convince": {
+		"slug": "how_to_convince",
+		"tone": "ah",
+		"characterSays": "Her. I can grant the Dragon two hundred tonnes of spice each year. That should be enough to convince her.",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_do_i_get",
+				"text": "What do I get?",
+				"class": ""
+			}
+		]
+	},
+	"what_do_i_get": {
+		"slug": "what_do_i_get",
+		"characterSays": "If you secure the loan, I will pay you five sacks of spice for your troubles.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button",
+				"callback": "setRewardSmall"
+			},
+			{
+				"nextStep": "upfront_deal",
+				"text": "I want half up front",
+				"class": "blue_button",
+				"callback": "setRewardSmallHalfUpfront"
+			},
+			{
+				"nextStep": "deal",
+				"text": "I want ten sacks",
+				"class": "blue_button",
+				"callback": "setRewardLarge"
+			},
+			{
+				"nextStep": "negotiate",
+				"text": "I want twenty sacks",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "no_deal",
+				"text": "No deal",
+				"class": "red_button"
+			}
+		]
+	},
+	"negotiate": {
+		"slug": "negotiate",
+		"characterSays": "I will give you ten sacks of spice, no more.",
+		"tone": "offerBad",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button",
+				"callback": "setRewardLarge"
+			},
+			{
+				"nextStep": "upfront_deal",
+				"text": "I want half up front",
+				"class": "blue_button",
+				"callback": "setRewardLargeHalfUpfront"
+			},
+			{
+				"nextStep": "negotiate",
+				"text": "I want twenty sacks",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "no_deal",
+				"text": "No deal",
+				"class": "red_button"
+			}
+		]
+	},
+	"upfront_deal": {
+		"slug": "upfront_deal",
+		"characterSays": "Fine, you can have the black pepper up front. If you return with the help of the Dragon, you'll receive superior spices. Please help us right this centuries long injustice.",
+		"tone": "deal",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"deal": {
+		"slug": "deal",
+		"characterSays": "A deal it is. The people of Kai will appreciate your help. This centuries long injustice will finally be righted.",
+		"tone": "deal",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_deal": {
+		"slug": "no_deal",
+		"characterSays": "If you find yourself ever talking to the Dragon, remember that the offer stands.",
+		"tone": "rejected",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

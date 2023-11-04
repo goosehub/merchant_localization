@@ -1,0 +1,240 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome to Kazuujan Merchant. I am Kris, friend of The Dragon of Kazuujan. What brings you this far west?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "want_to_meet_dragon",
+				"text": "I want to meet the Dragon",
+				"class": ""
+			},
+			{
+				"nextStep": "who_is_the_dragon",
+				"text": "Who is the Dragon?",
+				"class": ""
+			},
+			{
+				"nextStep": "just_passing_through",
+				"text": "I'm just passing through",
+				"class": "red_button"
+			}
+		]
+	},
+	"just_passing_through": {
+		"slug": "just_passing_through",
+		"characterSays": "Alright just cause no trouble. If you are ever interested in meeting The Dragon, let me know and I'll see what I can do.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "who_is_the_dragon",
+				"text": "Who is the Dragon?",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"who_is_the_dragon": {
+		"slug": "who_is_the_dragon",
+		"characterSays": "The Dragon of Kazuujan runs the Bank of Kazuujan. Merchants and Kings come from across the Realm seeking loans only she can provide.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "want_to_meet_dragon",
+				"text": "Can I meet the Dragon",
+				"class": ""
+			}
+		]
+	},
+	"want_to_meet_dragon": {
+		"slug": "want_to_meet_dragon",
+		"characterSays": "Many wish to meet her. As her friend, I ensure only those worthy can. She is not interested in common merchants.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai needs a loan",
+				"class": "blue_button seeking_kai_loan"
+			},
+			{
+				"nextStep": "seeking_loan",
+				"text": "I need a loan",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek her wisdom",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "bribe",
+				"text": "I will pay",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "nevermind",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"seeking_loan": {
+		"slug": "seeking_loan",
+		"characterSays": "Of course. However, unless you are a great ruler or the King of Coin, she's not interested in your modest trades.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai needs a loan",
+				"class": "blue_button seeking_kai_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek her wisdom",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "bribe",
+				"text": "I will pay",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "nevermind",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"seeking_kai_loan": {
+		"slug": "seeking_kai_loan",
+		"characterSays": "I've told Natia that her schemes will mean trouble. I suggest you do not involve yourself in their affairs.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I need a loan",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek her wisdom",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "bribe",
+				"text": "I will pay",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "nevermind",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"seeking_wisdom": {
+		"slug": "seeking_wisdom",
+		"characterSays": "And she seeks debtors. She doesn't have time for your shallow questions.",
+		"tone": "offerBad",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai needs a loan",
+				"class": "blue_button seeking_kai_loan"
+			},
+			{
+				"nextStep": "seeking_loan",
+				"text": "I need a loan",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "bribe",
+				"text": "I will pay",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "nevermind",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"nevermind": {
+		"slug": "nevermind",
+		"characterSays": "Her time is very valuable. I suggest you come back when you ready.",
+		"tone": "rejected",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I need a loan",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek her wisdom",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "bribe",
+				"text": "I will pay",
+				"class": "green_button"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"bribe": {
+		"slug": "bribe",
+		"characterSays": "We could work something out together. What are you offering?",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "nevermind",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"deal_bribe": {
+		"slug": "deal_bribe",
+		"characterSays": "Deal. Come with me.",
+		"tone": "deal",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"accept": {
+		"slug": "accept",
+		"characterSays": "Come with me.",
+		"tone": "ah",
+		"callback": "triggerTakePlayertoDragon",
+		"responses": [
+		]
+	}
+}

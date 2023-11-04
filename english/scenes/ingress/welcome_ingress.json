@@ -1,0 +1,250 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome to Ingress Rock Merchant. I am the local guild leader, although I am better known as the King of Thieves.",
+		"tone": "greeting",
+		"callback": "requestFlowers",
+		"responses": [
+			{
+				"nextStep": "king_of_thieves",
+				"text": "You're a merchant and a thief?",
+				"class": ""
+			}
+		]
+	},
+	"king_of_thieves": {
+		"slug": "king_of_thieves",
+		"characterSays": "It is a nickname, as I make coin by borrowing things from others. Speaking of, I have a business proposition.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_are_you_offering",
+				"text": "What are you offering?",
+				"class": ""
+			}
+		]
+	},
+	"what_are_you_offering": {
+		"slug": "what_are_you_offering",
+		"characterSays": "I offer information, a comprehensive ledger of prices of various items for any given day in Ingress.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_do_you_want",
+				"text": "What do you want in return?",
+				"class": ""
+			},
+			{
+				"nextStep": "how_is_that_useful",
+				"text": "How is that useful?",
+				"class": ""
+			}
+		]
+	},
+	"how_is_that_useful": {
+		"slug": "how_is_that_useful",
+		"characterSays": "You will be able to buy items when they are cheap, and know when to sell at the highest price.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_do_you_want",
+				"text": "What do you want in return?",
+				"class": ""
+			}
+		]
+	},
+	"what_do_you_want": {
+		"slug": "what_do_you_want",
+		"characterSays": "I would like to borrow ten sunflowers for one week.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "where_to_find",
+				"text": "Where do I find sunflowers?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_sunflowers",
+				"text": "Why sunflowers?",
+				"class": ""
+			}
+		]
+	},
+	"why_sunflowers": {
+		"slug": "why_sunflowers",
+		"characterSays": "You haven't heard of the sunflowers craze? The price is astronomical. Perfect opportunity to make some coin.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "where_to_find",
+				"text": "Where do I find sunflowers?",
+				"class": ""
+			},
+			{
+				"nextStep": "how_do_you_make_coin_borrowing",
+				"text": "How do you make coin by borrowing something",
+				"class": ""
+			}
+		]
+	},
+	"how_do_you_make_coin_borrowing": {
+		"slug": "how_do_you_make_coin_borrowing",
+		"characterSays": "I sell the items I borrow. When it's time to return them, I buy them back at a lower price and profit the difference.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "where_to_find",
+				"text": "Where do I find sunflowers?",
+				"class": ""
+			},
+			{
+				"nextStep": "sounds_like_scam",
+				"text": "Sounds like a scam",
+				"class": ""
+			}
+		]
+	},
+	"sounds_like_scam": {
+		"slug": "sounds_like_scam",
+		"characterSays": "The sunflower craze is the real scam. I always return what I borrow.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "where_to_find",
+				"text": "Where do I find sunflowers?",
+				"class": ""
+			}
+		]
+	},
+	"where_to_find": {
+		"slug": "where_to_find",
+		"characterSays": "Everyone in Ingress Rock has been trading them. Let me borrow ten sunflowers for one week and you'll have full ledger access.",
+		"tone": "generic",
+		"callback": "citadelHook",
+		"responses": [
+			{
+				"nextStep": "agree_to_get",
+				"text": "I'll be right back with some sunflowers",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "negotiate",
+				"text": "I want some silver for the effort",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "agree_to_get",
+				"text": "I'll think about it",
+				"class": ""
+			}
+		]
+	},
+	"negotiate": {
+		"slug": "negotiate",
+		"characterSays": "That's fair. I'll give you 20 silver for interest. Just lend me the sunflowers. In the meantime, would you like to make some trades?",
+		"tone": "inquire",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"agree_to_get": {
+		"slug": "agree_to_get",
+		"characterSays": "In the meantime, would you like to make some trades?",
+		"tone": "inquire",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"resumed": {
+		"slug": "resumed",
+		"characterSays": "You do?",
+		"tone": "inquire",
+		"callback": "playerOfferSunflowers",
+		"responses": [
+			{
+				"nextStep":"giveSunflowers",
+				"text":"Here you go",
+				"class":"give_sunflowers_button green_button"
+			},
+			{
+				"nextStep":"nevermind",
+				"text":"Nevermind",
+				"class":"red_button"
+			}
+		]
+	},
+	"giveSunflowers": {
+		"slug": "giveSunflowers",
+		"characterSays": "Excellent. I'll return these in seven days. And have some silver for interest. So, would you like to see the ledger?",
+		"tone": "laugh",
+		"callback": "giveSunflowers",
+		"responses": [
+			{
+				"nextStep":"start_cutscene",
+				"text":"Let me see the ledger",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"nevermind": {
+		"slug": "nevermind",
+		"characterSays": "I do not care for your games.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"start_cutscene": {
+		"slug": "start_cutscene",
+		"characterSays": "Of course. Come with me.",
+		"tone": "generic",
+		"callback": "loadCutscene",
+		"responses": [
+		]
+	}
+}

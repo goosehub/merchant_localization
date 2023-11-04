@@ -1,0 +1,38 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "You may have lost, but I believe you are our best chance at ousting Audric.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"give_gold",
+				"text":"I will do my best",
+				"class":""
+			},
+			{
+				"nextStep":"give_gold",
+				"text":"I will never give up",
+				"class":""
+			},
+			{
+				"nextStep":"give_gold",
+				"text":"Audric is too powerful",
+				"class":""
+			}
+		]
+	},
+	"give_gold": {
+		"slug": "give_gold",
+		"characterSays": "Take this gold. Make more allies among the merchants of the realm and you'll win King of Coin next year. I believe in you.",
+		"tone": "generic",
+		"callback": "givePlayerGold",
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

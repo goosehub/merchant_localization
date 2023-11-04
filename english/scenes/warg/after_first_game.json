@@ -1,0 +1,20 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "The Tournament is every Wednesday. 10 copper to enter. Bring your best deck! Here's a couple cards to start you off.",
+		"tone": "ah",
+		"callback": "giveCards",
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

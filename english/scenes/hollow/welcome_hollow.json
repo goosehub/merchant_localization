@@ -1,0 +1,309 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Welcome to Hollow Lake. May you have a safe and profitable time in our quiet village.",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"offering_art",
+				"text":"Thank you",
+				"class":""
+			}
+		]
+	},
+	"offering_art":{
+		"slug":"offering_art",
+		"characterSays":"I paint between customers. Would you be interested in purchasing my latest piece for a few silver?",
+		"tone":"inquire",
+		"callback":"putOriginalArtOnOffer",
+		"responses":[
+			
+		]
+	},
+	"not_interested_in_original_art":{
+		"slug":"not_interested_in_original_art",
+		"characterSays":"I understand. Art isn't worth the paint it's made of unless the artist is dead. I've something you'll be more interested in.",
+		"tone":"uninterested",
+		"callback":"clearOffers",
+		"responses":[
+			{
+				"nextStep":"offer_forgery",
+				"text":"What is it?",
+				"class":""
+			}
+		]
+	},
+	"first_deal":{
+		"slug":"first_deal",
+		"characterSays":"Deal I suppose. Seems art isn't worth much unless the artist is long dead. I've something you might be more interested in.",
+		"tone":"deal",
+		"callback":"makeTransaction",
+		"responses":[
+			{
+				"nextStep":"offer_forgery",
+				"text":"What is it?",
+				"class":""
+			}
+		]
+	},
+	"great_first_deal":{
+		"slug":"great_first_deal",
+		"characterSays":"Wow, you really see a lot of value in my art. Say, I've something else you might be interested in.",
+		"tone":"deal",
+		"callback":"makeTransaction",
+		"responses":[
+			{
+				"nextStep":"offer_forgery",
+				"text":"What is it?",
+				"class":""
+			}
+		]
+	},
+	"offer_forgery":{
+		"slug":"offer_forgery",
+		"characterSays":"This is a priceless and historic Winston Robertson's masterpiece from his early period.",
+		"tone":"inquire",
+		"callback":"introduceForgery",
+		"responses":[
+			{
+				"nextStep":"looks_beautiful",
+				"text":"Looks beautiful",
+				"class":""
+			},
+			{
+				"nextStep":"how_much",
+				"text":"How much?",
+				"class":""
+			},
+			{
+				"nextStep":"verify",
+				"text":"How do I know it's real?",
+				"class":""
+			}
+		]
+	},
+	"how_much":{
+		"slug":"how_much",
+		"characterSays":"It is priceless, but also a forgery. I took meticulous notes of the original and reproduced it perfectly. It's worth a fortune to the right buyer.",
+		"tone":"laugh",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"where_is_the_original",
+				"text":"Where is the original?",
+				"class":""
+			},
+			{
+				"nextStep":"why_not_lie",
+				"text":"Why tell me it's a forgery?",
+				"class":""
+			},
+			{
+				"nextStep":"reject_forgery",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"verify":{
+		"slug":"verify",
+		"characterSays":"You wouldn't be able to. I took meticulous notes of the original and reproduced it perfectly. It's worth a fortune to the right buyer.",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"where_is_the_original",
+				"text":"Where is the original?",
+				"class":""
+			},
+			{
+				"nextStep":"why_not_lie",
+				"text":"Why tell me it's a forgery?",
+				"class":""
+			},
+			{
+				"nextStep":"reject_forgery",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"looks_beautiful":{
+		"slug":"looks_beautiful",
+		"characterSays":"Some say a forgery can't be beautiful.",
+		"tone":"laugh",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"its_a_forgery",
+				"text":"This is a forgery?",
+				"class":""
+			}
+		]
+	},
+	"its_a_forgery":{
+		"slug":"its_a_forgery",
+		"characterSays":"I took meticulous notes of the original when it was still in Ayr and reproduced it perfectly. It's worth a fortune to the right buyer.",
+		"tone":"ah",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"where_is_the_original",
+				"text":"Where is the original?",
+				"class":""
+			},
+			{
+				"nextStep":"why_not_lie",
+				"text":"Why tell me it's a forgery?",
+				"class":""
+			},
+			{
+				"nextStep":"reject_forgery",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"resumed":{
+		"slug":"resumed",
+		"characterSays":"I promise you it will be the best art investment you'll ever make.",
+		"tone":"laugh",
+		"callback":"introduceForgery",
+		"responses":[
+			{
+				"nextStep":"where_is_the_original",
+				"text":"Where is the original?",
+				"class":""
+			},
+			{
+				"nextStep":"why_not_lie",
+				"text":"Why tell me it's a forgery?",
+				"class":""
+			},
+			{
+				"nextStep":"reject_forgery",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"where_is_the_original":{
+		"slug":"where_is_the_original",
+		"characterSays":"I saw it on display in the Church of Ayr eight years ago. It was sold off shortly after and hasn't been seen since.",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"why_not_lie",
+				"text":"Why tell me it's a forgery?",
+				"class":""
+			},
+			{
+				"nextStep":"reject_forgery",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"why_not_lie":{
+		"slug":"why_not_lie",
+		"characterSays":"Good merchants never lie to fellow merchants. We are nothing without each other.",
+		"tone":"laugh",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"where_is_the_original",
+				"text":"Where is the original?",
+				"class":""
+			},
+			{
+				"nextStep":"reject_forgery",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal_forgery":{
+		"slug":"deal_forgery",
+		"characterSays":"Deal. There are two buyers I recommend selling this to. One lives in Riverton and the other is found in Ingress Rock.",
+		"tone":"deal",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"buyer_riverton",
+				"text":"Who is the buyer in Riverton?",
+				"class":""
+			},
+			{
+				"nextStep":"buyer_ingress_rock",
+				"text":"Who is the buyer in Ingress Rock?",
+				"class":""
+			}
+		]
+	},
+	"buyer_riverton":{
+		"slug":"buyer_riverton",
+		"characterSays":"Nicholas Godfrey is the most famous art collector in the world. Winston Robert is one of his favorites. He'll pay more for this than anyone else in the realm.",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"buyer_ingress_rock",
+				"text":"Who is the buyer in Ingress Rock?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"buyer_ingress_rock":{
+		"slug":"buyer_ingress_rock",
+		"characterSays":"Zehaan is an eccentric western noble who has gained great wealth in spite of spending his coin effortlessly and being easily convinced.",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"buyer_riverton",
+				"text":"Who is the buyer in Riverton?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"reject_forgery":{
+		"slug":"reject_forgery",
+		"characterSays":"Feel free to buy it if you change your mind.",
+		"tone":"rejected",
+		"callback":"rejectForgery",
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

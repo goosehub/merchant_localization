@@ -1,0 +1,220 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"I don't believe we've met. I'm Baldric, leader of the Guild here, and Auctioneer every Thursday.",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"need_help",
+				"text":"Good to meet you.",
+				"class":""
+			}
+		]
+	},
+	"need_help":{
+		"slug":"need_help",
+		"characterSays":"Listen, I need a face that isn't familiar around here to help with a particular item I am selling. Are you interested?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"what_is_it",
+				"text":"What is it?",
+				"class":""
+			}
+		]
+	},
+	"what_is_it":{
+		"slug":"what_is_it",
+		"characterSays":"I've acquired a rare Simon Crowell painting from the First Notting era. I have a particular customer who considers it to be priceless.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"why_he_need_help",
+				"text":"Sounds like it should sell itself.",
+				"class":""
+			}
+		]
+	},
+	"why_he_need_help":{
+		"slug":"why_he_need_help",
+		"characterSays":"Not everyone agrees that Simon Crowell was a genius. Without a competing bidder, I fear he'll win it for a bargain.",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"bid_against_him",
+				"text":"You want me to bid against him?",
+				"class":""
+			}
+		]
+	},
+	"bid_against_him":{
+		"slug":"bid_against_him",
+		"characterSays":"You catch on quick. I don't know how much money he'll bring, but I know that he'll bid every coin of it to win it.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"compensation",
+				"text":"What's my compensation?",
+				"class":""
+			}
+		]
+	},
+	"compensation":{
+		"slug":"compensation",
+		"characterSays":"I'll pay you a gold for every bid you make on the item.",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"Make it two gold",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"private_sale",
+				"text":"Why not do a private sale",
+				"class":""
+			},
+			{
+				"nextStep":"drop_out",
+				"text":"What happens if he drops out?",
+				"class":""
+			},
+			{
+				"nextStep":"rejected",
+				"text":"I'll have nothing to do with this ploy.",
+				"class":"red_button"
+			}
+		]
+	},
+	"private_sale":{
+		"slug":"private_sale",
+		"characterSays":"He knows I have no other buyers. He'll hold out for a fair price. That's why I run auctions. Makes people impulsive and fearful.",
+		"tone":"offerBad",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"Make it two gold",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"drop_out",
+				"text":"What happens if he drops out?",
+				"class":""
+			},
+			{
+				"nextStep":"rejected",
+				"text":"I'll have nothing to do with this ploy.",
+				"class":"red_button"
+			}
+		]
+	},
+	"haggle":{
+		"slug":"haggle",
+		"characterSays":"Do not haggle with me. I can find someone else. Final offer.",
+		"tone":"offerBad",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"private_sale",
+				"text":"Why not do a private sale",
+				"class":""
+			},
+			{
+				"nextStep":"drop_out",
+				"text":"What happens if he drops out?",
+				"class":""
+			},
+			{
+				"nextStep":"rejected",
+				"text":"I'll have nothing to do with this ploy.",
+				"class":"red_button"
+			}
+		]
+	},
+	"drop_out":{
+		"slug":"drop_out",
+		"characterSays":"You'll be paid the same regardless of who wins, but if you win, you'll have to buy the painting.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"private_sale",
+				"text":"Why not do a private sale",
+				"class":""
+			},
+			{
+				"nextStep":"haggle",
+				"text":"Make it two gold for every bid",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"rejected",
+				"text":"I'll have nothing to do with this ploy.",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal":{
+		"slug":"deal",
+		"characterSays":"The entry deposit is 5 gold. I'll hold the item until you make it. Now buy something so this meeting doesn't look suspicious.",
+		"tone":"generic",
+		"callback":"setMerchantDealTrue",
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"rejected":{
+		"slug":"rejected",
+		"characterSays":"So be it. I hope you still attend the auction. The entry deposit is 5 gold.",
+		"tone":"rejected",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "A gift for an honest merchant.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"thanks",
+				"text":"Thank you",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"thanks": {
+		"slug": "thanks",
+		"characterSays": "We Orcs have a saying. When you help others, you help yourself.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

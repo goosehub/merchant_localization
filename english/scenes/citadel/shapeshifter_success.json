@@ -1,0 +1,43 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Thanks to your help, we've found the shapeshifter. Here is your reward as promised.",
+		"tone": "greeting",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep":"what_happens",
+				"text":"What happens to the shapeshifter?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_happens": {
+		"slug": "what_happens",
+		"characterSays": "He has agreed to use his skills to help the Exiled Order, in exchange for being allowed to keep his abilities.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

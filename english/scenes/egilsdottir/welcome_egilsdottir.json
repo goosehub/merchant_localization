@@ -1,0 +1,535 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello merchant. I'm the Necromancer of Egilsdóttir. What brings you to our remote little village?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"looking_for_coin",
+				"text":"I'm looking for coin",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"looking_for_items",
+				"text":"I'm looking for exotic items",
+				"class":"short_button",
+				"callback":"setRewardItems"
+			},
+			{
+				"nextStep":"looking_for_exiled",
+				"text":"I'm looking for the Exiled Order",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"curious",
+				"text":"I was curious about what's out here",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"revive_the_dead",
+				"text":"Can you bring the dead back to life?",
+				"class":"short_button"
+			}
+		]
+	},
+	"curious": {
+		"slug": "curious",
+		"characterSays": "Funny, that's how I discovered this place myself. But that was a long time ago.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"how_long_ago",
+				"text":"How long ago?",
+				"class":""
+			},
+			{
+				"nextStep":"looking_for_coin",
+				"text":"I'm looking for coin",
+				"class":""
+			},
+			{
+				"nextStep":"looking_for_items",
+				"text":"I'm looking for exotic items",
+				"class":"",
+				"callback":"setRewardItems"
+			},
+			{
+				"nextStep":"looking_for_exiled",
+				"text":"I'm looking for the Exiled Order",
+				"class":""
+			},
+			{
+				"nextStep":"revive_the_dead",
+				"text":"Can you bring the dead back to life?",
+				"class":""
+			}
+		]
+	},
+	"how_long_ago": {
+		"slug": "how_long_ago",
+		"characterSays": "After the revival, I left for the edge of the realm. I wandered for decades before I discovered this village a hundred years ago.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"looking_for_coin",
+				"text":"I'm looking for coin",
+				"class":""
+			},
+			{
+				"nextStep":"looking_for_items",
+				"text":"I'm looking for exotic items",
+				"class":"",
+				"callback":"setRewardItems"
+			},
+			{
+				"nextStep":"looking_for_exiled",
+				"text":"I'm looking for the Exiled Order",
+				"class":""
+			},
+			{
+				"nextStep":"revive_the_dead",
+				"text":"Can you bring the dead back to life?",
+				"class":""
+			}
+		]
+	},
+	"revive_the_dead": {
+		"slug": "revive_the_dead",
+		"characterSays": "Yes, I have before. You'll meet some of them. It is a small village.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"revive_cost",
+				"text":"How much do you charge?",
+				"class":""
+			},
+			{
+				"nextStep":"looking_for_coin",
+				"text":"I'm looking for coin",
+				"class":""
+			},
+			{
+				"nextStep":"looking_for_items",
+				"text":"I'm looking for exotic items",
+				"class":"",
+				"callback":"setRewardItems"
+			},
+			{
+				"nextStep":"looking_for_exiled",
+				"text":"I'm looking for the Exiled Order",
+				"class":""
+			}
+		]
+	},
+	"revive_cost": {
+		"slug": "revive_cost",
+		"characterSays": "I do not perform necromancy for coin. I could however, give you a Scepter of Necromancy, in exchange for a small favor.",
+		"tone": "offerBad",
+		"callback": "showRewardItem",
+		"responses": [
+			{
+				"nextStep":"start_explain_errand",
+				"text":"What is the favor?",
+				"class":""
+			},
+			{
+				"nextStep":"scepter_of_necromancy",
+				"text":"How do I use the Scepter of Necromancy?",
+				"class":""
+			}
+		]
+	},
+	"scepter_of_necromancy": {
+		"slug": "scepter_of_necromancy",
+		"characterSays": "You don't. I'm the only one who has ever successfully revived the dead, but people are always desperate to try. You can sell the scepter for over fifty gold coins.",
+		"tone": "laugh",
+		"callback": "setRewardItems",
+		"responses": [
+			{
+				"nextStep":"start_explain_errand",
+				"text":"What is the favor?",
+				"class":""
+			},
+			{
+				"nextStep":"coin_instead",
+				"text":"How about for fifty gold coins instead?",
+				"class":"blue_button",
+				"callback":"setRewardCoin"
+			}
+		]
+	},
+	"looking_for_coin": {
+		"slug": "looking_for_coin",
+		"characterSays": "Right to the point I see. I will pay fifty gold coins if you take care of a simple errand for me.",
+		"tone": "uninterested",
+		"callback": "setRewardCoin",
+		"responses": [
+			{
+				"nextStep":"start_explain_errand",
+				"text":"What is the errand?",
+				"class":""
+			}
+		]
+	},
+	"looking_for_items": {
+		"slug": "looking_for_items",
+		"characterSays": "I make these scepters of necromancy. Each is worth well over fifty gold coins. It's yours if you do me a small favor.",
+		"tone": "generic",
+		"callback": "showRewardItem",
+		"responses": [
+			{
+				"nextStep":"start_explain_errand",
+				"text":"What is the favor?",
+				"class":""
+			},
+			{
+				"nextStep":"coin_instead",
+				"text":"How about for fifty gold coins instead?",
+				"class":"blue_button",
+				"callback":"setRewardCoin"
+			}
+		]
+	},
+	"looking_for_exiled": {
+		"slug": "looking_for_exiled",
+		"characterSays": "I may be able to help... if you promise to bring me back something I need. I'll even reward you with a scepter of necromancy.",
+		"tone": "ah",
+		"callback": "setRewardItems",
+		"responses": [
+			{
+				"nextStep":"start_explain_errand",
+				"text":"What do you need?",
+				"class":""
+			},
+			{
+				"nextStep":"coin_instead",
+				"text":"How about for fifty gold coins instead?",
+				"class":"blue_button",
+				"callback":"setRewardCoin"
+			}
+		]
+	},
+	"coin_instead": {
+		"slug": "coin_instead",
+		"characterSays": "Of course.",
+		"tone": "yes",
+		"callback": "clearOffers",
+		"responses": [
+			{
+				"nextStep":"start_explain_errand",
+				"text":"What is the favor?",
+				"class":""
+			}
+		]
+	},
+	"start_explain_errand": {
+		"slug": "start_explain_errand",
+		"characterSays": "I need a new Amulet of Vitality. Only Incantato can make this amulet.",
+		"tone": "generic",
+		"callback": "clearOffers",
+		"responses": [
+			{
+				"nextStep":"where_is_he",
+				"text":"Where is he?",
+				"class":""
+			}
+		]
+	},
+	"where_is_he": {
+		"slug": "where_is_he",
+		"characterSays": "He is leader of the Exiled Order, and lives in The Citadel high in the mountains east of here.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"can_i_buy",
+				"text":"Can I buy it from him?",
+				"class":""
+			},
+			{
+				"nextStep":"why_not_you",
+				"text":"Why don't you buy it from him?",
+				"class":""
+			}
+		]
+	},
+	"why_not_you": {
+		"slug": "why_not_you",
+		"characterSays": "I am banned from the Exiled Order. A cruel irony.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"can_i_buy",
+				"text":"Can I buy it from him?",
+				"class":""
+			}
+		]
+	},
+	"can_i_buy": {
+		"slug": "can_i_buy",
+		"characterSays": "Unfortunately, he sells his best items in the enchantment allocation draft.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"what_is_draft",
+				"text":"What is a draft?",
+				"class":""
+			}
+		]
+	},
+	"what_is_draft": {
+		"slug": "what_is_draft",
+		"characterSays": "Buyers provide an entry fee. They then take turns selecting items until there are no items left.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"buy_in_draft",
+				"text":"I can buy it in the draft?",
+				"class":""
+			},
+			{
+				"nextStep":"cost_of_ticket",
+				"text":"How much is the entry fee?",
+				"class":""
+			}
+		]
+	},
+	"cost_of_ticket": {
+		"slug": "cost_of_ticket",
+		"characterSays": "One crystal. I will provide you with the entry fee.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"buy_in_draft",
+				"text":"I can buy it in the draft?",
+				"class":""
+			}
+		]
+	},
+	"buy_in_draft": {
+		"slug": "buy_in_draft",
+		"characterSays": "You will be assigned the last pick if it's your first time. This item will be gone before it is your turn.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"trade_up",
+				"text":"Can I buy the first pick?",
+				"class":""
+			}
+		]
+	},
+	"trade_up": {
+		"slug": "trade_up",
+		"characterSays": "You are not allowed to buy or sell the picks, but you can trade them. Trade up to the first pick, or as high as you can.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"got_it",
+				"text":"Go to the draft, trade up, get the amulet",
+				"class":""
+			}
+		]
+	},
+	"got_it": {
+		"slug": "got_it",
+		"characterSays": "You got it. I'll provide the map and entry fee of one crystal, you just return with the Amulet of Vitality, and you'll have your reward.",
+		"tone": "uninterested",
+		"callback": "showUpFrontItems",
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I'll do it",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I want 75 gold coins",
+				"class":"blue_button coin_reward_option",
+				"callback":"setRewardMoreCoin"
+			},
+			{
+				"nextStep":"hard_haggle",
+				"text":"I want 100 gold coins",
+				"class":"blue_button coin_reward_option"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I want two scepters",
+				"class":"blue_button item_reward_option",
+				"callback":"setRewardMoreItems"
+			},
+			{
+				"nextStep":"hard_haggle",
+				"text":"I want three scepters",
+				"class":"blue_button item_reward_option"
+			},
+			{
+				"nextStep":"not_interested",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"resumed": {
+		"slug": "resumed",
+		"characterSays": "So, will you .",
+		"tone": "inquire",
+		"callback": "showUpFrontItems",
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I'll do it",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I want 75 gold coins",
+				"class":"blue_button coin_reward_option",
+				"callback":"setRewardMoreCoin"
+			},
+			{
+				"nextStep":"hard_haggle",
+				"text":"I want 100 gold coins",
+				"class":"blue_button coin_reward_option"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I want two scepters",
+				"class":"blue_button item_reward_option",
+				"callback":"setRewardMoreItems"
+			},
+			{
+				"nextStep":"hard_haggle",
+				"text":"I want three scepters",
+				"class":"blue_button item_reward_option"
+			},
+			{
+				"nextStep":"not_interested",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"hard_haggle": {
+		"slug": "hard_haggle",
+		"characterSays": "No.",
+		"tone": "no",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I'll do it",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I want 75 gold coins",
+				"class":"blue_button coin_reward_option",
+				"callback":"setRewardMoreCoin"
+			},
+			{
+				"nextStep":"hard_haggle",
+				"text":"I want 100 gold coins",
+				"class":"blue_button coin_reward_option"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I want two scepters",
+				"class":"blue_button item_reward_option",
+				"callback":"setRewardMoreItems"
+			},
+			{
+				"nextStep":"not_interested",
+				"text":"I'm not interested",
+				"class":"red_button"
+			}
+		]
+	},
+	"haggle": {
+		"slug": "haggle",
+		"characterSays": "Deal. Just don't tell anybody that you're buying it for me.",
+		"tone": "deal",
+		"callback": "givePlayerItems",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"do_it": {
+		"slug": "do_it",
+		"characterSays": "It's a deal then. Just don't tell anybody that you're buying it for me.",
+		"tone": "deal",
+		"callback": "givePlayerItems",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"not_interested": {
+		"slug": "not_interested",
+		"characterSays": "So be it. Let me know if you change you're mind.",
+		"tone": "rejected",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I change my mind, I'll do it",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"no_chat": {
+		"slug": "no_chat",
+		"characterSays": "Goodbye",
+		"tone": "goodbye",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

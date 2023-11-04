@@ -1,0 +1,163 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello Merchant. Looking to make some deals?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "incantato_sent_me",
+				"text": "Incantato sent me",
+				"class": ""
+			}
+		]
+	},
+	"after_welcome": {
+		"slug": "after_welcome",
+		"characterSays": "Say, are you the merchant Incanto told me to be expecting?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "incantato_sent_me",
+				"text": "Yes, it's about a shapeshifter",
+				"class": ""
+			}
+		]
+	},
+	"incantato_sent_me": {
+		"slug": "incantato_sent_me",
+		"characterSays": "Good grief. This is about Randy, isn't it?",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "whos_randy",
+				"text": "Who's Randy?",
+				"class": ""
+			}
+		]
+	},
+	"whos_randy": {
+		"slug": "whos_randy",
+		"characterSays": "I've been a thief for a long time, but I began by teaching illusion magic. I still teach when I find someone with potential.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "you_taught_randy",
+				"text": "You taught Randy to shapeshift?",
+				"class": ""
+			}
+		]
+	},
+	"you_taught_randy": {
+		"slug": "you_taught_randy",
+		"characterSays": "I suppose I trusted the wrong person. Even after all these years of thieving, I'm still not a great judge of character.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "need_to_find",
+				"text": "I need to find him",
+				"class": ""
+			}
+		]
+	},
+	"need_to_find": {
+		"slug": "need_to_find",
+		"characterSays": "That will be difficult. I picked him because of his incredible ability to impersonate people without using magic.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "looks",
+				"text": "Could I tell the difference",
+				"class": ""
+			}
+		]
+	},
+	"looks": {
+		"slug": "looks",
+		"characterSays": "Unlikely. With magic and his intense attention to detail, he will appear identical.",
+		"tone": "offerBad",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "voice",
+				"text": "What about his voice",
+				"class": ""
+			}
+		]
+	},
+	"voice": {
+		"slug": "voice",
+		"characterSays": "He doesn't need magic to perform a perfect impression.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "items",
+				"text": "Does he have any habits?",
+				"class": ""
+			}
+		]
+	},
+	"items": {
+		"slug": "items",
+		"characterSays": "No. You are thinking about this all wrong. He is the perfect mimic. He misses no details.",
+		"tone": "no",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "so_how",
+				"text": "So how do I find them?",
+				"class": ""
+			}
+		]
+	},
+	"so_how": {
+		"slug": "so_how",
+		"characterSays": "Hmmm... He doesn't know how to barter. He steals what he needs. He'd be a lousy merchant.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_mistakes",
+				"text": "What mistakes would he make?",
+				"class": ""
+			}
+		]
+	},
+	"what_mistakes": {
+		"slug": "what_mistakes",
+		"characterSays": "Look for a merchant selling their coins for cheap. That will be Randy.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "is_that_it",
+				"text": "Is that it?",
+				"class": ""
+			}
+		]
+	},
+	"is_that_it": {
+		"slug": "is_that_it",
+		"characterSays": "I'll pay you good coin for the tracker.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

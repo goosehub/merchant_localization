@@ -1,0 +1,43 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "...",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_chat",
+				"text": "That's me",
+				"class": "half_button"
+			},
+			{
+				"nextStep": "lets_chat",
+				"text": "Who's asking?",
+				"class": "half_button"
+			}
+		]
+	},
+	"lets_chat": {
+		"slug": "lets_chat",
+		"characterSays": "Ryuko wanted you to have this.",
+		"tone": "generic",
+		"callback": "giveLetter",
+		"responses": [
+			{
+				"nextStep":false,
+				"text":"Thank you",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

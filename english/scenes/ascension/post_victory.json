@@ -1,0 +1,143 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Congratulations on your victory yesterday --player_name--, or should I say King of Coin?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "as_king",
+				"text": "Call me King of Coin",
+				"class": ""
+			},
+			{
+				"nextStep": "as_king",
+				"text": "No need to be so formal",
+				"class": ""
+			},
+			{
+				"nextStep": "as_king",
+				"text": "I'm still drunk from the celebration",
+				"class": ""
+			}
+		]
+	},
+	"as_king": {
+		"slug": "as_king",
+		"characterSays": "As King of Coin, you now benefit from reduced tolls and can control Guild Fees. Would you like to make a change?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Keep them the same",
+				"class": "blue_button",
+				"callback": "setGuildFeesSame"
+			},
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Raise them",
+				"class": "blue_button",
+				"callback": "setGuildFeesHigh"
+			},
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Lower them",
+				"class": "blue_button",
+				"callback": "setGuildFeesLow"
+			},
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Remove them",
+				"class": "blue_button",
+				"callback": "setGuildFeesNone"
+			}
+		]
+	},
+	"restrict_supplies": {
+		"slug": "restrict_supplies",
+		"characterSays": "Another thing; Audric would restrict supplies to raise prices across the realm. Are you interested in this practice?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "pick_supply",
+				"text": "Yes, let's make some coin",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "end",
+				"text": "I don't believe in manipulating market prices",
+				"class": "red_button"
+			}
+		]
+	},
+	"pick_supply": {
+		"slug": "pick_supply",
+		"characterSays": "What would you like to restrict the supply of? You can change this choice at any time.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "end",
+				"text": "Spices",
+				"class": "blue_button",
+				"callback": "setRestrictSpices"
+			},
+			{
+				"nextStep": "end",
+				"text": "Monster Parts",
+				"class": "blue_button",
+				"callback": "setRestrictParts"
+			},
+			{
+				"nextStep": "end",
+				"text": "Potions",
+				"class": "blue_button",
+				"callback": "setRestrictPotions"
+			},
+			{
+				"nextStep": "end",
+				"text": "Magic",
+				"class": "blue_button",
+				"callback": "setRestrictMagic"
+			},
+			{
+				"nextStep": "end",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "Not today my friend, I must return and tell the Dragon of Kazuujan the news.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"end": {
+		"slug": "end",
+		"characterSays": "Alright, that's it then. If you change your mind you can always change your choices while in Ascension.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"no_barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,105 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Interested in the fated star plant? Let me guess, you're searching for the cure to a dying heart?",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "yes",
+				"text": "Yes",
+				"class": ""
+			},
+			{
+				"nextStep": "yes",
+				"text": "How did you know?",
+				"class": ""
+			},
+			{
+				"nextStep": false,
+				"text": "None of your business",
+				"class": ""
+			}
+		]
+	},
+	"yes": {
+		"slug": "yes",
+		"characterSays": "Many travelers come looking for this plant because they believe it is a cure.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "not_a_cure",
+				"text": "It's not a cure?",
+				"class": ""
+			}
+		]
+	},
+	"not_a_cure": {
+		"slug": "not_a_cure",
+		"characterSays": "No. It only slows the decay, and prolongs the ordeal. Whoever this is for, do them a favor and return empty-handed.",
+		"tone": "no",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "is_there_a_cure",
+				"text": "Is there a cure?",
+				"class": ""
+			}
+		]
+	},
+	"is_there_a_cure": {
+		"slug": "is_there_a_cure",
+		"characterSays": "Only the Legendary Amulet of Vitality could cure it. But I advise against it.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "why",
+				"text": "Why?",
+				"class": ""
+			}
+		]
+	},
+	"why": {
+		"slug": "why",
+		"characterSays": "Death is not something to fear. Too much suffering and coin is spent by the desperate fighting for a few additional years.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "take_it",
+				"text": "Can I buy some fated star plant?",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"take_it": {
+		"slug": "take_it",
+		"characterSays": "Take it. You did come all this way after all. However I hope you will contemplate on what I've said.",
+		"tone": "generic",
+		"callback": "givePlant",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

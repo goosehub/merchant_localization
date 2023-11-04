@@ -1,0 +1,291 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"A new face! Is this your first auction?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"first_auction",
+				"text":"Yes",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"not_first_auction",
+				"text":"No",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"first_auction":{
+		"slug":"first_auction",
+		"characterSays":"Be careful. I've seen many people get carried away and pay far too much.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"not_first_auction":{
+		"slug":"not_first_auction",
+		"characterSays":"Perhaps you've been to the auctions on the oasis? If so, I'm sure you'll find this much less frustrating.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"who_are_you":{
+		"slug":"who_are_you",
+		"characterSays":"Nicholas Godfrey. I was just wondering if you would be bidding on the Simon Crowell piece?",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"yes",
+				"text":"Yes",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"no",
+				"text":"No",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"perhaps",
+				"text":"Perhaps",
+				"class":""
+			},
+			{
+				"nextStep":"not_saying",
+				"text":"I'm not saying",
+				"class":""
+			},
+			{
+				"nextStep":"why_do_you_ask",
+				"text":"Why do you ask?",
+				"class":""
+			}
+		]
+	},
+	"yes":{
+		"slug":"yes",
+		"characterSays":"Me as well. Wouldn't it be a shame if we bid each other up? Perhaps we could come to an agreement and save ourselves a lot of money?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"plan_if_yes",
+				"text":"What do you have in mind?",
+				"class":""
+			}
+		]
+	},
+	"no":{
+		"slug":"no",
+		"characterSays":"Hmm... Thank you for indulging my curiosity.",
+		"tone":"rejected",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"why_do_you_ask",
+				"text":"Why do you ask?",
+				"class":""
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"perhaps":{
+		"slug":"perhaps",
+		"characterSays":"Well, perhaps I could offer a little coin to pass on that particular item?",
+		"tone":"offerClose",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"plan_if_perhaps",
+				"text":"What do you have in mind?",
+				"class":""
+			}
+		]
+	},
+	"not_saying":{
+		"slug":"not_saying",
+		"characterSays":"I can respect that. I wish you great luck and grand fun.",
+		"tone":"uninterested",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"why_do_you_ask",
+				"text":"Why do you ask?",
+				"class":""
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"why_do_you_ask":{
+		"slug":"why_do_you_ask",
+		"characterSays":"I am only being curious and friendly my friend.",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"yes",
+				"text":"I am interested in the painting",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"no",
+				"text":"I'm not interested in the painting",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"perhaps",
+				"text":"I might be interested",
+				"class":""
+			},
+			{
+				"nextStep":"not_saying",
+				"text":"I'm not saying",
+				"class":""
+			}
+		]
+	},
+	"plan_if_yes":{
+		"slug":"plan_if_yes",
+		"characterSays":"Do not bid against me on the painting, and I will pay you 5 gold. All you have to do is keep your hand down.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button",
+				"callback":"setCollectorDealAt5"
+			},
+			{
+				"nextStep":"deal",
+				"text":"10 gold and we have a deal",
+				"class":"blue_button",
+				"callback":"setCollectorDealAt10"
+			},
+			{
+				"nextStep":"deal",
+				"text":"15 gold and we have a deal",
+				"class":"green_button",
+				"callback":"setCollectorDealAt15"
+			},
+			{
+				"nextStep":"no_deal",
+				"text":"No Deal",
+				"class":"red_button"
+			}
+		]
+	},
+	"plan_if_perhaps":{
+		"slug":"plan_if_yes",
+		"characterSays":"Do not bid against me on the painting, and I will pay you 5 gold. All you have to do is keep your hand down.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button",
+				"callback":"setCollectorDealAt5"
+			},
+			{
+				"nextStep":"deal",
+				"text":"10 gold and we have a deal",
+				"class":"blue_button",
+				"callback":"setCollectorDealAt10"
+			},
+			{
+				"nextStep":"haggle_failure",
+				"text":"15 gold and we have a deal",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"no_deal",
+				"text":"No Deal",
+				"class":"red_button"
+			}
+		]
+	},
+	"haggle_failure":{
+		"slug":"haggle_failure",
+		"characterSays":"You didn't even affirm definitely you were buying the painting and you want 15 gold to do nothing?",
+		"tone":"offerBad",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button",
+				"callback":"setCollectorDealAt5"
+			},
+			{
+				"nextStep":"deal",
+				"text":"10 gold and we have a deal",
+				"class":"blue_button",
+				"callback":"setCollectorDealAt10"
+			},
+			{
+				"nextStep":"haggle_failure",
+				"text":"15 gold and we have a deal",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"no_deal",
+				"text":"No Deal",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal":{
+		"slug":"deal",
+		"characterSays":"Deal indeed. You'll receive your payment after the auction, if you follow through that is.",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":" red_button"
+			}
+		]
+	},
+	"no_deal":{
+		"slug":"deal",
+		"characterSays":"Well, it was worth a shot. I wish you great luck and grand fun.",
+		"tone":"uninterested",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":" red_button"
+			}
+		]
+	}
+}

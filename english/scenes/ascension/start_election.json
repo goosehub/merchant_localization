@@ -1,0 +1,106 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Today is the election. Would you like to challenge Audric for King of Coin?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "yes_run",
+				"text": "Yes",
+				"class": "green_button half_button"
+			},
+			{
+				"nextStep": "no_run",
+				"text": "No",
+				"class": "red_button half_button"
+			}
+		]
+	},
+	"no_run": {
+		"slug": "no_run",
+		"characterSays": "Looks like Audric will go unopposed again. Maybe next year.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "no_barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "Not today my friend, I must leave to tell Audric.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"yes_run": {
+		"slug": "yes_run",
+		"characterSays": "Do you have the five hundred gold coin entry fee?",
+		"tone": "inquire",
+		"callback": "offerGoldCoins",
+		"responses": [
+		]
+	},
+	"fee_paid": {
+		"slug": "fee_paid",
+		"characterSays": "Excellent. I'll get the guild together and we'll start the debate.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "goodbye_running",
+				"text": "Okay, I'm ready",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "debate",
+				"text": "There's a debate?",
+				"class": ""
+			}
+		]
+	},
+	"debate": {
+		"slug": "debate",
+		"characterSays": "Of course. It's your chance to make your case and sway any undecided voters.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "goodbye_running",
+				"text": "Okay, I'm ready",
+				"class": "green_button"
+			}
+		]
+	},
+	"goodbye_running": {
+		"slug": "goodbye_running",
+		"characterSays": "Be back in a minute.",
+		"tone": "goodbye",
+		"callback": "startScene",
+		"responses": [
+		]
+	},
+	"goodbye_not_running": {
+		"slug": "goodbye_not_running",
+		"characterSays": "Goodbye.",
+		"tone": "goodbye",
+		"callback": "endScene",
+		"responses": [
+		]
+	}
+}

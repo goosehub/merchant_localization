@@ -1,0 +1,129 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Merchant! I have heard reports that you are supporting the resistance. We are searching your belongings...",
+		"tone": "bothered",
+		"callback": "startSearch",
+		"responses": [
+		]
+	},
+	"caught": {
+		"slug": "caught",
+		"characterSays": "What do we have here? Signs of the resistance? The king will decide your fate today!",
+		"tone": "ah",
+		"callback": "setCaught",
+		"responses": [
+			{
+				"nextStep":"go_to_king",
+				"text":"Please, I didn't know what it meant",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"go_to_king",
+				"text":"The resistance shall prevail!",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"bribe_attempt",
+				"text":"Perhaps I can convince you to overlook this",
+				"class":"blue_button"
+			}
+		]
+	},
+	"go_to_king": {
+		"slug": "go_to_king",
+		"characterSays": "Follow me.",
+		"tone": "offended",
+		"callback": "sendToKing",
+		"responses": [
+		]
+	},
+	"bribe_attempt": {
+		"slug": "bribe_attempt",
+		"characterSays": "...",
+		"tone": "offended",
+		"callback": "attemptBribe",
+		"responses": [
+		]
+	},
+	"bribe_declined": {
+		"slug": "bribe_declined",
+		"characterSays": "You will not haggle your way out of this one merchant.",
+		"tone": "offended",
+		"callback": "sendToKing",
+		"responses": [
+		]
+	},
+	"bribe_start": {
+		"slug": "bribe_start",
+		"characterSays": "Hmm... Give me this and you'll have no problems.",
+		"tone": "laugh",
+		"callback": "offerBribe",
+		"responses": [
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"haggle",
+				"text":"Perhaps we can haggle?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"go_to_king",
+				"text":"No deal",
+				"class":"red_button"
+			}
+		]
+	},
+	"haggle": {
+		"slug": "haggle",
+		"characterSays": "You are in no position to haggle. Accept it now or come with me.",
+		"tone": "offended",
+		"callback": "offerBribe",
+		"responses": [
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"go_to_king",
+				"text":"No deal",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal": {
+		"slug": "deal",
+		"characterSays": "You are smarter than you look. I suggest you leave Shikyomo before any more trouble finds you.",
+		"tone": "offended",
+		"callback": "acceptBribe",
+		"responses": [
+			{
+				"nextStep":"no_barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "No.",
+		"tone": "offended",
+		"callback": "",
+		"responses": [
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

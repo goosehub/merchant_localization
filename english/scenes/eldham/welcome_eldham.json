@@ -1,0 +1,441 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello merchant. I hate to bother you, but I am in dire need of help.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"what_do_you_need",
+				"text":"What do you need?",
+				"class":"",
+				"callback":""
+			},
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":"",
+				"callback":""
+			},
+			{
+				"nextStep":"what_do_i_get",
+				"text":"What's in it for me?",
+				"class":"",
+				"callback":""
+			}
+		]
+	},
+	"what_do_i_get": {
+		"slug": "what_do_i_get",
+		"characterSays": "I'll pay fifty silver up front, and will be forever in your debt.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"what_do_you_need",
+				"text":"What do you need?",
+				"class":"",
+				"callback":""
+			},
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":"",
+				"callback":""
+			}
+		]
+	},
+	"who_are_you": {
+		"slug": "who_are_you",
+		"characterSays": "My apologies. I'm Sarah, alchemist and merchant here in Eldham Harbor.",
+		"tone": "generic",
+		"callback": "giveName",
+		"responses": [
+			{
+				"nextStep":"what_do_you_need",
+				"text":"What do you need?",
+				"class":"",
+				"callback":""
+			},
+			{
+				"nextStep":"what_do_i_get",
+				"text":"What's in it for me?",
+				"class":"",
+				"callback":""
+			}
+		]
+	},
+	"what_do_you_need": {
+		"slug": "what_do_you_need",
+		"characterSays": "My husband has a rare and debilitating illness. It won't be long before his heart can no longer recover.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"cure",
+				"text":"Is there a cure?",
+				"class":"",
+				"callback":""
+			}
+		]
+	},
+	"cure": {
+		"slug": "cure",
+		"characterSays": "The cure requires the Fated Star Plant, only found in tundra of Egilsdóttir in the far north-west corner of the realm.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"just_a_plant",
+				"text":"All you need is a plant?",
+				"class":"",
+				"callback":""
+			}
+		]
+	},
+	"just_a_plant": {
+		"slug": "just_a_plant",
+		"characterSays": "Yes. I'll provide fifty silver and if you return with the plant, free potions for life. Please merchant, I need your help.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I'll try my best",
+				"class":"green_button",
+				"callback":""
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I'll need a hundred silver",
+				"class":"blue_button",
+				"callback":""
+			},
+			{
+				"nextStep":"wont_do_it",
+				"text":"I can't help you",
+				"class":"red_button",
+				"callback":""
+			}
+		]
+	},
+	"resume": {
+		"slug": "resume",
+		"characterSays": "I am grateful you've reconsidered. I'll provide fifty silver and if you return within three years time, free potions for life.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I'll try my best",
+				"class":"green_button",
+				"callback":""
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I'll need a hundred silver",
+				"class":"blue_button",
+				"callback":""
+			},
+			{
+				"nextStep":"wont_do_it_again",
+				"text":"On second thought, I still can't help you",
+				"class":"red_button",
+				"callback":""
+			}
+		]
+	},
+	"haggle": {
+		"slug": "haggle",
+		"characterSays": "Whatever it takes. Here's a hundred silver to help with your expenses and a map to Egilsdóttir. May god protect you on your travels.",
+		"tone": "deal",
+		"callback": "giveItemsAfterHaggle",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"do_it": {
+		"slug": "do_it",
+		"characterSays": "Here's fifty silver to help with your expenses and a map to Egilsdóttir. Best of luck and may god protect you on your travels.",
+		"tone": "generic",
+		"callback": "giveItemsWithoutHaggle",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"wont_do_it": {
+		"slug": "wont_do_it",
+		"characterSays": "I hope you reconsider.",
+		"tone": "bothered",
+		"callback": "rejectQuest",
+		"responses": [
+			{
+				"nextStep":"do_it",
+				"text":"I can't promise anything",
+				"class":"green_button",
+				"callback":""
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I'll need a hundred silver",
+				"class":"blue_button",
+				"callback":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"wont_do_it_again": {
+		"slug": "wont_do_it_again",
+		"characterSays": "Why must you play these games with my heart you lumpish donkey.",
+		"tone": "bothered",
+		"callback": "rejectQuest",
+		"responses": [
+			{
+				"nextStep":"resume",
+				"text":"I can't promise anything",
+				"class":"green_button",
+				"callback":""
+			},
+			{
+				"nextStep":"haggle",
+				"text":"I'll need a hundred silver",
+				"class":"blue_button",
+				"callback":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"you_have_the_treatment": {
+		"slug": "you_have_the_treatment",
+		"characterSays": "You have the plant!",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"giveTreatment",
+				"text":"Here, you can have it",
+				"class":"give_treatment_button green_button"
+			},
+			{
+				"nextStep":"giveCure",
+				"text":"You should have this Amulet of Vitality instead",
+				"class":"give_cure_button green_button"
+			},
+			{
+				"nextStep":"not_for_free",
+				"text":"Sorry, I can't give you this for free",
+				"class":"red_button"
+			}
+		]
+	},
+	"you_have_the_cure": {
+		"slug": "you_have_the_cure",
+		"characterSays": "You have the Legendary Amulet of Vitality?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"giveCure",
+				"text":"Here, you can have it",
+				"class":"give_cure_button green_button"
+			},
+			{
+				"nextStep":"not_for_free",
+				"text":"Sorry, I can't give you this for free",
+				"class":"red_button"
+			}
+		]
+	},
+	"not_for_free": {
+		"slug": "not_for_free",
+		"characterSays": "Oh... I see. You are a merchant at heart afterall. How much?",
+		"tone": "inquire",
+		"callback": "allowBarter",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Let's barter for it",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"giveTreatment",
+				"text":"Actually, you can have the Fated Star Plant",
+				"class":"give_treatment_button green_button"
+			},
+			{
+				"nextStep":"giveCure",
+				"text":"Actually, you can have the Legendary Amulet of Vitality",
+				"class":"give_cure_button green_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "You do!?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"giveTreatment",
+				"text":"I brought the Fated Star Plant",
+				"class":"give_treatment_button green_button"
+			},
+			{
+				"nextStep":"giveCure",
+				"text":"I brought the Legendary Amulet of Vitality",
+				"class":"give_cure_button green_button"
+			},
+			{
+				"nextStep":"caution_about_treatment",
+				"text":"The Necromancer said it wasn't a cure",
+				"class":"necromancer_question"
+			},
+			{
+				"nextStep":"nevermind",
+				"text":"Nevermind",
+				"class":"red_button"
+			}
+		]
+	},
+	"giveCure": {
+		"slug": "giveCure",
+		"characterSays": "Miraculous! This is a blessing I could never repay. You never need pay for my potions again. See me anytime for more.",
+		"tone": "laugh",
+		"callback": "giveCure",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"giveTreatment": {
+		"slug": "giveTreatment",
+		"characterSays": "The cure! I will remember this miraculous day. You never need pay for my potions again. See me anytime for more.",
+		"tone": "laugh",
+		"callback": "giveTreatment",
+		"responses": [
+			{
+				"nextStep":"ask_about_treatment",
+				"text":"Do you believe this cure will work?",
+				"class":"necromancer_question"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"caution_about_treatment": {
+		"slug": "caution_about_treatment",
+		"characterSays": "Immortality has made her unsympathetic and resentful of perseverance itself. She does not understand why we fight death.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"giveTreatment",
+				"text":"I brought the Fated Star Plant",
+				"class":"give_treatment_button green_button"
+			},
+			{
+				"nextStep":"giveCure",
+				"text":"I brought the Legendary Amulet of Vitality",
+				"class":"give_cure_button green_button"
+			},
+			{
+				"nextStep":"nevermind",
+				"text":"Nevermind",
+				"class":"red_button"
+			}
+		]
+	},
+	"ask_about_treatment": {
+		"slug": "ask_about_treatment",
+		"characterSays": "I wouldn't have asked if I didn't believe there was a chance. You've brought us hope. Thank you.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"nevermind": {
+		"slug": "nevermind",
+		"characterSays": "What kind of joke is that to pull?",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "A challenge? And who exactly is this merchant who thinks they can become King of Coin?",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"no_matter",
+				"text":"I am a wealthy and powerful merchant",
+				"class":""
+			},
+			{
+				"nextStep":"no_matter",
+				"text":"I am the right merchant for the job",
+				"class":""
+			},
+			{
+				"nextStep":"no_matter",
+				"text":"I was destined to become a king",
+				"class":""
+			},
+			{
+				"nextStep":"no_matter",
+				"text":"I am a simple traveling merchant",
+				"class":""
+			}
+		]
+	},
+	"no_matter": {
+		"slug": "no_matter",
+		"characterSays": "No matter. You are only wasting everyone's time. Let's get this over with.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"goodbye",
+				"text":"Good luck",
+				"class":""
+			},
+			{
+				"nextStep":"goodbye",
+				"text":"Goodbye",
+				"class":""
+			},
+			{
+				"nextStep":"goodbye",
+				"text":"Shove off",
+				"class":""
+			}
+		]
+	},
+	"goodbye": {
+		"slug": "goodbye",
+		"characterSays": "...",
+		"tone": "goodbye",
+		"callback": "startCutscene",
+		"responses": [
+		]
+	}
+}

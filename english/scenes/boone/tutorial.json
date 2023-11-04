@@ -1,0 +1,396 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"I haven't seen you before. What's your name?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			
+		]
+	},
+	"goal":{
+		"slug":"goal",
+		"characterSays":"I can tell from that name you truly were born in the swamp bog. What brings you to the market?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"merchant",
+				"text":"I want to become a traveling merchant",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"travel",
+				"text":"I want to journey across the realm",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"fortune",
+				"text":"I want to amass a large fortune",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"king",
+				"text":"I want to become a great king",
+				"class":"short_button"
+			},
+			{
+				"nextStep":"survive",
+				"text":"I only want to survive",
+				"class":"short_button"
+			}
+		]
+	},
+	"merchant":{
+		"slug":"merchant",
+		"characterSays":"That is a mistake. The life of a traveling merchant is void of love, and full of trouble.",
+		"tone":"laugh",
+		"callback":"setGoalMerchant",
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"travel":{
+		"slug":"travel",
+		"characterSays":"I once traveled the realm as a traveling merchant. Never again.",
+		"tone":"laugh",
+		"callback":"setGoalTravel",
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"fortune":{
+		"slug":"fortune",
+		"characterSays":"I lost everything trying to make my fortune, but I suspect you have little to lose.",
+		"tone":"laugh",
+		"callback":"setGoalFortune",
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"king":{
+		"slug":"king",
+		"characterSays":"I've met with Kings from across the realm. None of them seemed happy to me.",
+		"tone":"laugh",
+		"callback":"setGoalKing",
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"survive":{
+		"slug":"survive",
+		"characterSays":"Aren't we all.",
+		"tone":"laugh",
+		"callback":"setGoalSurvive",
+		"responses":[
+			{
+				"nextStep":"who_are_you",
+				"text":"Who are you?",
+				"class":""
+			}
+		]
+	},
+	"who_are_you":{
+		"slug":"who_are_you",
+		"characterSays":"Edward. I've traveled The Six Kingdoms as a merchant. Now I barter for a modest profit here in Boone.",
+		"tone":"generic",
+		"callback":"whoAreYou",
+		"responses":[
+			{
+				"nextStep":"teach_me",
+				"text":"Can you teach me to become a merchant?",
+				"class":""
+			}
+		]
+	},
+	"no_teach":{
+		"slug":"no_teach",
+		"characterSays":"I'm no teacher. Buy something or get out of here.",
+		"tone":"offended",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"teach_me":{
+		"slug":"teach_me",
+		"characterSays":"I'm no teacher, but a merchant will become anything for the right price. Give me the <i class=\"orange_color\">Statue</i> and I'll teach you.",
+		"tone":"inquire",
+		"callback":"requestFirstItem",
+		"responses":[
+			
+		]
+	},
+	"reject_first_deal":{
+		"slug":"reject_first_deal",
+		"characterSays":"You are already learning. For the <i class=\"orange_color\">Gloves</i> then. Seems a fair deal for years of knowledge.",
+		"tone":"rejected",
+		"callback":"requestSecondItem",
+		"responses":[
+			
+		]
+	},
+	"reject_second_deal":{
+		"slug":"reject_second_deal",
+		"characterSays":"It is already a fair deal, but I'm in a good way today. How about you share an <i class=\"orange_color\">Onion</i> with me? Final offer.",
+		"tone":"rejected",
+		"callback":"requestThirdItem",
+		"responses":[
+			
+		]
+	},
+	"reject_third_deal":{
+		"slug":"reject_third_deal",
+		"characterSays":"See me again if you change your mind.",
+		"tone":"rejected",
+		"callback":"updateJournal",
+		"responses":[
+			
+		]
+	},
+	"first_deal":{
+		"slug":"first_deal",
+		"characterSays":"First mistake. Always haggle.",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"inquire",
+				"text":"What do I need to know?",
+				"class":""
+			}
+		]
+	},
+	"second_deal":{
+		"slug":"second_deal",
+		"characterSays":"Excellent haggling. What do you want to know first?",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"inquire",
+				"text":"What do I need to know?",
+				"class":""
+			}
+		]
+	},
+	"third_deal":{
+		"slug":"third_deal",
+		"characterSays":"Fine, let's do this before I change my mind.",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"inquire",
+				"text":"What do I need to know?",
+				"class":""
+			}
+		]
+	},
+	"resumed":{
+		"slug":"resumed",
+		"characterSays":"I knew you'd come running back. Alright let's do this.",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"inquire",
+				"text":"What do I need to know?",
+				"class":""
+			}
+		]
+	},
+	"inquire":{
+		"slug":"inquire",
+		"characterSays":"People only approach merchants when they need something. Ask them what they are <i class=\"blue_color\">Selling</i> or <i class=\"blue_color\">Buying</i>.",
+		"tone":"ah",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"make_offer",
+				"text":"What are you Selling?",
+				"class":"selling_button half_button"
+			},
+			{
+				"nextStep":"request_coin",
+				"text":"What are you Buying?",
+				"class":"buying_button half_button"
+			}
+		]
+	},
+	"request_coin":{
+		"slug":"request_coin",
+		"characterSays":"Merchants are always interested in coin.",
+		"tone":"inquire",
+		"callback":"requestCoin",
+		"responses":[
+			
+		]
+	},
+	"make_offer":{
+		"slug":"make_offer",
+		"characterSays":"I'm looking to sell this bread.",
+		"tone":"inquire",
+		"callback":"offerItems",
+		"responses":[
+			
+		]
+	},
+	"good_deal":{
+		"slug":"good_deal",
+		"characterSays":"That is a hard deal, but a fair one for us both. Remember, the customer should never leave too happy.",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"final_offer",
+				"text":"How can I negotiate a better deal",
+				"class":""
+			}
+		]
+	},
+	"great_deal":{
+		"slug":"great_deal",
+		"characterSays":"That's too generous of a deal. I'll accept of course. But remember, the customer should never leave too happy.",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"final_offer",
+				"text":"How can I negotiate a better deal",
+				"class":""
+			}
+		]
+	},
+	"final_offer":{
+		"slug":"final_offer",
+		"characterSays":"You can give a <i class=\"red_color\">Final Offer</i> to haggle a better deal, but if it fails the customer will walk.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"hide_magic",
+				"text":"Sounds Risky",
+				"class":"green_button half_button tall_button"
+			},
+			{
+				"nextStep":"hide_magic",
+				"text":"Sounds Smart",
+				"class":"red_button half_button tall_button"
+			}
+		]
+	},
+	"hide_magic":{
+		"slug":"hide_magic",
+		"characterSays":"You should <i class=\"red_color\">Conceal</i> that amulet. Magical items are valuable, but don't let the guards find you selling it.",
+		"tone":"generic",
+		"callback":"hideMagic",
+		"responses":[
+			{
+				"nextStep":"give_sack",
+				"text":"I'll keep it hidden",
+				"class":"green_button half_button tall_button"
+			},
+			{
+				"nextStep":"give_sack",
+				"text":"I won't get caught",
+				"class":"red_button half_button tall_button"
+			}
+		]
+	},
+	"give_sack":{
+		"slug":"give_sack",
+		"characterSays":"These sacks will help you <i class=\"blue_color\">Carry</i> your things. When the weight becomes too much, you'll need packhorses to help <i class=\"green_color\">Pull</i> your items.",
+		"tone":"generic",
+		"callback":"giveSack",
+		"responses":[
+			{
+				"nextStep":"give_map",
+				"text":"Thank you",
+				"class":""
+			}
+		]
+	},
+	"give_map":{
+		"slug":"give_map",
+		"characterSays":"This map will help you find your way around the region. Look for new maps to discover new markets.",
+		"tone":"generic",
+		"callback":"giveMap",
+		"responses":[
+			{
+				"nextStep":"more_advice",
+				"text":"What do I do now?",
+				"class":""
+			}
+		]
+	},
+	"where_to_go":{
+		"slug":"where_to_go",
+		"characterSays":"Ascension is the wealthiest city in the Realm. Find the King Of Coin there, he might be of help to you.",
+		"tone":"ah",
+		"callback":"clearOffers",
+		"responses":[
+			{
+				"nextStep":"more_advice",
+				"text":"What do I do now?",
+				"class":""
+			}
+		]
+	},
+	"more_advice":{
+		"slug":"more_advice",
+		"characterSays":"Start by bartering food. Everybody needs to eat. Find a farmer and buy as much as you can.",
+		"tone":"uninterested",
+		"callback":"clearOffers",
+		"responses":[
+			{
+				"nextStep":"last_words",
+				"text":"Thanks for all the advice",
+				"class":""
+			}
+		]
+	},
+	"last_words":{
+		"slug":"last_words",
+		"characterSays":"Merchants need each other. It only makes sense to help each other.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

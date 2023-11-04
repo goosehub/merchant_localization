@@ -1,0 +1,290 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Hello. I see you have an art piece here. Is it for sale?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"take_a_look",
+				"text":"Sure, take a look",
+				"class":""
+			}
+		]
+	},
+	"take_a_look":{
+		"slug":"take_a_look",
+		"characterSays":"This is beautiful. Mind if I ask a few questions about it?",
+		"tone":"generic",
+		"callback":"putPaintingOnOffer",
+		"responses":[
+			{
+				"nextStep":"first_question",
+				"text":"Ask away",
+				"class":""
+			}
+		]
+	},
+	"first_question":{
+		"slug":"first_question",
+		"characterSays":"Where did you get this?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"second_question",
+				"text":"A merchant in Hollow Lake",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"Purchased at the Riverton auction",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"Bought it from the collector in Ayr",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"A stranger sold it to me",
+				"class":""
+			}
+		]
+	},
+	"second_question":{
+		"slug":"second_question",
+		"characterSays":"How do you know it's real?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"third_question",
+				"text":"I had it verified in Ayr",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"I had it verified in Riverton",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"I was assured by the seller",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"Only Winston Roberts could paint this masterpiece",
+				"class":""
+			}
+		]
+	},
+	"third_question":{
+		"slug":"third_question",
+		"characterSays":"Will you swear that this is real?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"response_to_questions",
+				"text":"I swear",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions",
+				"text":"I swear to god",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions",
+				"text":"I swear on my reputation",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions",
+				"text":"I make no promises",
+				"class":""
+			}
+		]
+	},
+	"response_to_questions":{
+		"slug":"response_to_questions",
+		"characterSays":"Well, this is truly a masterpiece. Too bad it's a forgery.",
+		"tone":"uninterested",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"how_can_you_tell",
+				"text":"How can you tell?",
+				"class":""
+			}
+		]
+	},
+	"how_can_you_tell":{
+		"slug":"how_can_you_tell",
+		"characterSays":"Because the real one has a large rip down the middle, and is in my closet collecting dust.",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"replacement",
+				"text":"Need a replacement?",
+				"class":""
+			},
+			{
+				"nextStep":"this_is_real",
+				"text":"Yours was a forgery. This is the real one.",
+				"class":""
+			},
+			{
+				"nextStep":"how_much_did_you_pay",
+				"text":"How much did you pay for it?",
+				"class":""
+			},
+			{
+				"nextStep":"where_to_sell",
+				"text":"Where can I sell this?",
+				"class":""
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"replacement":{
+		"slug":"replacement",
+		"characterSays":"No. Winston is dead and this is a waste of perfectly good paint without the name attached.",
+		"tone":"no",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"this_is_real",
+				"text":"Yours was a forgery. This is the real one.",
+				"class":""
+			},
+			{
+				"nextStep":"how_much_did_you_pay",
+				"text":"How much did you pay for it?",
+				"class":""
+			},
+			{
+				"nextStep":"where_to_sell",
+				"text":"Where can I sell this?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"this_is_real":{
+		"slug":"this_is_real",
+		"characterSays":"I had mine verified by The Collector of Ayr. He's never wrong. Or at least I trust him far more than I would ever trust a merchant.",
+		"tone":"offerInsulting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"replacement",
+				"text":"Need a replacement?",
+				"class":""
+			},
+			{
+				"nextStep":"how_much_did_you_pay",
+				"text":"How much did you pay for it?",
+				"class":""
+			},
+			{
+				"nextStep":"where_to_sell",
+				"text":"Where can I sell this?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"how_much_did_you_pay":{
+		"slug":"how_much_did_you_pay",
+		"characterSays":"Just ten gold coins. Must be worth at least twice that now.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"replacement",
+				"text":"Need a replacement?",
+				"class":""
+			},
+			{
+				"nextStep":"this_is_real",
+				"text":"Yours was a forgery. This is the real one.",
+				"class":""
+			},
+			{
+				"nextStep":"where_to_sell",
+				"text":"Where can I sell this?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"where_to_sell":{
+		"slug":"where_to_sell",
+		"characterSays":"Well, you could always sell it back to The Collector in Ayr. Tell him you purchased it from me.",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"replacement",
+				"text":"Need a replacement?",
+				"class":""
+			},
+			{
+				"nextStep":"this_is_real",
+				"text":"Yours was a forgery. This is the real one.",
+				"class":""
+			},
+			{
+				"nextStep":"how_much_did_you_pay",
+				"text":"How much did you pay for it?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

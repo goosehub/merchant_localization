@@ -1,0 +1,140 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Hello Merchant. Would you like to win some copper?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"how",
+				"text":"Of course",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"how",
+				"text":"How?",
+				"class":""
+			}
+		]
+	},
+	"how":{
+		"slug":"how",
+		"characterSays":"I'm the bookmaker for the horse race every Tuesday. You can win a lot of copper with a little luck.",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"interested",
+				"text":"I'm feeling lucky",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"reject",
+				"text":"I don't gamble",
+				"class":"red_button"
+			}
+		]
+	},
+	"interested":{
+		"slug":"interested",
+		"characterSays":"While you're at it, you should enter one of your own horses into the race.",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"how_to_enter",
+				"text":"How do I enter the race?",
+				"class":""
+			},
+			{
+				"nextStep":"interested_in_enter_horse",
+				"text":"How much is the prize?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"reject":{
+		"slug":"reject",
+		"characterSays":"Smart. Gambling is a fools game. The real copper is winning the race. You should enter a horse",
+		"tone":"rejected",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"how_to_enter",
+				"text":"How do I enter the race?",
+				"class":""
+			},
+			{
+				"nextStep":"interested_in_enter_horse",
+				"text":"How much is the prize?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"interested_in_enter_horse":{
+		"slug":"interested_in_enter_horse",
+		"characterSays":"First place prize is 60 copper. Second place is 15. Third place is 10.",
+		"tone":"offerClose",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"how_to_enter",
+				"text":"How do I enter the race?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"how_to_enter":{
+		"slug":"how_to_enter",
+		"characterSays":"The race is every Tuesday. Just bring a horse and 5 copper for the entry fee.",
+		"tone":"offerClose",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"interested_in_enter_horse",
+				"text":"How much is the prize?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

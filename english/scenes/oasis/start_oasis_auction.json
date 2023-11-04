@@ -1,0 +1,33 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Ready to start the auction?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "start",
+				"text": "I'm ready",
+				"class": "green_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Not today",
+				"class": "red_button"
+			}
+		]
+	},
+	"start": {
+		"slug": "start",
+		"characterSays": "The auction will begin in a few moments. Please wait here with the others.",
+		"tone": "generic",
+		"callback": "startAuction",
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Got it",
+				"class": "green_button"
+			}
+		]
+	}
+}

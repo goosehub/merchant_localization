@@ -1,0 +1,264 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome to The Citadel of the Exiled Order. Are you here for the enchantment allocation draft?",
+		"tone": "greeting",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"yes_draft",
+				"text":"Yes",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"no_draft",
+				"text":"No",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"tell_about_draft",
+				"text":"Tell me about the draft",
+				"class":""
+			}
+		]
+	},
+	"yes_draft": {
+		"slug": "yes_draft",
+		"characterSays": "I'll see you on Friday then. In the meantime, I'm looking for a savvy merchant to help me with a tricky problem.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"start_explain_mission",
+				"text":"What is your problem?",
+				"class":""
+			},
+			{
+				"nextStep":"reward",
+				"text":"Is there a reward?",
+				"class":""
+			}
+		]
+	},
+	"no_draft": {
+		"slug": "no_draft",
+		"characterSays": "Very well. Perhaps I can recruit you for a certain business opportunity.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"start_explain_mission",
+				"text":"What opportunity?",
+				"class":""
+			},
+			{
+				"nextStep":"reward",
+				"text":"Is there a reward?",
+				"class":""
+			}
+		]
+	},
+	"tell_about_draft": {
+		"slug": "tell_about_draft",
+		"characterSays": "Every Friday you can provide me a crystal gem and get the chance to select newly made enchanted items.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"after_draft_explained",
+				"text":"Interesting",
+				"class":""
+			}
+		]
+	},
+	"after_draft_explained": {
+		"slug": "after_draft_explained",
+		"characterSays": "Say, I'm looking for a savvy merchant to help me with a tricky problem.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"start_explain_mission",
+				"text":"What is your problem?",
+				"class":""
+			},
+			{
+				"nextStep":"reward",
+				"text":"Is there a reward?",
+				"class":""
+			}
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "If you help me, I'll reward you with a newly enchanted Legendary Scepter of Legacy.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"start_explain_mission",
+				"text":"What do I need to do?",
+				"class":""
+			}
+		]
+	},
+	"start_explain_mission": {
+		"slug": "start_explain_mission",
+		"characterSays": "There's a shapeshifter impersonating merchants across the realm, ruining the reputations of merchants and mages alike.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"how_to_find",
+				"text":"How do I find a shapeshifter?",
+				"class":""
+			}
+		]
+	},
+	"how_to_find": {
+		"slug": "how_to_find",
+		"characterSays": "Find The King of Thieves in Ingress Rock. He can shapeshift so he'll know how to find our target.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"how_to_catch",
+				"text":"How do I arrest a shapeshifter?",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"what_if_its_him",
+				"text":"What if the King of Thieves is responsible?",
+				"class":""
+			},
+			{
+				"nextStep":"he_can_shapeshift",
+				"text":"The King of Thieves is a shapeshifter?",
+				"class":""
+			},
+			{
+				"nextStep":"is_he_allowed_here",
+				"text":"Is The King of Thieves allowed here?",
+				"class":""
+			}
+		]
+	},
+	"what_if_its_him": {
+		"slug": "what_if_its_him",
+		"characterSays": "He's an old friend. He would swindle anybody out of a coin, but would never ruin someone's reputation, except his own.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"how_to_catch",
+				"text":"How do I arrest a shapeshifter?",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"he_can_shapeshift",
+				"text":"The King of Thieves is a shapeshifter?",
+				"class":""
+			},
+			{
+				"nextStep":"is_he_allowed_here",
+				"text":"Is The King of Thieves allowed here?",
+				"class":""
+			}
+		]
+	},
+	"he_can_shapeshift": {
+		"slug": "he_can_shapeshift",
+		"characterSays": "Yes. He has faked his death a few dozen times at this point.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"how_to_catch",
+				"text":"How do I arrest a shapeshifter?",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"what_if_its_him",
+				"text":"What if the King of Thieves is responsible?",
+				"class":""
+			},
+			{
+				"nextStep":"is_he_allowed_here",
+				"text":"Is The King of Thieves allowed here?",
+				"class":""
+			}
+		]
+	},
+	"is_he_allowed_here": {
+		"slug": "is_he_allowed_here",
+		"characterSays": "His illusion magic has kept The Citadel hidden for two centuries. He simply finds this place uninteresting.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"how_to_catch",
+				"text":"How do I arrest a shapeshifter?",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"what_if_its_him",
+				"text":"What if the King of Thieves is responsible?",
+				"class":""
+			},
+			{
+				"nextStep":"he_can_shapeshift",
+				"text":"The King of Thieves is a shapeshifter?",
+				"class":""
+			}
+		]
+	},
+	"how_to_catch": {
+		"slug": "how_to_catch",
+		"characterSays": "Do not confront them or they will escape. Instead, sell them this amulet. It is a tracker. I will take care of the rest.",
+		"tone": "bothered",
+		"callback": "giveTracker",
+		"responses": [
+			{
+				"nextStep":"anything_else",
+				"text":"Anything else?",
+				"class":""
+			},
+			{
+				"nextStep":"what_if_wrong_person",
+				"text":"What if I give it to the wrong person?",
+				"class":""
+			}
+		]
+	},
+	"what_if_wrong_person": {
+		"slug": "what_if_wrong_person",
+		"characterSays": "If you give it to the wrong person, I can sell you another for a fair price.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"anything_else",
+				"text":"Anything else.",
+				"class":""
+			}
+		]
+	},
+	"anything_else": {
+		"slug": "anything_else",
+		"characterSays": "After you've sold the amulet come see me here for your reward, or a new tracker. Good luck, merchant.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "You going to play in the Myth tournament today? Entry fee is 10 copper coin.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"request_deck": {
+		"slug": "request_deck",
+		"characterSays": "Excellent. And what deck will you be using? Know that you must play the whole tournament with the same deck.",
+		"tone": "generic",
+		"callback": "requestDeck",
+		"responses": [
+		]
+	},
+	"start": {
+		"slug": "start",
+		"characterSays": "Your first game will begin in a few moments. Please wait here with the others.",
+		"tone": "generic",
+		"callback": "startTournament",
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Got it",
+				"class": "green_button"
+			}
+		]
+	}
+}

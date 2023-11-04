@@ -1,0 +1,121 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Good morning merchant. Are you going to the horse race today?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"start_betting",
+				"text":"Yes, I'd like to place a bet",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"select_horse",
+				"text":"Yes, I'd like to enter a horse",
+				"class":"green_button convo_enter_horse"
+			},
+			{
+				"nextStep":"start_betting",
+				"text":"Yes, I'd like to enter my horse",
+				"class":"green_button convo_reenter_horse"
+			},
+			{
+				"nextStep":false,
+				"text":"No thanks",
+				"class":"red_button"
+			}
+		]
+	},
+	"select_horse":{
+		"slug":"select_horse",
+		"characterSays":"Excellent. Which horse would you like to enter?",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"nevermind",
+				"text":"Nevermind",
+				"class":"half_button red_button tall_button",
+				"callback":"cancelEnterHorse"
+			}
+		]
+	},
+	"nevermind":{
+		"slug":"nevermind",
+		"characterSays":"So, are you going to the horse race today?",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"start_betting",
+				"text":"Yes",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"select_horse",
+				"text":"Yes, I'd like to enter a horse",
+				"class":"green_button convo_enter_horse"
+			},
+			{
+				"nextStep":"start_betting",
+				"text":"Yes, I'd like to enter my horse",
+				"class":"green_button convo_reenter_horse"
+			},
+			{
+				"nextStep":false,
+				"text":"No thanks",
+				"class":"red_button"
+			}
+		]
+	},
+	"horse_entered":{
+		"slug":"horse_entered",
+		"characterSays":"Alright, and the 5 copper coin entry fee please.",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":"nevermind",
+				"text":"Nevermind",
+				"class":"half_button red_button tall_button",
+				"callback":"cancelEnterHorse"
+			}
+		]
+	},
+	"entry_fee_paid":{
+		"slug":"entry_fee_paid",
+		"characterSays":"Excellent. One last matter. What's the name of this horse?",
+		"tone":"deal",
+		"callback":"nameHorseSkip",
+		"responses":[
+			
+		]
+	},
+	"horse_named":{
+		"slug":"horse_named",
+		"characterSays":"The bidding starts in a few minutes, followed by the race. You will only be allowed to bet on your own horse.",
+		"tone":"generic",
+		"callback":null,
+		"responses":[
+			{
+				"nextStep":false,
+				"text":"Got it",
+				"class":"green_button"
+			}
+		]
+	},
+	"start_betting":{
+		"slug":"start_betting",
+		"characterSays":"The bidding starts in a few minutes. Good luck.",
+		"tone":"generic",
+		"callback":"startBetting",
+		"responses":[
+			{
+				"nextStep":false,
+				"text":"Got it",
+				"class":"green_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "You sold your tracker to the wrong person. I can sell you a new one at a discount.",
+		"tone": "bothered",
+		"callback": "offerTracker",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,84 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Merchant! I have been looking for you. The revolution happened! The king has been overthrown!",
+		"tone": "ah",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"reward",
+				"text":"Does this mean I'm allowed back?",
+				"class":""
+			}
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "Not only are you welcome back, but I have a reward for your sacrifice last year.",
+		"tone": "ah",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep":"thanks",
+				"text":"Thank you!",
+				"class":""
+			},
+			{
+				"nextStep":"what_now",
+				"text":"Who leads Shikyomo now?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"thanks": {
+		"slug": "thanks",
+		"characterSays": "No, thank you Merchant!",
+		"tone": "laugh",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"what_now",
+				"text":"Who leads Shikyomo now?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_now": {
+		"slug": "what_now",
+		"characterSays": "Nobody. The power struggle will last many years, but I should have some sway if you happen across any opportunities.",
+		"tone": "bothered",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

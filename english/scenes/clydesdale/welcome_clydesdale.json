@@ -1,0 +1,143 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello merchant. Allow me to introduce myself. I'm Nevin Quinn, Librarian and Clydesdale Merchant Guild President.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"pleasures_mine",
+				"text":"Nice to meet you",
+				"class":""
+			}
+		]
+	},
+	"pleasures_mine": {
+		"slug": "pleasures_mine",
+		"characterSays": "The pleasure is mine. Merchant, do you enjoy books?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "yes",
+				"text": "All the time",
+				"class": ""
+			},
+			{
+				"nextStep": "yes",
+				"text": "I've read a few",
+				"class": ""
+			},
+			{
+				"nextStep": "no",
+				"text": "Not at all",
+				"class": ""
+			},
+			{
+				"nextStep": "no",
+				"text": "I can't read",
+				"class": ""
+			}
+		]
+	},
+	"yes": {
+		"slug": "yes",
+		"characterSays": "There's no wealth like knowledge. I'm building the most comprehensive library in the world. Could you help with this noble goal?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "help",
+				"text": "What books do you need?",
+				"class": ""
+			},
+			{
+				"nextStep": "what_about_me",
+				"text": "What's in it for me",
+				"class": ""
+			}
+		]
+	},
+	"no": {
+		"slug": "no",
+		"characterSays": "That's perfect actually. Send any books you don't need my way. I'm creating the most comprehensive library in the world.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "help",
+				"text": "What books do you need?",
+				"class": ""
+			},
+			{
+				"nextStep": "what_about_me",
+				"text": "What's in it for me",
+				"class": ""
+			}
+		]
+	},
+	"help": {
+		"slug": "help",
+		"characterSays": "Any book that the library doesn't have already. Would you like to see the books I've collected has so far?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_go",
+				"text": "Show me your collection",
+				"class": "green_button",
+				"callback": "showCollection"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_about_me": {
+		"slug": "what_about_me",
+		"characterSays": "I will purchase books for a fair price, but donations are much preferred. Would you like to see the books I've collected has so far?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_go",
+				"text": "Show me your collection",
+				"class": "green_button",
+				"callback": "showCollection"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"resumed": {
+		"slug": "resumed",
+		"characterSays": "I will purchase books for a fair price, but donations are much preferred. Would you like to see the books I've collected has so far?",
+		"tone": "generic",
+		"callback": "showCollection",
+		"responses": [
+		]
+	},
+	"lets_go": {
+		"slug": "lets_go",
+		"characterSays": "Let's go.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+		]
+	}
+}

@@ -1,0 +1,160 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Citizens of Notting! The King is dead! A fine reward is offered for assistance in bringing the assassin to justice.",
+		"tone": "offended",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "after_herald",
+				"text": "I know who might have done it",
+				"class": "green_button",
+				"callback": "setNextCharacter"
+			},
+			{
+				"nextStep": false,
+				"text": "I know nothing",
+				"class": "red_button"
+			}
+		]
+	},
+	"after_herald": {
+		"slug": "after_herald",
+		"characterSays": "I understand you may know who did the crime?",
+		"tone": "inquire",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "reveal_killer",
+				"text": "It was Elric",
+				"class": ""
+			},
+			{
+				"nextStep": "know_nothing",
+				"text": "I know nothing",
+				"class": "red_button"
+			}
+		]
+	},
+	"know_nothing": {
+		"slug": "know_nothing",
+		"characterSays": "Do not waste my time in my moment of mourning. Away from my sight. I hope that we never meet again.",
+		"tone": "offended",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "reveal_killer",
+				"text": "It was Elric",
+				"class": ""
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"reveal_killer": {
+		"slug": "reveal_killer",
+		"characterSays": "My fears have been confirmed. My father makes many enemies, but Elric was red as a wound after my father tore us apart.",
+		"tone": "bothered",
+		"callback": "turnInElric",
+		"responses": [
+			{
+				"nextStep": "sorry_this_happened",
+				"text": "I'm sorry this happened",
+				"class": ""
+			},
+			{
+				"nextStep": "heard_there_was_a_reward",
+				"text": "I heard there was a reward",
+				"class": ""
+			}
+		]
+	},
+	"heard_there_was_a_reward": {
+		"slug": "heard_there_was_a_reward",
+		"characterSays": "Yes. I hope this is enough. If you have a moment, I must know. Did he truly love me?",
+		"tone": "yes",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep": "love",
+				"text": "He loved you",
+				"class": ""
+			},
+			{
+				"nextStep": "no_love",
+				"text": "He only wanted to be King",
+				"class": ""
+			}
+		]
+	},
+	"sorry_this_happened": {
+		"slug": "sorry_this_happened",
+		"characterSays": "I hope this reward is enough. I must ask you this. Did he truly love me?",
+		"tone": "inquire",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep": "love",
+				"text": "He loved you",
+				"class": ""
+			},
+			{
+				"nextStep": "no_love",
+				"text": "He only wanted to be King",
+				"class": ""
+			}
+		]
+	},
+	"love": {
+		"slug": "love",
+		"characterSays": "Such tragedy. No matter my feelings, he must pay for his crime. He will spend the rest of his days locked away in the deepest dungeon.",
+		"tone": "bothered",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "no_barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_love": {
+		"slug": "no_love",
+		"characterSays": "Another man using me as a means to grab power. He will pay for this betrayal with his life, and his death will be public.",
+		"tone": "uninterested",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "no_barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "No. I'm sorry but now is not a good time.",
+		"tone": "no",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

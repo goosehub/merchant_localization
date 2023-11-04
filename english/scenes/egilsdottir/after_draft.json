@@ -1,0 +1,135 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Mind if I ask, did someone from Egilsdóttir ask you to bring her that amulet?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "yes",
+				"text": "Yes actually",
+				"class": "green_button half_button"
+			},
+			{
+				"nextStep": "no",
+				"text": "No",
+				"class": "red_button half_button"
+			},
+			{
+				"nextStep": "why_do_you_ask",
+				"text": "Why do you ask?",
+				"class": ""
+			}
+		]
+	},
+	"yes": {
+		"slug": "yes",
+		"characterSays": "Tell her that she is welcome to visit us at The Citadel anytime.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "is_she_banned",
+				"text": "She said she was banned",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"no": {
+		"slug": "no",
+		"characterSays": "I'm sure she requested discretion. Let her know she can buy the amulets herself.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "is_she_banned",
+				"text": "She said she was banned",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"why_do_you_ask": {
+		"slug": "why_do_you_ask",
+		"characterSays": "She has been sending couriers to bring her vitality amulets for centruies. Let her know she can buy them herself.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "is_she_banned",
+				"text": "She said she was banned",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"is_she_banned": {
+		"slug": "is_she_banned",
+		"characterSays": "I pardoned her nearly three centuries ago.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_crime",
+				"text": "What was the crime?",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_crime": {
+		"slug": "what_crime",
+		"characterSays": "She refused to revive The Great Maho. Imprisoning her was a grave mistake, one she may never forgive.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

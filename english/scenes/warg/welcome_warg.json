@@ -1,0 +1,111 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello Merchant. Care for a game of myth?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_play",
+				"text": "Let's play",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "no_thanks",
+				"text": "No thanks",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_myth",
+				"text": "What's myth?",
+				"class": ""
+			}
+		]
+	},
+	"no_thanks": {
+		"slug": "no_thanks",
+		"characterSays": "You're all business I see. We have a Tournament every Wednesday. Entry fee is 10 copper. Prize is 150 copper. You should enter.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_play",
+				"text": "Actually, let's play",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"what_is_myth": {
+		"slug": "what_is_myth",
+		"characterSays": "You don't know? It's the most popular card game across the Realm right now. Would you like me to show you how to play?",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_play_first_time",
+				"text": "Let's play",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "no_thanks",
+				"text": "No thanks",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "lets_play_first_time",
+				"text": "I don't have a deck",
+				"class": ""
+			}
+		]
+	},
+	"lets_play": {
+		"slug": "lets_play",
+		"characterSays": "Alright, do you have enough cards for a deck?",
+		"tone": "laugh",
+		"callback": "requestDeck",
+		"responses": [
+			{
+				"nextStep": "lets_play_first_time",
+				"text": "I don't have a deck",
+				"class": ""
+			}
+		]
+	},
+	"lets_play_first_time": {
+		"slug": "lets_play_first_time",
+		"characterSays": "I'll let you borrow my Harvest deck. Ready to get started?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "start_game",
+				"text": "Let's play",
+				"class": "green_button",
+				"callback": "startGame"
+			},
+			{
+				"nextStep": "no_thanks",
+				"text": "No thanks",
+				"class": "red_button"
+			}
+		]
+	},
+	"start_game": {
+		"slug": "start_game",
+		"characterSays": "...",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+		]
+	}
+}

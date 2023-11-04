@@ -1,0 +1,112 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Merchant, why do you have these?",
+		"tone": "ah",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"excuse",
+				"text":"I didn't know what they meant",
+				"class":""
+			},
+			{
+				"nextStep":"excuse",
+				"text":"I support the resistance",
+				"class":""
+			},
+			{
+				"nextStep":"excuse",
+				"text":"I've been framed",
+				"class":""
+			},
+			{
+				"nextStep":"excuse",
+				"text":"I have a lot of things",
+				"class":""
+			}
+		]
+	},
+	"excuse": {
+		"slug": "excuse",
+		"characterSays": "No matter. I can tell you didn't make these. So where did these come from?",
+		"tone": "bothered",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"snitch",
+				"text":"The merchant Ryuko",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"no_snitch",
+				"text":"I don't remember",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"no_snitch",
+				"text":"I don't know",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"no_snitch",
+				"text":"I'll never tell",
+				"class":"red_button"
+			}
+		]
+	},
+	"no_snitch": {
+		"slug": "no_snitch",
+		"characterSays": "Tell me where you got these or I will take half of your coins, spices, and jewelry and exile you forever.",
+		"tone": "offended",
+		"callback": "putHalfOnOffer",
+		"responses": [
+			{
+				"nextStep":"snitch",
+				"text":"The merchant Ryuko",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"no_snitch_insist",
+				"text":"I don't remember",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"no_snitch_insist",
+				"text":"I don't know",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"no_snitch_insist",
+				"text":"I'll never tell",
+				"class":"red_button"
+			}
+		]
+	},
+	"no_snitch_insist": {
+		"slug": "no_snitch_insist",
+		"characterSays": "So be it. Get this merchant onto the next ship to Eldham...",
+		"tone": "laugh",
+		"callback": "takeHalfAndSendPlayer",
+		"responses": [
+		]
+	},
+	"snitch": {
+		"slug": "snitch",
+		"characterSays": "Ryuko! She'll pay for this with her life. As for you Merchant, you are free to go. On your way.",
+		"tone": "laugh",
+		"callback": "snitch",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

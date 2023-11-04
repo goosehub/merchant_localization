@@ -1,0 +1,23 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "The magic allocation draft is today. If you would like to participate, please provide one crystal as payment.",
+		"tone": "greeting",
+		"callback": "requestCyrstal",
+		"responses": [
+		]
+	},
+	"entry_fee_paid": {
+		"slug": "entry_fee_paid",
+		"characterSays": "The draft will begin in a few moments. Please wait here with the others.",
+		"tone": "generic",
+		"callback": "startDraft",
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Got it",
+				"class": "green_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Good doing business",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

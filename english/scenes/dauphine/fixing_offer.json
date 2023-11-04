@@ -1,0 +1,106 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Pardon me. I am to understand you have entered a horse into this race. Is that correct?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"yes",
+				"text":"Yes I have",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"no",
+				"text":"None of your business",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"yes",
+				"text":"Why do you ask?",
+				"class":""
+			}
+		]
+	},
+	"no":{
+		"slug":"no",
+		"characterSays":"Why do you lie to me?",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"yes",
+				"text":"Why are you asking?",
+				"class":""
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button",
+				"callback":"rejectFixing"
+			}
+		]
+	},
+	"yes":{
+		"slug":"yes",
+		"characterSays":"I am betting on this race, and I don't like to leave things to chance. I would like your horse to lose this race.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"reward",
+				"text":"What do I get?",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"noWay",
+				"text":"No way",
+				"class":"red_button"
+			}
+		]
+	},
+	"reward":{
+		"slug":"reward",
+		"characterSays":"I'll pay you 100 copper coins for your cooperation and discretion.",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"deal",
+				"text":"Deal",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"noWay",
+				"text":"No way",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal":{
+		"slug":"deal",
+		"characterSays":"It's good doing business with you. Better to win coin than win races after all.",
+		"tone":"deal",
+		"callback":"acceptFixing",
+		"responses":[
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"noWay":{
+		"slug":"noWay",
+		"characterSays":"So be it. I suppose you can't teach a loser how to win.",
+		"tone":"offerInsulting",
+		"callback":"rejectFixing",
+		"responses":[
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

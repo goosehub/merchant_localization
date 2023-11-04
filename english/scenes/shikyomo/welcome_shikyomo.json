@@ -1,0 +1,337 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome to Shikyomo merchant. Cause no trouble and you may just leave here richer than you arrived.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_to_know",
+				"text": "What do I need to know?",
+				"class": ""
+			},
+			{
+				"nextStep": "hold_on",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "hold_on",
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"hold_on": {
+		"slug": "hold_on",
+		"characterSays": "Hold on merchant. We have a few laws in Shikyomo you should know about.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_to_know",
+				"text": "What do I need to know?",
+				"class": ""
+			}
+		]
+	},
+	"what_to_know": {
+		"slug": "what_to_know",
+		"characterSays": "It is illegal to trade in magic, monster parts, coins, or weapons.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "why_magic",
+				"text": "Why is magic illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_monster",
+				"text": "Why are monster parts illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_coins",
+				"text": "Why are coins illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_weapons",
+				"text": "Why are weapons illegal?",
+				"class": ""
+			}
+		]
+	},
+	"why_magic": {
+		"slug": "why_magic",
+		"characterSays": "Magic nearly destroyed the realm. Nowhere knows that better than Shikyomo.",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "why_monster",
+				"text": "Why are monster parts illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_coins",
+				"text": "Why are coins illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_weapons",
+				"text": "Why are weapons illegal?",
+				"class": ""
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"why_monster": {
+		"slug": "why_monster",
+		"characterSays": "We do not want merchants importing monsters to our island causing chaos.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "why_magic",
+				"text": "Why is magic illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_coins",
+				"text": "Why are coins illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_weapons",
+				"text": "Why are weapons illegal?",
+				"class": ""
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"why_coins": {
+		"slug": "why_coins",
+		"characterSays": "Our leader has decided that coins provide no true value to our kingdom. You may keep your coins, but do not barter or display them.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "why_magic",
+				"text": "Why is magic illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_monster",
+				"text": "Why are monster parts illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_weapons",
+				"text": "Why are weapons illegal?",
+				"class": ""
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"why_weapons": {
+		"slug": "why_weapons",
+		"characterSays": "After a recent revolt, the leader has decided that weapons are a threat to the peace.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "why_magic",
+				"text": "Why is magic illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_monster",
+				"text": "Why are monster parts illegal?",
+				"class": ""
+			},
+			{
+				"nextStep": "why_coins",
+				"text": "Why are coins illegal?",
+				"class": ""
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"last_thing",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"last_thing": {
+		"slug": "last_thing",
+		"characterSays": "One last thing. There is a three sapphire reward for turning in any members of the Shikyomo resistance.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_is_resistance",
+				"text": "What is the resistance?",
+				"class": ""
+			},
+			{
+				"nextStep":"no_barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"change_character",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_is_resistance": {
+		"slug": "what_is_resistance",
+		"characterSays": "A group of troublemakers out to undermine the legitimacy of the king. Do not trust them.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"no_barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"change_character",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "No.",
+		"tone": "no",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"change_character",
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"change_character": {
+		"slug": "change_character",
+		"characterSays": "...",
+		"tone": "goodbye",
+		"callback":"changeCharacter",
+		"responses": [
+		]
+	},
+	"resumed": {
+		"slug": "resumed",
+		"characterSays": "Excellent. Tell us who it is and you will be rewarded with three sapphires.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"turn_in",
+				"text":"It's Ryuko the merchant",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"nevermind_turn_in",
+				"text":"Nevermind",
+				"class":"red_button"
+			}
+		]
+	},
+	"nevermind_turn_in": {
+		"slug": "nevermind_turn_in",
+		"characterSays": "Do not waste our time merchant. This is a serious matter.",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"turn_in": {
+		"slug": "turn_in",
+		"characterSays": "You've done a great deed. However I am sure you are more interested in this reward than my praise. On your way Merchant.",
+		"tone": "generic",
+		"callback": "snitchReward",
+		"responses": [
+			{
+				"nextStep":"what_happens_to_merchant",
+				"text":"What happens to Ryuko",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_happens_to_merchant": {
+		"slug": "what_happens_to_merchant",
+		"characterSays": "The peanlty is death of course. You're not surprised by this, are you?",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

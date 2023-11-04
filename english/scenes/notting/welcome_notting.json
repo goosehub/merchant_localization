@@ -1,0 +1,263 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Welcome Merchant, to the historic Notting Hill. The greatest city to bless the realm. I welcome you.",
+		"tone": "greeting",
+		"callback": "setFirstWelcome",
+		"responses": [
+			{
+				"nextStep": "thank_you",
+				"text": "What makes Notting Hill so great?",
+				"class": ""
+			}
+		]
+	},
+	"thank_you": {
+		"slug": "thank_you",
+		"characterSays": "It is the birth place of civilized society, back when The Great Notting The First settled here five hundred years before the revival.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "interesting",
+				"text": "Interesting",
+				"class": ""
+			}
+		]
+	},
+	"interesting": {
+		"slug": "interesting",
+		"characterSays": "And with your help, you could make me the next King of Notting!",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_king",
+				"text": "How will a merchant become king?",
+				"class": ""
+			}
+		]
+	},
+	"how_king": {
+		"slug": "how_king",
+		"characterSays": "The Royal Family is holding a Masquerade Ball. It is there I will persuade Clementine, the princess of Notting, to marry me.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_help",
+				"text": "Were you invited?",
+				"class": ""
+			}
+		]
+	},
+	"how_help": {
+		"slug": "how_help",
+		"characterSays": "No. Only nobles are invited, each given a mask. Perhaps if you can convince one to give up their mask, I can sneak in and sway her heart.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_do_i_get",
+				"text": "What do I get?",
+				"class": ""
+			}
+		]
+	},
+	"what_do_i_get": {
+		"slug": "what_do_i_get",
+		"characterSays": "When I am king I will give you the riches of Notting beyond your imagination.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "if_not_king",
+				"text": "And if you don't become king?",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "rejected",
+				"text": "I'm not interested.",
+				"class":"red_button"
+			}
+		]
+	},
+	"if_not_king": {
+		"slug": "if_not_king",
+		"characterSays": "I will give you a statue worthy of such an important favor.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "prefer_coin",
+				"text": "I prefer coin",
+				"class": "blue_button",
+				"callback": "setReward40"
+			},
+			{
+				"nextStep": "rejected",
+				"text": "I'm not interested.",
+				"class":"red_button"
+			}
+		]
+	},
+	"prefer_coin": {
+		"slug": "prefer_coin",
+		"characterSays": "Understandable. Forty silver.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button",
+				"callback": "setReward40"
+			},
+			{
+				"nextStep": "deal",
+				"text": "Make it fifty silver",
+				"class": "blue_button",
+				"callback": "setReward50"
+			},
+			{
+				"nextStep": "haggle_big",
+				"text": "Make it eighty silver",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "rejected",
+				"text": "I'm not interested.",
+				"class":"red_button"
+			}
+		]
+	},
+	"haggle_big": {
+		"slug": "haggle_big",
+		"characterSays": "I can do sixty silver, no more.",
+		"tone": "offerBad",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Deal",
+				"class": "green_button",
+				"callback": "setReward60"
+			},
+			{
+				"nextStep": "haggle_big",
+				"text": "Make it eighty silver",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "rejected",
+				"text": "I'm not interested.",
+				"class":"red_button"
+			}
+		]
+	},
+	"rejected": {
+		"slug": "rejected",
+		"characterSays": "The offer stands if you happen to come across any masks.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"deal": {
+		"slug": "deal",
+		"characterSays": "Deal. The small mask you bring me will change the course of the realm forever.",
+		"tone": "deal",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"resumed": {
+		"slug": "resumed",
+		"characterSays": "Must you have chosen such a strange mask? No matter. Soon I will have the hand of the Princess. And you'll have your reward tomorrow morning.",
+		"tone": "laugh",
+		"callback": "resume",
+		"responses": [
+			{
+				"nextStep": "reward_now",
+				"text": "I expect my reward now",
+				"class": "notting_expect_reward_now"
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"reward_now": {
+		"slug": "reward_now",
+		"characterSays": "No. You'll have your reward after this mask gets me into the ball.",
+		"tone": "no",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"oldResumed": {
+		"slug": "oldResumed",
+		"characterSays": "Excellent. Soon I will have the hand of the Princess. Here's your reward as promised.",
+		"tone": "laugh",
+		"callback": "resume",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

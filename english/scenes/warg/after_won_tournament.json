@@ -1,0 +1,20 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "What a run! You've really impressed me. You've earned this prize, and my respect.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

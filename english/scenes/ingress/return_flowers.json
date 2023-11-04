@@ -1,0 +1,20 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Thanks for loaning me these. The price crashed as I expected and I made a nice profit. But you are free to use my ledger anytime.",
+		"tone": "laugh",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

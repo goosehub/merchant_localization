@@ -1,0 +1,41 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "There you are! The Dragon's gold arrived. Thank you so much for your help. Here's the spices as promised.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "thanks",
+				"text": "Thanks",
+				"class": ""
+			}
+		]
+	},
+	"init_without_reward": {
+		"slug": "init_without_reward",
+		"characterSays": "There you are! The Dragon's gold arrived. Thank you so much for your help. Here's the spices as promised.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "thanks",
+				"text": "Thanks",
+				"class": ""
+			}
+		]
+	},
+	"thanks": {
+		"slug": "thanks",
+		"characterSays": "The ceremony is about to begin. It is time to finally take back what belongs to the people of Kai.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Good luck",
+				"class": ""
+			}
+		]
+	}
+}

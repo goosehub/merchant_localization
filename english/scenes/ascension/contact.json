@@ -1,0 +1,137 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Excuse me, are you --player_name--?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "introduction",
+				"text": "Yes",
+				"class": ""
+			},
+			{
+				"nextStep": "introduction",
+				"text": "Who's asking?",
+				"class": ""
+			}
+		]
+	},
+	"introduction": {
+		"slug": "introduction",
+		"characterSays": "Hello. I'm Rowan Moss. The Dragon of Kazuujan sent me here to get you up to speed.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "name_company",
+				"text": "What do I need to know?",
+				"class": ""
+			}
+		]
+	},
+	"name_company": {
+		"slug": "name_company",
+		"characterSays": "I've incorporated your company in Ascension. First order of business, what do you want to name the company?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"give_company_name": {
+		"slug": "give_company_name",
+		"characterSays": "A bold name. Allow me to put that on the company stocks right now.",
+		"tone": "laugh",
+		"callback": "prepareCompanyStock",
+		"responses": [
+			{
+				"nextStep": "give_company_stock",
+				"text": "Company stock?",
+				"class": ""
+			}
+		]
+	},
+	"give_company_stock": {
+		"slug": "give_company_stock",
+		"characterSays": "Of course. Here's your stocks. These represent your ownership of the company.",
+		"tone": "generic",
+		"callback": "giveCompanyStock",
+		"responses": [
+			{
+				"nextStep": "explain_company_stock",
+				"text": "How much are these worth?",
+				"class": ""
+			}
+		]
+	},
+	"explain_company_stock": {
+		"slug": "explain_company_stock",
+		"characterSays": "Nothing right now. The more success the company has, the more valuable these become, so hold onto these for now.",
+		"tone": "ah",
+		"callback": "clearOffers",
+		"responses": [
+			{
+				"nextStep": "what_now",
+				"text": "What now?",
+				"class": ""
+			}
+		]
+	},
+	"no_stock": {
+		"slug": "no_stock",
+		"characterSays": "Yes. You did not negotiate for stake in the company so you will depend entirely on your profit split.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_now",
+				"text": "What now?",
+				"class": ""
+			}
+		]
+	},
+	"what_now": {
+		"slug": "what_now",
+		"characterSays": "The Dragon has graciously provided some gold to hire the first crew. Are you ready to look for captains?",
+		"tone": "generic",
+		"callback": "giveGold",
+		"responses": [
+			{
+				"nextStep": "lets_go",
+				"text": "Let's go",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "not_now",
+				"text": "Not now",
+				"class": "red_button"
+			}
+		]
+	},
+	"lets_go": {
+		"slug": "lets_go",
+		"characterSays": "Follow me to the docks...",
+		"tone": "generic",
+		"callback": "startCutscene",
+		"responses": [
+		]
+	},
+	"not_now": {
+		"slug": "not_now",
+		"characterSays": "Head to the docks whenever you are ready. And best of luck.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

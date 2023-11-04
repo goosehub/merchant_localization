@@ -1,0 +1,321 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "A new merchant. I bet you paid a lot to get here. What were you hoping to get in Shikyomo",
+		"tone": "ah",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "turn_back",
+				"text": "I came to make coin",
+				"class": ""
+			},
+			{
+				"nextStep": "turn_back",
+				"text": "I came for rare items",
+				"class": ""
+			},
+			{
+				"nextStep": "came_for_city",
+				"text": "I came to learn about Shikyomo",
+				"class": ""
+			},
+			{
+				"nextStep": "came_for_resistance",
+				"text": "I came to help the resistance",
+				"class": ""
+			},
+			{
+				"nextStep": "came_for_nothing",
+				"text": "I just kind of ended up here",
+				"class": ""
+			}
+		]
+	},
+	"turn_back": {
+		"slug": "turn_back",
+		"characterSays": "Well turn back now. The king runs the market. He decides who profits and who starves. He only allows outsiders to come so he can wring them dry.",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "wont_leave",
+				"text": "I intend to stay",
+				"class": ""
+			},
+			{
+				"nextStep": "will_leave",
+				"text": "Okay I'll leave then",
+				"class": ""
+			}
+		]
+	},
+	"came_for_city": {
+		"slug": "came_for_city",
+		"characterSays": "Well, Shikyomo is a once great city being run to the ground by a mad king and his foolish schemes.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "will_help",
+				"text": "Can I help?",
+				"class": ""
+			},
+			{
+				"nextStep": "wont_help",
+				"text": "Good luck with that",
+				"class": ""
+			}
+		]
+	},
+	"came_for_resistance": {
+		"slug": "came_for_resistance",
+		"characterSays": "Has word spread to the mainland? Well you're talking to the right person. Would you mind distributing these for the cause?",
+		"tone": "inquire",
+		"callback": "giveSigns",
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"came_for_nothing": {
+		"slug": "came_for_nothing",
+		"characterSays": "Well, perhaps your indifferent outlook can be used for good. Would you mind distributing these for me.",
+		"tone": "inquire",
+		"callback": "giveSigns",
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"will_help": {
+		"slug": "will_help",
+		"characterSays": "Would you mind distributing these signs of resistance for the cause?",
+		"tone": "inquire",
+		"callback": "giveSigns",
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"wont_help": {
+		"slug": "wont_help",
+		"characterSays": "Wait, would you mind distributing these signs for me?",
+		"tone": "inquire",
+		"callback": "giveSigns",
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"will_leave": {
+		"slug": "will_leave",
+		"characterSays": "Well since you're leaving, would you mind distributing these signs for me?",
+		"tone": "inquire",
+		"callback": "giveSigns",
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"wont_leave": {
+		"slug": "wont_leave",
+		"characterSays": "Well since you're staying, would you mind distributing these signs for me?",
+		"tone": "inquire",
+		"callback": "giveSigns",
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"what_is_meaning": {
+		"slug": "what_is_meaning",
+		"characterSays": "It is a symbol of significance that has come to represent resistance against the king and his many plans.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "ask_trouble",
+				"text": "Will I get in trouble for distributing these?",
+				"class": ""
+			}
+		]
+	},
+	"ask_trouble": {
+		"slug": "ask_trouble",
+		"characterSays": "Yes, it is illegal to own or display this symbol in Shikyomo. Be careful who you give these to.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "will_distribute",
+				"text": "Sure, I'll distribute these",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "wont_distribute",
+				"text": "I'll have nothing to do with this",
+				"class": "red_button"
+			},
+			{
+				"nextStep": "what_is_meaning",
+				"text": "What does it mean?",
+				"class": ""
+			}
+		]
+	},
+	"wont_distribute": {
+		"slug": "wont_distribute",
+		"characterSays": "I understand. If you have a change of heart, come see me and I'll provide any symbols you need.",
+		"tone": "rejected",
+		"callback": "clearOffers",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"will_distribute": {
+		"slug": "will_distribute",
+		"characterSays": "Thank you. Remember, don't get caught and you didn't get these from me. But if you run out, find me for more.",
+		"tone": "generic",
+		"callback": "clearOffers",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

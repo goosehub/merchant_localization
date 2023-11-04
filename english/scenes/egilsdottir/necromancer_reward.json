@@ -1,0 +1,51 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Did you get the Amulet of Vitality?",
+		"tone": "inquire",
+		"callback": "putQuestItemOnOffer",
+		"responses": [
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "Thank you. Here is your reward. Goodbye.",
+		"tone": "generic",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep": "mention_enchanter",
+				"text": "He said you are not banned",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"mention_enchanter": {
+		"slug": "mention_enchanter",
+		"characterSays": "He wishes to lure me back to use my necromancy, and will imprison me to do it. Do not believe him.",
+		"tone": "uninterested",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

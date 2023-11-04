@@ -1,0 +1,152 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Attention citizens. The King declares that the Princess is to be wed to the Prince of Fray, strengthening the strongest alliance in the Realm.",
+		"tone": "ah",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "after_herald",
+				"text": "...",
+				"class": "",
+				"callback": "setNextCharacter"
+			}
+		]
+	},
+	"after_herald": {
+		"slug": "after_herald",
+		"characterSays": "That damn king. That bastard. He won't get away with this.",
+		"tone": "offended",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "what_happened",
+				"text": "What happened?",
+				"class": ""
+			},
+			{
+				"nextStep": "reward",
+				"text": "Where's my reward",
+				"class": "green_button"
+			}
+		]
+	},
+	"what_happened": {
+		"slug": "what_happened",
+		"characterSays": "She was as beautiful as the moon. I took her hand and we danced and talked for hours.",
+		"tone": "ah",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "what_happened_next",
+				"text": "And then?",
+				"class": ""
+			},
+			{
+				"nextStep": "reward",
+				"text": "Where's my reward",
+				"class": "green_button"
+			}
+		]
+	},
+	"what_happened_next": {
+		"slug": "what_happened_next",
+		"characterSays": "The king demanded I remove my mask. When my identity was revealed, he insulted me in front of the entire nobility of Notting.",
+		"tone": "bothered",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "why_insult",
+				"text": "Why did he insult you?",
+				"class": ""
+			},
+			{
+				"nextStep": "reward",
+				"text": "Where's my reward",
+				"class": "green_button"
+			}
+		]
+	},
+	"why_insult": {
+		"slug": "why_insult",
+		"characterSays": "He called me a fool to think the princess could love a merchant. Despite all my wealth, without much land I am nothing to those people.",
+		"tone": "offended",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "sorry_that_happened",
+				"text": "I'm sorry that happened to you",
+				"class": ""
+			},
+			{
+				"nextStep": "reward",
+				"text": "Where's my reward",
+				"class": "green_button"
+			}
+		]
+	},
+	"sorry_that_happened": {
+		"slug": "sorry_that_happened",
+		"characterSays": "It is for the best. Here's your reward. I am thankful to now know what I must do.",
+		"tone": "generic",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep": "what_will_you_do",
+				"text": "What are you going to do?",
+				"class": ""
+			},
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "Oh of course. Here you go. Thank you for your help. I now know what must be done.",
+		"tone": "generic",
+		"callback": "giveReward",
+		"responses": [
+			{
+				"nextStep": "what_will_you_do",
+				"text": "What are you going to do?",
+				"class": ""
+			},
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"what_will_you_do": {
+		"slug": "what_will_you_do",
+		"characterSays": "It's best if you didn't know. As a matter of fact, if anybody asks about me, we've never met.",
+		"tone": "bothered",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	}
+}

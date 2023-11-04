@@ -1,0 +1,119 @@
+[
+	{
+		"index":0,
+		"name":"Redlands Empire",
+		"leader":"King David the Second",
+		"religion":"Divinity",
+		"religionSymbolFile":"divinity.png",
+		"flagFile":"redlands_empire.png",
+		"thiefPortraitFile":"male_thief.png",
+		"color":"#AB3428",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic"
+		]
+	},
+	{
+		"index":0,
+		"name":"Notting Dynasty",
+		"leader":"King Christoph the Sixth",
+		"religion":"Revivalism",
+		"religionSymbolFile":"revivalism.png",
+		"flagFile":"notting_dynasty.png",
+		"thiefPortraitFile":"male_theif_older.png",
+		"color":"#476C9B",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic"
+		]
+	},
+	{
+		"index":0,
+		"name":"The Fray",
+		"leader":"King Robert the Second",
+		"religion":"Divinity",
+		"religionSymbolFile":"divinity.png",
+		"flagFile":"the_fray.png",
+		"thiefPortraitFile":"male_thief_hood.png",
+		"color":"#628B48",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic",
+			"monster parts"
+		]
+	},
+	{
+		"index":0,
+		"name":"Kaichi",
+		"leader":"Satoshi Nimoto",
+		"religion":"Mysticism",
+		"religionSymbolFile":"mysticism.png",
+		"flagFile":"hermit_kingdom.png",
+		"thiefPortraitFile":"female_theif.png",
+		"color":"#4F345A",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"shikyomo resistance",
+			"magic",
+			"monster parts",
+			"coins",
+			"weapons"
+		]
+	},
+	{
+		"index":0,
+		"name":"Island Republic",
+		"leader":"Chieftain Koda",
+		"religion":"Conjure",
+		"religionSymbolFile":"conjure.png",
+		"flagFile":"island_republic.png",
+		"thiefPortraitFile":"female_thief_kazuujan.png",
+		"color":"#83B692",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic"
+		]
+	},
+	{
+		"index":0,
+		"name":"Western Nations",
+		"leader":"Dragon of Kazuujan",
+		"religion":"Elementalism",
+		"religionSymbolFile":"elementalism.png",
+		"flagFile":"western_nations.png",
+		"thiefPortraitFile":"female_thief_kazuujan.png",
+		"color":"#CF995F",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			
+		]
+	},
+	{
+		"index":0,
+		"name":"Exiled Order",
+		"leader":"The Enchanter",
+		"religion":"Magic",
+		"religionSymbolFile":"magic.png",
+		"flagFile":"exiled_order.png",
+		"thiefPortraitFile":"female_theif.png",
+		"color":"#8F95D3",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			
+		]
+	}
+]

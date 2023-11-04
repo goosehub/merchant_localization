@@ -1,0 +1,23 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "If you are to participate in the auction, pay a 5 gold coin deposit to be returned at the end of the auction.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"start": {
+		"slug": "start",
+		"characterSays": "The auction will begin in a few moments. Please wait here with the others.",
+		"tone": "generic",
+		"callback": "startAuction",
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Got it",
+				"class": "green_button"
+			}
+		]
+	}
+}

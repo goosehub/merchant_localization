@@ -1,0 +1,833 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello Merchant. Kris tells me you were determined to meet with me. What is it you seek?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai seeks a loan",
+				"class": "blue_button seeking_only_kai_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			}
+		]
+	},
+	"nevermind_loan": {
+		"slug": "nevermind_loan",
+		"characterSays": "Then what is your reason for being before me?",
+		"tone": "rejected",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"nevermind_story": {
+		"slug": "nevermind_story",
+		"characterSays": "Humans have such little patience.",
+		"tone": "rejected",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"seeking_wisdom": {
+		"slug": "seeking_wisdom",
+		"characterSays": "Wisdom by imitation is easy; Wisdom by reflection is noble; Wisdom by experience is forever.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"seeking_story": {
+		"slug": "seeking_story",
+		"characterSays": "It is a very long story.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_a",
+				"text": "Please tell me",
+				"class": ""
+			},
+			{
+				"nextStep": "nevermind_story",
+				"text": "Nevermind then",
+				"class": "red_button"
+			}
+		]
+	},
+	"story_part_a": {
+		"slug": "story_part_a",
+		"characterSays": "Dragons were conjured to be the ultimate Weapon in the War of Revival. Massive flying fire breathing creatures with impenetrable skin.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_b",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_b": {
+		"slug": "story_part_b",
+		"characterSays": "But their mistake was also making us intelligent. Ultimately, it was a dragon who killed the sole person capable of conjuring Dragons with magic.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_c",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_c": {
+		"slug": "story_part_c",
+		"characterSays": "After the Revival, humans turned their armies towards the dragons of the land. They claimed we were destroying villages. The real motivation was greed and pride.",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_d",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_d": {
+		"slug": "story_part_d",
+		"characterSays": "We were driven west. I refused to be pushed any further. I decided to use their greed and pride against them. I became a lender.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_e",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_e": {
+		"slug": "story_part_e",
+		"characterSays": "All the gold in this room started from the small pouch left by a fleeing nobleman.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_f",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_f": {
+		"slug": "story_part_f",
+		"characterSays": "I swore to one day use my wealth to punish humans for what they did, and continue to do.",
+		"tone": "offerBad",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_g",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_g": {
+		"slug": "story_part_g",
+		"characterSays": "However, you don't know humans until you've gone into business with them...",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_h",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_h": {
+		"slug": "story_part_h",
+		"characterSays": "Each human, rich or poor, are victims of circumstance, and are their own endless sources of suffering.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_i",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_i": {
+		"slug": "story_part_i",
+		"characterSays": "And so, I have no vendetta to conclude, yet no desire to deliver them from their self inflected injuries.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_part_j",
+				"text": "...",
+				"class": ""
+			}
+		]
+	},
+	"story_part_j": {
+		"slug": "story_part_j",
+		"characterSays": "I have no purpose, and so I continue to grow my wealth and power, preparing for the day when my purpose is revealed.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "story_response_sad",
+				"text": "That is a tragic story",
+				"class": ""
+			},
+			{
+				"nextStep": "story_response_good",
+				"text": "That is a good story",
+				"class": ""
+			},
+			{
+				"nextStep": "story_response_boring",
+				"text": "That is a boring story",
+				"class": ""
+			}
+		]
+	},
+	"story_response_sad": {
+		"slug": "story_response_sad",
+		"characterSays": "Perhaps, but that is life.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"story_response_good": {
+		"slug": "story_response_good",
+		"characterSays": "I've told it so many times, the words have lost all meaning.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"story_response_boring": {
+		"slug": "story_response_boring",
+		"characterSays": "To be honest, I'd rather forget it all.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_loan",
+				"text": "I seek a loan",
+				"class": "seeking_loan"
+			},
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"seeking_loan": {
+		"slug": "seeking_loan",
+		"characterSays": "I provide loans to those who provide plans. For what reason do you require a loan.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_personal_loan",
+				"text": "I will work hard bartering and pay you back",
+				"class": "blue_button seeking_personal_loan"
+			},
+			{
+				"nextStep": "seeking_citadel_loan",
+				"text": "Incantato needs help smuggling magical items",
+				"class": "blue_button seeking_citadel_loan"
+			},
+			{
+				"nextStep": "seeking_ayr_loan",
+				"text": "The Church of Ayr wants monsters from the west",
+				"class": "blue_button seeking_ayr_loan"
+			},
+			{
+				"nextStep": "seeking_notting_loan",
+				"text": "The Queen of Notting needs to fund her war",
+				"class": "blue_button seeking_notting_loan"
+			},
+			{
+				"nextStep": "seeking_shikyomo_loan",
+				"text": "Ryuko of Shikyomo wants to begin shipments to Ascension",
+				"class": "blue_button seeking_shikyomo_loan"
+			},
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai wants to win Unity Chief",
+				"class": "blue_button seeking_kai_loan"
+			}
+		]
+	},
+	"seeking_personal_loan": {
+		"slug": "seeking_personal_loan",
+		"characterSays": "I require concrete business opportunities. If you have none, I suggest you return when you do.",
+		"tone": "offerBad",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_personal_loan",
+				"text": "I will work hard bartering and pay you back",
+				"class": "blue_button seeking_personal_loan"
+			},
+			{
+				"nextStep": "seeking_citadel_loan",
+				"text": "Incantato needs help smuggling magical items",
+				"class": "blue_button seeking_citadel_loan"
+			},
+			{
+				"nextStep": "seeking_ayr_loan",
+				"text": "The Church of Ayr wants monsters from the west",
+				"class": "blue_button seeking_ayr_loan"
+			},
+			{
+				"nextStep": "seeking_notting_loan",
+				"text": "The Queen of Notting needs to fund her war",
+				"class": "blue_button seeking_notting_loan"
+			},
+			{
+				"nextStep": "seeking_shikyomo_loan",
+				"text": "Ryuko of Shikyomo wants to begin shipments to Ascension",
+				"class": "blue_button seeking_shikyomo_loan"
+			},
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai wants to win Unity Chief",
+				"class": "blue_button seeking_kai_loan"
+			},
+			{
+				"nextStep": "nevermind_loan",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"seeking_citadel_loan": {
+		"slug": "seeking_citadel_loan",
+		"characterSays": "I'm not interested. He has flooded markets for a century and his prices will continue to fall.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_personal_loan",
+				"text": "I will work hard bartering and pay you back",
+				"class": "blue_button seeking_personal_loan"
+			},
+			{
+				"nextStep": "seeking_citadel_loan",
+				"text": "Incantato needs help smuggling magical items",
+				"class": "blue_button seeking_citadel_loan"
+			},
+			{
+				"nextStep": "seeking_ayr_loan",
+				"text": "The Church of Ayr wants monsters from the west",
+				"class": "blue_button seeking_ayr_loan"
+			},
+			{
+				"nextStep": "seeking_notting_loan",
+				"text": "The Queen of Notting needs to fund her war",
+				"class": "blue_button seeking_notting_loan"
+			},
+			{
+				"nextStep": "seeking_shikyomo_loan",
+				"text": "Ryuko of Shikyomo wants to begin shipments to Ascension",
+				"class": "blue_button seeking_shikyomo_loan"
+			},
+			{
+				"nextStep": "seeking_kai_loan",
+				"text": "Natia of Kai wants to win Unity Chief",
+				"class": "blue_button seeking_kai_loan"
+			},
+			{
+				"nextStep": "nevermind_loan",
+				"text": "Nevermind",
+				"class": "red_button"
+			}
+		]
+	},
+	"seeking_ayr_loan": {
+		"slug": "seeking_ayr_loan",
+		"characterSays": "Aren't monster parts against God according to their books?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_ayr_loan_follow_up",
+				"text": "They just added a Juggernaut to their collection",
+				"class": ""
+			}
+		]
+	},
+	"seeking_ayr_loan_follow_up": {
+		"slug": "seeking_ayr_loan_follow_up",
+		"characterSays": "So you were the crazy merchant hauling a Juggernaut to Ayr? They must have paid you well!",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_ayr_loan_accept",
+				"text": "They are looking to buy more",
+				"class": ""
+			}
+		]
+	},
+	"seeking_ayr_loan_accept": {
+		"slug": "seeking_ayr_loan_accept",
+		"characterSays": "Anybody that can haul a Juggernaut to Ayr must know how to ship. How about we negotiate a deal.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_ayr_negotiate",
+				"text": "What kind of deal?",
+				"class": ""
+			}
+		]
+	},
+	"seeking_notting_loan": {
+		"slug": "seeking_notting_loan",
+		"characterSays": "Why would she trust a common merchant?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_notting_loan_follow_up",
+				"text": "I told her who killed her father",
+				"class": ""
+			}
+		]
+	},
+	"seeking_notting_loan_follow_up": {
+		"slug": "seeking_notting_loan_follow_up",
+		"characterSays": "Interesting... Her father did not accept my help, but I suspect she will have no choice.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_notting_loan_accept",
+				"text": "She needs our help",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_notting_loan_accept",
+				"text": "She is ready to fight",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_notting_loan_accept",
+				"text": "She is willing to spend",
+				"class": ""
+			}
+		]
+	},
+	"seeking_notting_loan_accept": {
+		"slug": "seeking_notting_loan_accept",
+		"characterSays": "We would need an operation to smuggle quality weapons from Ascension across the front lines.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_notting_negotiate",
+				"text": "I can handle that",
+				"class": ""
+			}
+		]
+	},
+	"seeking_shikyomo_loan": {
+		"slug": "seeking_shikyomo_loan",
+		"characterSays": "I have heard rumors of a revolution. Were you a part of that?",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_shikyomo_loan_follow_up",
+				"text": "I helped spread signs of resistance",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_shikyomo_loan_follow_up",
+				"text": "It was all Ryuko",
+				"class": ""
+			}
+		]
+	},
+	"seeking_shikyomo_loan_follow_up": {
+		"slug": "seeking_shikyomo_loan_follow_up",
+		"characterSays": "I've been waited centuries for Shikyomo to open up to the world.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_shikyomo_negotiate",
+				"text": "So do we have a deal?",
+				"class": ""
+			}
+		]
+	},
+	"seeking_kai_loan": {
+		"slug": "seeking_kai_loan",
+		"characterSays": "That is an interesting proposal... How much gold does she need?",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan_amount_needed",
+				"text": "Eight hundred ingots of gold",
+				"class": ""
+			}
+		]
+	},
+	"seeking_kai_loan_amount_needed": {
+		"slug": "seeking_kai_loan_amount_needed",
+		"characterSays": "How does she plan to repay the debt?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan_how_repay",
+				"text": "Two hundred tonnes of spices a year",
+				"class": ""
+			}
+		]
+	},
+	"seeking_kai_loan_how_repay": {
+		"slug": "seeking_kai_loan_how_repay",
+		"characterSays": "Hmmm... She does make a good offer... and this is a unique opportunity...",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan_deal",
+				"text": "Do we have a deal?",
+				"class": ""
+			}
+		]
+	},
+	"seeking_kai_loan_deal": {
+		"slug": "seeking_kai_loan_deal",
+		"characterSays": "Deal. I will grant this loan for Natia of Kai.",
+		"tone": "deal",
+		"callback": "kaiQuestUpdate",
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan_what_now",
+				"text": "What now?",
+				"class": "not_seeking_only_kai_loan"
+			},
+			{
+				"nextStep": "seeking_only_kai_loan_what_now",
+				"text": "What now?",
+				"class": "seeking_only_kai_loan"
+			},
+			{
+				"nextStep": "seeking_kai_loan_request_gold",
+				"text": "Can I have the gold?",
+				"class": ""
+			}
+		]
+	},
+	"seeking_kai_loan_request_gold": {
+		"slug": "seeking_kai_loan_request_gold",
+		"characterSays": "Don't be absurd. I will send a small army to transport the gold.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_loan_what_now",
+				"text": "What now?",
+				"class": "not_seeking_only_kai_loan"
+			},
+			{
+				"nextStep": "seeking_only_kai_loan_what_now",
+				"text": "What now?",
+				"class": "seeking_only_kai_loan"
+			}
+		]
+	},
+	"seeking_only_kai_loan_what_now": {
+		"slug": "seeking_only_kai_loan_what_now",
+		"characterSays": "Return to Kai and ensure no issues arise. Then travel to Ascension to hire a sailor for the spice shipments.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"seeking_kai_loan_what_now": {
+		"slug": "seeking_kai_loan_what_now",
+		"characterSays": "I will need help selling two hundred tonnes of spices every year. I would like to employ you for this task.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_kai_negotiate",
+				"text": "What do I get?",
+				"class": ""
+			}
+		]
+	},
+	"seeking_kai_negotiate": {
+		"slug": "seeking_kai_negotiate",
+		"characterSays": "I will establish a shipping company in Ascension. I can offer you a small stake in the ownership and a split of the profits.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"seeking_ayr_negotiate": {
+		"slug": "seeking_ayr_negotiate",
+		"characterSays": "I will establish a shipping company in Ascension. I can offer you a small stake in the ownership and a split of the profits.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"seeking_notting_negotiate": {
+		"slug": "seeking_notting_negotiate",
+		"characterSays": "I will establish a shipping company in Ascension. I can offer you a small stake in the ownership and a split of the profits.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"seeking_shikyomo_negotiate": {
+		"slug": "seeking_shikyomo_negotiate",
+		"characterSays": "I will establish a shipping company in Ascension. I can offer you a small stake in the ownership and a split of the profits.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"seeking_loan_accept": {
+		"slug": "seeking_loan_accept",
+		"characterSays": "Deal. Meet my contact in Ascension. We are partners now. Do not fail me.",
+		"tone": "deal",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"seeking_kai_loan_accept": {
+		"slug": "seeking_kai_loan_accept",
+		"characterSays": "Deal. Return to Kai and ensure no issues arise. Then meet my contact in Ascension. We are partners now. Do not fail me.",
+		"tone": "deal",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "seeking_wisdom",
+				"text": "I seek your wisdom",
+				"class": ""
+			},
+			{
+				"nextStep": "seeking_story",
+				"text": "I want to hear your story",
+				"class": ""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

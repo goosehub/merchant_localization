@@ -1,0 +1,62 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Challenging for the King of Coin? Sounds like you could use some help.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_help",
+				"text": "What kind of help?",
+				"class": ""
+			}
+		]
+	},
+	"what_help": {
+		"slug": "what_help",
+		"characterSays": "My vote is for sale. Every vote counts, right? You're lucky I'm giving you a chance to outbid Audric.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"buy_vote": {
+		"slug": "buy_vote",
+		"characterSays": "A wise investment. I hope you win.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "advice",
+				"text": "Any adivce?",
+				"class": ""
+			},
+			{
+				"nextStep": "goodbye",
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"advice": {
+		"slug": "advice",
+		"characterSays": "Audric has raised guild fees recently and the guild is not happy. Promise lower fees and you'll win a few votes.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "goodbye",
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"goodbye": {
+		"slug": "goodbye",
+		"characterSays": "Good luck...",
+		"tone": "goodbye",
+		"callback": "startScene",
+		"responses": [
+		]
+	}
+}

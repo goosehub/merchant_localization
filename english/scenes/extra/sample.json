@@ -1,0 +1,61 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Hello Merchant. My quest is not yet ready to be played. Care to chat?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "lets_chat",
+				"text": "Sure",
+				"class": "half_button"
+			},
+			{
+				"nextStep": "no_chat",
+				"text": "No thanks",
+				"class": "half_button"
+			},
+			{
+				"nextStep": "barter",
+				"text": "Care to barter",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Goodbye",
+				"class": "red_button"
+			}
+		]
+	},
+	"lets_chat": {
+		"slug": "lets_chat",
+		"characterSays": "Sometimes I like to lay on the floor and pretend I'm a carrot.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "init",
+				"text": "Interesting",
+				"class": ""
+			}
+		]
+	},
+	"no_chat": {
+		"slug": "no_chat",
+		"characterSays": "So be it.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}

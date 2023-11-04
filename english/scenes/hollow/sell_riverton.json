@@ -1,0 +1,328 @@
+{
+	"init":{
+		"slug":"init",
+		"characterSays":"Hello. I see you have what appears to be a Winston Roberts masterpiece. Is it for sale?",
+		"tone":"greeting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"take_a_look",
+				"text":"Sure, take a look",
+				"class":""
+			}
+		]
+	},
+	"take_a_look":{
+		"slug":"take_a_look",
+		"characterSays":"This is truly incredible. Mind if I ask a few questions about it?",
+		"tone":"generic",
+		"callback":"putPaintingOnOffer",
+		"responses":[
+			{
+				"nextStep":"first_question",
+				"text":"Ask away",
+				"class":""
+			}
+		]
+	},
+	"first_question":{
+		"slug":"first_question",
+		"characterSays":"Where did you get this?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"second_question",
+				"text":"A merchant in Hollow Lake",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"Purchased from Zehaan in Ingress Rock",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"Bought it from the collector in Ayr",
+				"class":""
+			},
+			{
+				"nextStep":"second_question",
+				"text":"A stranger sold it to me",
+				"class":""
+			}
+		]
+	},
+	"second_question":{
+		"slug":"second_question",
+		"characterSays":"How do you know it's real?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"third_question",
+				"text":"I had it verified in Ayr",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"I had it verified in Riverton",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"I was assured by the seller",
+				"class":""
+			},
+			{
+				"nextStep":"third_question",
+				"text":"Only Winston Roberts could paint this masterpiece",
+				"class":""
+			}
+		]
+	},
+	"third_question":{
+		"slug":"third_question",
+		"characterSays":"Will you swear that this is real?",
+		"tone":"inquire",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"response_to_questions",
+				"text":"I swear",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions",
+				"text":"I swear to god",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions",
+				"text":"I swear on my reputation",
+				"class":""
+			},
+			{
+				"nextStep":"response_to_questions",
+				"text":"I make no promises",
+				"class":""
+			}
+		]
+	},
+	"response_to_questions":{
+		"slug":"response_to_questions",
+		"characterSays":"I hate to be the one who tells you, but this is a forgery.",
+		"tone":"uninterested",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"how_can_you_tell",
+				"text":"How can you tell?",
+				"class":""
+			}
+		]
+	},
+	"how_can_you_tell":{
+		"slug":"how_can_you_tell",
+		"characterSays":"Look here, the textures are much too detailed. The shapes too perfect. And the color choice far more nuanced. Who is the artist?",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"do_know_the_artist",
+				"text":"Darjus Zdanovic in Hollow Lake",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"dont_know_the_artist",
+				"text":"No, I must keep his identity a secret",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"dont_know_the_artist",
+				"text":"It isn't a forgery",
+				"class":"red_button"
+			},
+			{
+				"nextStep":"for_a_price",
+				"text":"For a price",
+				"class":"blue_button"
+			}
+		]
+	},
+	"for_a_price":{
+		"slug":"for_a_price",
+		"characterSays":"Of course. A predictable reply for a merchant. 10 gold coins should be plenty.",
+		"tone":"offerInsulting",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"accept_info_offer",
+				"text":"Deal. The artist is Darjus Zdanovic in Hollow Lake",
+				"class":"green_button",
+				"callback":"payPlayer10Gold"
+			},
+			{
+				"nextStep":"accept_info_offer",
+				"text":"I need 15 gold coins",
+				"class":"blue_button",
+				"callback":"payPlayer15Gold"
+			},
+			{
+				"nextStep":"ask_20_gold",
+				"text":"I need 20 gold coins",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":"threaten_walk_away",
+				"text":"You are wasting my time, goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"ask_20_gold":{
+		"slug":"ask_20_gold",
+		"characterSays":"20 is a lot of coin for just a name.",
+		"tone":"offerBad",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"accept_info_offer",
+				"text":"Deal. The artist is Darjus Zdanovic in Hollow Lake",
+				"class":"green_button",
+				"callback":"payPlayer10Gold"
+			},
+			{
+				"nextStep":"accept_info_offer",
+				"text":"I need 15 gold coins",
+				"class":"blue_button",
+				"callback":"payPlayer15Gold"
+			},
+			{
+				"nextStep":"accept_info_offer",
+				"text":"20 gold. Final offer.",
+				"class":"red_button",
+				"callback":"payPlayer20Gold"
+			}
+		]
+	},
+	"threaten_walk_away":{
+		"slug":"threaten_walk_away",
+		"characterSays":"Okay fine, 20 gold coins.",
+		"tone":"rejected",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"do_know_the_artist",
+				"text":"Deal. The artist is Darjus Zdanovic in Hollow Lake",
+				"class":"green_button",
+				"callback":"payPlayer20Gold"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"dont_know_the_artist":{
+		"slug":"dont_know_the_artist",
+		"characterSays":"Unfortunate, however I understand the risk of being exposed. Just know, I only want to commission them to paint for me.",
+		"tone":"rejected",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"do_know_the_artist",
+				"text":"The artist is Darjus Zdanovic in Hollow Lake",
+				"class":"green_button"
+			},
+			{
+				"nextStep":"for_a_price",
+				"text":"I could tell you for a price",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"accept_info_offer":{
+		"slug":"accept_info_offer",
+		"characterSays":"Deal. I might be commissioning the next great artist. Thank you Merchant. Now, how much for the piece?",
+		"tone":"deal",
+		"callback":"artistHired",
+		"responses":[
+			
+		]
+	},
+	"do_know_the_artist":{
+		"slug":"do_know_the_artist",
+		"characterSays":"Interesting. I might be commissioning the next great artist. Thank you Merchant. Now, how much for the piece?",
+		"tone":"generic",
+		"callback":"artistHired",
+		"responses":[
+			
+		]
+	},
+	"forgery_sold":{
+		"slug":"forgery_sold",
+		"characterSays":"That is a deal I must accept. If the public found out he painted a forgery, it would destroy his reputation on arrival.",
+		"tone":"deal",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"what_do_with_art",
+				"text":"What will you do with the painting?",
+				"class":""
+			},
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"what_do_with_art":{
+		"slug":"what_do_with_art",
+		"characterSays":"Destroy it of course. No one can know he's done something so awful. Did you think I paid you all that just for a pretty picture to hang on my wall?",
+		"tone":"laugh",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	},
+	"not_interested_in_selling_forgery":{
+		"slug":"not_interested_in_selling_forgery",
+		"characterSays":"I suppose we have nothing else to discuss then.",
+		"tone":"generic",
+		"callback":false,
+		"responses":[
+			{
+				"nextStep":"barter",
+				"text":"Care to barter",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Goodbye",
+				"class":"red_button"
+			}
+		]
+	}
+}
