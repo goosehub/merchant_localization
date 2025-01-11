@@ -1,0 +1,29 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Zamierzasz zagrać dzisiaj w turnieju Myth? Wpisowe wynosi 10 miedzianych monet.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": []
+    },
+    "request_deck": {
+        "slug": "request_deck",
+        "characterSays": "Doskonale. Jakiej talii będziesz używał? Pamiętaj, że przez cały turniej musisz grać tą samą talią.",
+        "tone": "generic",
+        "callback": "requestDeck",
+        "responses": []
+    },
+    "start": {
+        "slug": "start",
+        "characterSays": "Twoja pierwsza gra rozpocznie się za kilka chwil. Poczekaj tutaj z innymi.",
+        "tone": "generic",
+        "callback": "startTournament",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Rozumiem",
+                "class": "green_button"
+            }
+        ]
+    }
+}

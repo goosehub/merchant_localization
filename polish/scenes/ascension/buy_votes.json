@@ -1,0 +1,62 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Wyzwanie o tytuł Króla Monety? Wygląda na to, że możesz potrzebować pomocy.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_help",
+				"text": "Jakiej pomocy?",
+				"class": ""
+			}
+		]
+	},
+	"what_help": {
+		"slug": "what_help",
+		"characterSays": "Mój głos jest na sprzedaż. Każdy głos się liczy, prawda? Masz szczęście, że daję ci szansę przebić Audrica.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"buy_vote": {
+		"slug": "buy_vote",
+		"characterSays": "Mądra inwestycja. Mam nadzieję, że wygrasz.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "advice",
+				"text": "Jakieś rady?",
+				"class": ""
+			},
+			{
+				"nextStep": "goodbye",
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"advice": {
+		"slug": "advice",
+		"characterSays": "Audric niedawno podniósł opłaty cechowe, a cech nie jest zadowolony. Obiecaj niższe opłaty, a zdobędziesz kilka głosów.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "goodbye",
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"goodbye": {
+		"slug": "goodbye",
+		"characterSays": "Powodzenia...",
+		"tone": "goodbye",
+		"callback": "startScene",
+		"responses": [
+		]
+	}
+}

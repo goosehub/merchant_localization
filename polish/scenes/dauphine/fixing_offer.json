@@ -1,0 +1,106 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Przepraszam. Rozumiem, że zgłosił pan konia do tego wyścigu. Czy to prawda?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Tak, mam",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no",
+                "text": "Nie twoja sprawa",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "yes",
+                "text": "Dlaczego pytasz?",
+                "class": ""
+            }
+        ]
+    },
+    "no": {
+        "slug": "no",
+        "characterSays": "Dlaczego mnie okłamujesz?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Dlaczego pytasz?",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button",
+                "callback": "rejectFixing"
+            }
+        ]
+    },
+    "yes": {
+        "slug": "yes",
+        "characterSays": "Obstawiam ten wyścig i nie lubię pozostawiać spraw przypadkowi. Chciałbym, aby twój koń przegrał ten wyścig.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "reward",
+                "text": "Co otrzymam?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "noWay",
+                "text": "Nie ma mowy",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reward": {
+        "slug": "reward",
+        "characterSays": "Zapłacę ci 100 miedzianych monet za współpracę i dyskrecję.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "noWay",
+                "text": "Nie ma mowy",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal": {
+        "slug": "deal",
+        "characterSays": "Dobrze się z tobą robi interesy. W końcu lepiej wygrywać monety niż wyścigi.",
+        "tone": "deal",
+        "callback": "acceptFixing",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "noWay": {
+        "slug": "noWay",
+        "characterSays": "Niech tak będzie. Przypuszczam, że nie można nauczyć przegranego, jak wygrywać.",
+        "tone": "offerInsulting",
+        "callback": "rejectFixing",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

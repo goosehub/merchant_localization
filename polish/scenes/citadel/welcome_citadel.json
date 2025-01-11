@@ -1,0 +1,264 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witamy w Cytadeli Wygnanego Zakonu. Czy jesteś tu w związku z draftem przydziału zaklęć?",
+        "tone": "greeting",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "yes_draft",
+                "text": "Tak",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no_draft",
+                "text": "Nie",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "tell_about_draft",
+                "text": "Opowiedz mi o drafcie",
+                "class": ""
+            }
+        ]
+    },
+    "yes_draft": {
+        "slug": "yes_draft",
+        "characterSays": "Do zobaczenia w piątek. W międzyczasie szukam doświadczonego handlowca, który pomoże mi w rozwiązaniu trudnego problemu.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_explain_mission",
+                "text": "Jaki jest twój problem?",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Czy jest jakaś nagroda?",
+                "class": ""
+            }
+        ]
+    },
+    "no_draft": {
+        "slug": "no_draft",
+        "characterSays": "Bardzo dobrze. Być może uda mi się zwerbować cię do pewnego biznesu.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_explain_mission",
+                "text": "Jaka okazja?",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Czy jest jakaś nagroda?",
+                "class": ""
+            }
+        ]
+    },
+    "tell_about_draft": {
+        "slug": "tell_about_draft",
+        "characterSays": "W każdy piątek możesz dostarczyć mi kryształowy klejnot i otrzymać szansę na wybranie nowych zaklętych przedmiotów.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "after_draft_explained",
+                "text": "Interesujące",
+                "class": ""
+            }
+        ]
+    },
+    "after_draft_explained": {
+        "slug": "after_draft_explained",
+        "characterSays": "Powiedzmy, że szukam doświadczonego handlowca, który pomoże mi rozwiązać trudny problem.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_explain_mission",
+                "text": "Jaki jest twój problem?",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Czy jest jakaś nagroda?",
+                "class": ""
+            }
+        ]
+    },
+    "reward": {
+        "slug": "reward",
+        "characterSays": "Jeśli mi pomożesz, nagrodzę cię nowo zaklętym Legendarnym Berłem Dziedzictwa.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_explain_mission",
+                "text": "Co muszę zrobić?",
+                "class": ""
+            }
+        ]
+    },
+    "start_explain_mission": {
+        "slug": "start_explain_mission",
+        "characterSays": "Zmiennokształtny podszywa się pod kupców w całym królestwie, rujnując reputację zarówno kupców, jak i magów.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_find",
+                "text": "Jak znaleźć zmiennokształtnego?",
+                "class": ""
+            }
+        ]
+    },
+    "how_to_find": {
+        "slug": "how_to_find",
+        "characterSays": "Znajdź Króla Złodziei w Ingress Rock. Potrafi się zmieniać, więc będzie wiedział, jak znaleźć nasz cel.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_catch",
+                "text": "Jak aresztować zmiennokształtnego?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "what_if_its_him",
+                "text": "Co jeśli Król Złodziei jest za to odpowiedzialny?",
+                "class": ""
+            },
+            {
+                "nextStep": "he_can_shapeshift",
+                "text": "Król Złodziei jest zmiennokształtnym?",
+                "class": ""
+            },
+            {
+                "nextStep": "is_he_allowed_here",
+                "text": "Czy Król Złodziei jest tutaj dozwolony?",
+                "class": ""
+            }
+        ]
+    },
+    "what_if_its_him": {
+        "slug": "what_if_its_him",
+        "characterSays": "To stary przyjaciel. Wyłudziłby od każdego monetę, ale nigdy nie zrujnowałby czyjejś reputacji, z wyjątkiem własnej.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_catch",
+                "text": "Jak aresztować zmiennokształtnego?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "he_can_shapeshift",
+                "text": "Król Złodziei jest zmiennokształtnym?",
+                "class": ""
+            },
+            {
+                "nextStep": "is_he_allowed_here",
+                "text": "Czy Król Złodziei jest tutaj dozwolony?",
+                "class": ""
+            }
+        ]
+    },
+    "he_can_shapeshift": {
+        "slug": "he_can_shapeshift",
+        "characterSays": "Tak. W tym momencie sfingował swoją śmierć kilkadziesiąt razy.",
+        "tone": "yes",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_catch",
+                "text": "Jak aresztować zmiennokształtnego?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "what_if_its_him",
+                "text": "Co jeśli Król Złodziei jest za to odpowiedzialny?",
+                "class": ""
+            },
+            {
+                "nextStep": "is_he_allowed_here",
+                "text": "Czy Król Złodziei jest tutaj dozwolony?",
+                "class": ""
+            }
+        ]
+    },
+    "is_he_allowed_here": {
+        "slug": "is_he_allowed_here",
+        "characterSays": "Jego magia iluzji utrzymywała Cytadelę w ukryciu przez dwa stulecia. Po prostu uważa to miejsce za nieciekawe.",
+        "tone": "yes",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_catch",
+                "text": "Jak aresztować zmiennokształtnego?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "what_if_its_him",
+                "text": "Co jeśli Król Złodziei jest za to odpowiedzialny?",
+                "class": ""
+            },
+            {
+                "nextStep": "he_can_shapeshift",
+                "text": "Król Złodziei jest zmiennokształtnym?",
+                "class": ""
+            }
+        ]
+    },
+    "how_to_catch": {
+        "slug": "how_to_catch",
+        "characterSays": "Nie konfrontuj się z nimi, bo uciekną. Zamiast tego sprzedaj im ten amulet. To tropiciel. Ja zajmę się resztą.",
+        "tone": "bothered",
+        "callback": "giveTracker",
+        "responses": [
+            {
+                "nextStep": "anything_else",
+                "text": "Coś jeszcze?",
+                "class": ""
+            },
+            {
+                "nextStep": "what_if_wrong_person",
+                "text": "Co jeśli dam go niewłaściwej osobie?",
+                "class": ""
+            }
+        ]
+    },
+    "what_if_wrong_person": {
+        "slug": "what_if_wrong_person",
+        "characterSays": "Jeśli dasz go niewłaściwej osobie, mogę sprzedać ci inny za uczciwą cenę.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "anything_else",
+                "text": "Cokolwiek innego.",
+                "class": ""
+            }
+        ]
+    },
+    "anything_else": {
+        "slug": "anything_else",
+        "characterSays": "Po sprzedaniu amuletu przyjdź do mnie po nagrodę lub nowy tropiciel. Powodzenia, kupcze.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

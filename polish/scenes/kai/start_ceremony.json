@@ -1,0 +1,41 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Już jesteś! Smocze złoto dotarło. Dziękuję bardzo za pomoc. Oto obiecane przyprawy.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "thanks",
+                "text": "Dzięki",
+                "class": ""
+            }
+        ]
+    },
+    "init_without_reward": {
+        "slug": "init_without_reward",
+        "characterSays": "Jesteś! Smocze złoto dotarło. Dziękuję bardzo za pomoc. Oto obiecane przyprawy.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "thanks",
+                "text": "Dzięki",
+                "class": ""
+            }
+        ]
+    },
+    "thanks": {
+        "slug": "thanks",
+        "characterSays": "Ceremonia wkrótce się rozpocznie. Nadszedł czas, aby w końcu odzyskać to, co należy do ludu Kai.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Powodzenia",
+                "class": ""
+            }
+        ]
+    }
+}

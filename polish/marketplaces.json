@@ -1,0 +1,2784 @@
+[
+    {
+        "index":0,
+        "name": "Boone",
+        "kingdomIndex":1,
+        "isCapitol":false,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"b.png",
+        "townsquareFile":"boone.jpg",
+        "backdropFile":"boone.jpg",
+        "guardPortraitFile":"male_notting_soldier_high.png",
+        "musicFile": "Loop_Harvest_Season.mp3",
+        "ambiancePrimaryFile":"nature.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":0,
+        "event":null,
+        "quest":{
+            "name": "Droga Monety",
+            "todo": "Ucz się od Edwarda Kupca",
+            "scene":"tutorial",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                
+            }
+        },
+        "timeDial":{
+            "foreground":"marsh",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"veggies",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":69,
+            "left":37
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":64,
+                "left":55,
+                "rotation":180
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":24,
+                "left":55,
+                "rotation":47
+            },
+            {
+                "index":2,
+                "characterIndex":19,
+                "top":62,
+                "left":31,
+                "rotation":200
+            },
+            {
+                "index":3,
+                "characterIndex":20,
+                "top":26,
+                "left":28,
+                "rotation":320
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":6,
+                "routeFile":"kai-boone.png",
+                "travelDays":6,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":10,
+                "routeFile":"warg-boone.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":15,
+                "routeFile":"danburg-boone.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":8,
+                "routeFile":"dauphine-boone.png",
+                "travelDays":5,
+                "tolls":2
+            }
+        ]
+    },
+    {
+        "index":1,
+        "name": "Wniebowstąpienie",
+        "kingdomIndex":0,
+        "isCapitol":true,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"trade_city.png",
+        "sealFile":"u.png",
+        "townsquareFile":"ascension.jpg",
+        "backdropFile":"ascension.jpg",
+        "guardPortraitFile":"male_redlands_knight.png",
+        "musicFile": "Loop_The_Old_Tower_Inn.wav",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"large_crowd.wav",
+        "stallage":5,
+        "event":{
+            "name": "Wybory króla monet",
+            "frequency": "Ostatnia sobota zimy",
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "King of Coin",
+            "todo": null,
+            "scene":"welcomeAscension",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "stake": null,
+                "split": null,
+                "loanSecured": false,
+                "contactMade": false,
+                "companyName": null,
+                "startingStockLoafValue": 5,
+                "stockLoafValueIncrement": 100,
+                "startingGoldCoins": 25,
+                "electionEntryFee": 500,
+                "goldCoinsOnLoss": 300,
+                "electionVoteBuyCost": 100,
+                "electionVoteBought": false,
+                "guildFees": 1,
+                "restrictedItem": null,
+                "restrictedItemBias": 30,
+                "changePending": false,
+                "citadelJob": {
+                    "active": false,
+                    "activeJobText": "Przemycanie magicznych przedmiotów",
+                    "characterIndex": null,
+                    "daysLeft": null,
+                    "success": null
+                },
+                "ayrJob": {
+                    "active": false,
+                    "activeJobText": "Polowanie na potwory",
+                    "characterIndex": null,
+                    "daysLeft": null,
+                    "success": null
+                },
+                "nottingJob": {
+                    "active": false,
+                    "activeJobText": "takowanie statków Redlands",
+                    "characterIndex": null,
+                    "daysLeft": null,
+                    "success": null
+                },
+                "shikyomoJob": {
+                    "active": false,
+                    "activeJobText": "Żeglowanie z Shikyomo",
+                    "characterIndex": null,
+                    "daysLeft": null,
+                    "success": null
+                },
+                "kaiJob": {
+                    "active": false,
+                    "activeJobText": "Wysyłka z Kai",
+                    "characterIndex": null,
+                    "daysLeft": null,
+                    "success": null
+                }
+            }
+        },
+        "timeDial":{
+            "foreground":"city",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":6,
+            "maxLoafValue":50,
+            "maxQuantity":6,
+            "maxSize":10
+        },
+        "bias":[
+            {
+                "tag":"coins",
+                "percent":10
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":21,
+            "left":51
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":31,
+                "left":2,
+                "rotation":330
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":20,
+                "left":62,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":29,
+                "left":42,
+                "rotation":1
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":49,
+                "left":25,
+                "rotation":170
+            },
+            {
+                "index":4,
+                "characterIndex":null,
+                "top":70,
+                "left":70,
+                "rotation":90
+            },
+            {
+                "index":5,
+                "characterIndex":null,
+                "top":69,
+                "left":55,
+                "rotation":280
+            },
+            {
+                "index":6,
+                "characterIndex":null,
+                "top":28,
+                "left":82,
+                "rotation":70
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":2,
+                "routeFile":"shikyomo-ascension.png",
+                "travelDays":3,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"riverton-ascension.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":8,
+                "routeFile":"ascension-dauphine.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":12,
+                "routeFile":"eldham-ascension.png",
+                "travelDays":6,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":13,
+                "routeFile":"ascension-pembran.png",
+                "travelDays":5,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":14,
+                "routeFile":"ascension-hartford.png",
+                "travelDays":5,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":2,
+        "name": "Shikyomo",
+        "kingdomIndex":3,
+        "isCapitol":true,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"fortress_city.png",
+        "sealFile":"o.png",
+        "townsquareFile":"shikyomo.jpg",
+        "backdropFile":"shikyomo.jpg",
+        "guardPortraitFile":"male_shikomo_older.png",
+        "musicFile": "Loop_Kings_Feast.wav",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"large_crowd.wav",
+        "stallage":10,
+        "event":{
+            "name": null,
+            "frequency": null,
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "Odporność",
+            "todo": "Rozdaj znaki oporu 10 osobom",
+            "scene":"welcomeShikyomo",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "sign-of-resistance"
+            ],
+            "data":{
+                "signItemFilename": "sign-of-resistance",
+                "signQuantity": 10,
+                "signsGiven": 0,
+                "signSearchMax": 8,
+                "signSearchMin": 4,
+                "rewardItemFilename": "blue_gem",
+                "rewardQuantity": 3,
+                "bribed": false,
+                "snitched": false,
+                "exiled": false,
+                "exileFinished": false,
+                "letterReceived": false,
+                "yearOfConfrontation": null,
+                "finalRewardQuantity": 15,
+                "acceptingSignDialogues": [
+                    "Nie mów nikomu, że sprzedałeś mi ten znak.",
+                    "Uważaj na te znaki, bo możesz mieć kłopoty.",
+                    "Dziękuję za znak. Niech nasza sprawa zwycięży.",
+                    "Z przyjemnością wesprzemy tę sprawę.",
+                    "Mam nadzieję, że pewnego dnia uwolnimy się od tyranii."
+                ]
+            }
+        },
+        "timeDial":{
+            "foreground":"village",
+            "clouds":"light",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                4
+            ]
+        },
+        "theft":{
+            "percent":4,
+            "maxLoafValue":30,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"coins",
+                "percent":20
+            },
+            {
+                "tag":"weapons",
+                "percent":20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":3,
+            "left":60
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":38,
+                "left":0,
+                "rotation":270
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":4,
+                "left":71,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":44,
+                "left":83,
+                "rotation":120
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":1,
+                "routeFile":"shikyomo-ascension.png",
+                "travelDays":4,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":12,
+                "routeFile":"eldham-shikyomo.png",
+                "travelDays":3,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":3,
+        "name": "Ayr",
+        "kingdomIndex":2,
+        "isCapitol":true,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"dark_castle_city.png",
+        "sealFile":"g.png",
+        "townsquareFile":"ayr.jpg",
+        "backdropFile":"ayr.jpg",
+        "guardPortraitFile":"male_fray_knight.png",
+        "musicFile": "Lament_for_a_Warriors_Soul.mp3",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"large_crowd.wav",
+        "stallage":2,
+        "event":{
+            "name": "Dzień odrodzenia",
+            "frequency": "Obserwowane w soboty",
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "Kolekcja",
+            "todo": "Udaj się na zachód i kup Juggernauta",
+            "scene":"welcomeAyr",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "juggernaut"
+            ],
+            "data":{
+                "deliveryItemFilename": "juggernaut",
+                "deliveryPayment": null,
+                "upfrontPayment": 20,
+                "upfrontDeliveryPayment": 20,
+                "defaultDeliveryPayment": 40,
+                "largerDeliveryPayment": 100
+            }
+        },
+        "timeDial":{
+            "foreground":"ruins",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                4
+            ]
+        },
+        "theft":{
+            "percent":4,
+            "maxLoafValue":30,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"statues",
+                "percent":20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":0,
+            "left":33
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":65,
+                "left":30,
+                "rotation":265
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":22,
+                "left":41,
+                "rotation":180
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":65,
+                "left":52,
+                "rotation":90
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":60,
+                "left":89,
+                "rotation":180
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":7,
+                "routeFile":"ayr-riverton.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":9,
+                "routeFile":"ayr-clydesdale.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":11,
+                "routeFile":"ayr-hollow.png",
+                "travelDays":5,
+                "tolls":0
+            }
+        ]
+    },
+    {
+        "index":4,
+        "name": "Notting Hill",
+        "kingdomIndex":1,
+        "isCapitol":true,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"normal_city.png",
+        "sealFile":"q.png",
+        "townsquareFile":"notting_hill.jpg",
+        "backdropFile":"notting_hill.jpg",
+        "guardPortraitFile":"male_notting_knight.png",
+        "musicFile": "Loop_Rejoicing.wav",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"large_crowd.wav",
+        "stallage":3,
+        "event":null,
+        "quest":{
+            "name": "Maskarada",
+            "todo": "Znajdź maskę na bal maskowy",
+            "scene":"welcomeNotting",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "butterfly_mask",
+                "creepy_mask",
+                "cyclopse_mask",
+                "devil_mask",
+                "funny_mask",
+                "masquerade_mask",
+                "monster_mask",
+                "skull_mask",
+                "water_demon_mask"
+            ],
+            "data":{
+                "statueFilename": "sword_statue",
+                "statueReward": true,
+                "coinReward": null,
+                "maskGiven": false,
+                "ballDone": false,
+                "rewardGiven": false,
+                "kingDead": false,
+                "elricTurnedIn": false,
+                "questActuallyFinished": false
+            }
+        },
+        "timeDial":{
+            "foreground":"town",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":4,
+            "maxLoafValue":30,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"furniture",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":37,
+            "left":27
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":10,
+                "left":36,
+                "rotation":1
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":10,
+                "left":54,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":70,
+                "left":54,
+                "rotation":180
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":70,
+                "left":36,
+                "rotation":180
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":10,
+                "routeFile":"notting-warg.png",
+                "travelDays":4,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":11,
+                "routeFile":"hollow-notting.png",
+                "travelDays":8,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":13,
+                "routeFile":"pembran-notting.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":14,
+                "routeFile":"hartford-notting.png",
+                "travelDays":3,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":16,
+                "routeFile":"notting-ingress.png",
+                "travelDays":9,
+                "tolls":2
+            },
+            {
+                "marketplaceIndex":19,
+                "routeFile":"kazuujan-notting.png",
+                "travelDays":12,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":15,
+                "routeFile":"notting-danburg.png",
+                "travelDays":7,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":5,
+        "name": "Cytadela",
+        "kingdomIndex":6,
+        "isCapitol":true,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"big_fortress.png",
+        "sealFile":"k.png",
+        "townsquareFile":"the_citadel.jpg",
+        "backdropFile":"the_citadel.jpg",
+        "guardPortraitFile":"female_elf_guard.png",
+        "musicFile": "Rising_Moon.mp3",
+        "ambiancePrimaryFile":"chamber.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":20,
+        "event":{
+            "name": "Magic Draft",
+            "frequency": "W każdy piątek",
+            "characterName": "Incantato",
+            "scene":"startDraft",
+            "datetime":{
+                "day":6,
+                "week":null,
+                "season":null,
+                "year":null
+            },
+            "data":{
+                "firstTime": true
+            }
+        },
+        "quest":{
+            "name": "Zmiennokształtny",
+            "todo": "Porozmawiaj z Królem Złodziei w Ingress Rock",
+            "scene":"welcomeCitadel",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": ["tracker"],
+            "data":{
+                "shapeshifterCharacterIndex": null,
+                "shapeshifterCoinBiasPercent": -75,
+                "shapeshifterIgnoredMarkets": [5,17],
+                "trackerItemFilename": "tracker",
+                "trackerWithTarget": false,
+                "ingressVisited": false
+            }
+        },
+        "timeDial":{
+            "foreground":"castle",
+            "clouds":"overcast",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"magic",
+                "percent":-30
+            },
+            {
+                "tag":"crystals",
+                "percent":10
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":2,
+            "left":20
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":58,
+                "left":4,
+                "rotation":210
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":22,
+                "left":25,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":58,
+                "left":52,
+                "rotation":1
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":11,
+                "routeFile":"citadel-hollow.png",
+                "travelDays":13,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":17,
+                "routeFile":"egil-citadel.png",
+                "travelDays":16,
+                "tolls":0
+            }
+        ]
+    },
+    {
+        "index":6,
+        "name": "Kai",
+        "kingdomIndex":4,
+        "isCapitol":true,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"island_monument.png",
+        "sealFile":"f.png",
+        "townsquareFile":"kai.jpg",
+        "backdropFile":"kai.jpg",
+        "guardPortraitFile":"male_spearman_kai.png",
+        "musicFile": "Exploration.mp3",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"nature.mp3",
+        "stallage":0,
+        "event":{
+            "name": "Wybory jedności",
+            "frequency": null,
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "Jedność",
+            "todo": "Uzyskaj pożyczkę od Smoka Kazuujana",
+            "scene":"welcomeKai",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "loanSecured":false,
+                "reward":50,
+                "rewardSmall":50,
+                "rewardLarge":100
+            }
+        },
+        "timeDial":{
+            "foreground":"jungle",
+            "clouds":"heavy",
+            "rainSeasons":[
+                2
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"spices",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":67,
+            "left":16
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":60,
+                "left":32,
+                "rotation":180
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":20,
+                "left":33,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":60,
+                "left":56,
+                "rotation":180
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":20,
+                "left":56,
+                "rotation":1
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":0,
+                "routeFile":"kai-boone.png",
+                "travelDays":5,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":10,
+                "routeFile":"warg-kai.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":16,
+                "routeFile":"ingress-kai.png",
+                "travelDays":3,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":7,
+        "name": "Riverton",
+        "kingdomIndex":0,
+        "isCapitol":false,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"m.png",
+        "townsquareFile":"riverton.jpg",
+        "backdropFile":"riverton.jpg",
+        "guardPortraitFile":"male_redlands_soldier_low.png",
+        "musicFile": "Loop_Harvest_Season.mp3",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":1,
+        "event":{
+            "name": "Aukcja",
+            "frequency": "W każdy czwartek",
+            "characterName": "Baldric",
+            "scene":"startRivertonAuction",
+            "datetime":{
+                "day":5,
+                "week":null,
+                "season":null,
+                "year":null
+            },
+            "data":{
+                "depositAmount":5
+            }
+        },
+        "quest":{
+            "name": "Najwyższy oferent",
+            "todo": "Weź udział w aukcji w czwartek",
+            "scene":"welcomeRiverton",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "merchantDeal":null,
+                "collectorDeal":null,
+                "merchantPayout":0,
+                "collectorPayout":true,
+                "playerWonItem":false
+            }
+        },
+        "timeDial":{
+            "foreground":"river",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":2,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"meat",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":17,
+            "left":40
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":2,
+                "left":21,
+                "rotation":1
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":60,
+                "left":16,
+                "rotation":220
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":68,
+                "left":68,
+                "rotation":160
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":10,
+                "left":70,
+                "rotation":1
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":1,
+                "routeFile":"riverton-ascension.png",
+                "travelDays":2,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":3,
+                "routeFile":"ayr-riverton.png",
+                "travelDays":4,
+                "tolls":2
+            },
+            {
+                "marketplaceIndex":8,
+                "routeFile":"riverton-dauphine.png",
+                "travelDays":9,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":9,
+                "routeFile":"clydesdale-riverton.png",
+                "travelDays":3,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":11,
+                "routeFile":"hollow-riverton.png",
+                "travelDays":4,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":13,
+                "routeFile":"riverton-pembran.png",
+                "travelDays":5,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":14,
+                "routeFile":"riverton-hartford.png",
+                "travelDays":6,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":12,
+                "routeFile":"eldham-riverton.png",
+                "travelDays":6,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":8,
+        "name": "Wybrzeże Dauphine",
+        "kingdomIndex":0,
+        "isCapitol":false,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"p.png",
+        "townsquareFile":"dauphine_coast.jpg",
+        "backdropFile":"dauphine_coast.jpg",
+        "guardPortraitFile":"male_redlands_soldier_high.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"port.mp3",
+        "stallage":0,
+        "event":{
+            "name": "Wyścig konny",
+            "frequency": "W każdy wtorek",
+            "characterName": "Giles Cooper",
+            "scene":"startHorserace",
+            "datetime":{
+                "day":3,
+                "week":null,
+                "season":null,
+                "year":null
+            },
+            "data":{
+                "wagerPayout":null,
+                "prizePayout":null,
+                "enteredHorsePlacement":null,
+                "enteredHorse":null,
+                "horseName": null,
+                "horses":[
+                    {
+                        "name": "Wkrótce Manifest",
+                        "color":"brown",
+                        "finishes":[
+                            6,
+                            1,
+                            5,
+                            4,
+                            6
+                        ],
+                        "file":"packhorse/brown_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Młody Lenny",
+                        "color":"brown",
+                        "finishes":[
+                            2,
+                            5,
+                            3,
+                            6,
+                            5
+                        ],
+                        "file":"packhorse/brown_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Beautrice",
+                        "color":"black",
+                        "finishes":[
+                            2,
+                            1,
+                            6,
+                            4,
+                            3
+                        ],
+                        "file":"packhorse/black_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Duży Benjamin",
+                        "color":"black",
+                        "finishes":[
+                            3,
+                            1,
+                            4,
+                            3,
+                            4
+                        ],
+                        "file":"packhorse/black_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Stary Dave",
+                        "color":"gray",
+                        "finishes":[
+                            5,
+                            6,
+                            3,
+                            6,
+                            5
+                        ],
+                        "file":"packhorse/gray_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Dusty Domino",
+                        "color":"gray",
+                        "finishes":[
+                            2,
+                            1,
+                            4,
+                            2,
+                            4
+                        ],
+                        "file":"packhorse/gray_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Light Dancer",
+                        "color":"white",
+                        "finishes":[
+                            2,
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "file":"packhorse/white_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "River Ale",
+                        "color":"white",
+                        "finishes":[
+                            2,
+                            3,
+                            3,
+                            6,
+                            5
+                        ],
+                        "file":"packhorse/white_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Generał",
+                        "color":"golden",
+                        "finishes":[
+                            2,
+                            1,
+                            5,
+                            1,
+                            2
+                        ],
+                        "file":"packhorse/golden_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    },
+                    {
+                        "name": "Jackpot",
+                        "color":"golden",
+                        "finishes":[
+                            3,
+                            1,
+                            5,
+                            5,
+                            1
+                        ],
+                        "file":"packhorse/golden_horse.png",
+                        "gap":0,
+                        "bonus":0,
+                        "gallopStep":0
+                    }
+                ]
+            }
+        },
+        "quest":{
+            "name": "Wyścig",
+            "todo": "Wygraj nagrodę w wyścigu konnym we wtorek",
+            "scene":"welcomeDauphine",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "doingFix":false,
+                "fixDone":false,
+                "fixRejected":false
+            }
+        },
+        "timeDial":{
+            "foreground":"coast",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":2,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"clothing",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":44,
+            "left":50
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":45,
+                "left":20,
+                "rotation":200
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":47,
+                "left":35,
+                "rotation":180
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":46,
+                "left":52,
+                "rotation":180
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":45,
+                "left":83,
+                "rotation":170
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":0,
+                "routeFile":"dauphine-boone.png",
+                "travelDays":5,
+                "tolls":2
+            },
+            {
+                "marketplaceIndex":1,
+                "routeFile":"ascension-dauphine.png",
+                "travelDays":4,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"riverton-dauphine.png",
+                "travelDays":9,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":14,
+                "routeFile":"hartford-dauphine.png",
+                "travelDays":3,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":15,
+                "routeFile":"dauphine-danburg.png",
+                "travelDays":4,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":9,
+        "name": "Clydesdale",
+        "kingdomIndex":2,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"d.png",
+        "townsquareFile":"clydesdale.jpg",
+        "backdropFile":"clydesdale.jpg",
+        "guardPortraitFile":"male_fray_soilder_low.png",
+        "musicFile": "Loop_Minstrel_Dance.wav",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"nature.mp3",
+        "stallage":0,
+        "event":{
+            "name": "Dzień odrodzenia",
+            "frequency": "Obserwowane w soboty",
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "Biblioteka",
+            "todo": "Przynieś książki do Nevin Quinn",
+            "scene":"welcomeClydesdale",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "donatedBooks":0,
+                "donatedValue":0,
+                "booksNeededForLibrary":30,
+                "libraryName": "Nevin Quinn Private Collection",
+                "inventory":[]
+            }
+        },
+        "timeDial":{
+            "foreground":"grassland",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                4
+            ]
+        },
+        "theft":{
+            "percent":2,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"drinks",
+                "percent":20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":6,
+            "left":43
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":10,
+                "left":20,
+                "rotation":270
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":43,
+                "left":2,
+                "rotation":180
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":3,
+                "left":50,
+                "rotation":50
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":3,
+                "routeFile":"ayr-clydesdale.png",
+                "travelDays":3,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"clydesdale-riverton.png",
+                "travelDays":3,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":11,
+                "routeFile":"clydesdale-hollow.png",
+                "travelDays":5,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":12,
+                "routeFile":"eldham-clydesdale.png",
+                "travelDays":3,
+                "tolls":0
+            }
+        ]
+    },
+    {
+        "index":10,
+        "name": "Zatoka Wargów",
+        "kingdomIndex":1,
+        "isCapitol":false,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"n.png",
+        "townsquareFile":"warg_bay.jpg",
+        "backdropFile":"warg_bay.jpg",
+        "guardPortraitFile":"male_notting_soldier_low.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"port.mp3",
+        "stallage":0,
+        "event":{
+            "name": "Gra karciana",
+            "frequency": "W każdą środę",
+            "characterName": "Faraday Casey",
+            "scene":"startCardGame",
+            "datetime":{
+                "day":4,
+                "week":null,
+                "season":null,
+                "year":null
+            },
+            "data":{
+                "tournamentActive": false,
+                "entryFeeAmount": 10,
+                "prizeAmount": 150,
+                "trophyFilename": "myth_tournament_trophy",
+                "rounds": 4,
+                "lastGamePlayerPoints": null,
+                "lastGameOpponentPoints": null,
+                "games": []
+            }
+        },
+        "quest":{
+            "name": "Mit",
+            "todo": "Wygraj turniej karciany w środę",
+            "scene":"welcomeWarg",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "playedWithCasey": false
+            }
+        },
+        "timeDial":{
+            "foreground":"coast",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":2,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"fish",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":54,
+            "left":29
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":63,
+                "left":9,
+                "rotation":270
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":4,
+                "left":55,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":31,
+                "left":79,
+                "rotation":1
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":18,
+                "left":9,
+                "rotation":270
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":0,
+                "routeFile":"warg-boone.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":4,
+                "routeFile":"notting-warg.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":6,
+                "routeFile":"warg-kai.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":15,
+                "routeFile":"danburg-warg.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":16,
+                "routeFile":"ingress-warg.png",
+                "travelDays":3,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":11,
+        "name": "Hollow Lake",
+        "kingdomIndex":0,
+        "isCapitol":false,
+        "unlocked":true,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"j.png",
+        "townsquareFile":"hollow_lake.jpg",
+        "backdropFile":"hollow_lake.jpg",
+        "guardPortraitFile":"male_notting_soldier_low_hollow.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"port.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":0,
+        "event":null,
+        "quest":{
+            "name": "Arcydzieło",
+            "todo": "Sprzedaj falsyfikat w Riverton lub Ingress Rock",
+            "scene":"welcomeHollow",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "painting_of_table"
+            ],
+            "data":{
+                "rivertonComplete":false,
+                "ingressComplete":false,
+                "ayrComplete":false,
+                "originalArtworkFilename": "painting_of_red_flowers",
+                "forgeryArtworkFilename": "painting_of_table",
+                "originalArtworkBought":null,
+                "forgeryArtworkBought":null,
+                "artistHired":false,
+                "soldToAyrCollector":false
+            }
+        },
+        "timeDial":{
+            "foreground":"mountain_green",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"dairy",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":12,
+            "left":28
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":54,
+                "left":60,
+                "rotation":180
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":10,
+                "left":10,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":52,
+                "left":81,
+                "rotation":160
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":50,
+                "left":20,
+                "rotation":180
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":3,
+                "routeFile":"ayr-hollow.png",
+                "travelDays":5,
+                "tolls":2
+            },
+            {
+                "marketplaceIndex":4,
+                "routeFile":"hollow-notting.png",
+                "travelDays":8,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":5,
+                "routeFile":"citadel-hollow.png",
+                "travelDays":13,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"hollow-riverton.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":9,
+                "routeFile":"clydesdale-hollow.png",
+                "travelDays":5,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":13,
+                "routeFile":"hollow-pembran.png",
+                "travelDays":7,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":12,
+        "name": "Port Eldham",
+        "kingdomIndex":2,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"town.png",
+        "sealFile":"l.png",
+        "townsquareFile":"eldham_harbor.jpg",
+        "backdropFile":"eldham_harbor.jpg",
+        "guardPortraitFile":"male_fray_soilder_high.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"port.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":0,
+        "event":{
+            "name": "Dzień odrodzenia",
+            "frequency": "Obserwowane w soboty",
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "The Cure",
+            "todo": "Zdobądź roślinę Fated Star od Egilsdóttir",
+            "scene":"welcomeEldham",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "urand_vitality",
+                "orange_star"
+            ],
+            "data":{
+                "plantFilename": "orange_star",
+                "cureFilename": "urand_vitality",
+                "giftedItemTags": ["potions", "remedies", "aromatics"],
+                "yearQuestStarted": null,
+                "plantInquiredAbout": false,
+                "allowBarter": false,
+                "gaveCure": false,
+                "gaveTreatment": false
+            }
+        },
+        "timeDial":{
+            "foreground":"coast",
+            "clouds":"overcast",
+            "rainSeasons":[
+                3
+            ],
+            "snowSeasons":[
+                4
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"fruits",
+                "percent":20
+            },
+            {
+                "tag":"potions",
+                "percent":-10
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":-3,
+            "left":47
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":38,
+                "left":5,
+                "rotation":310
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":30,
+                "left":80,
+                "rotation":50
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":35,
+                "left":60,
+                "rotation":50
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":32,
+                "left":32,
+                "rotation":1
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":1,
+                "routeFile":"eldham-ascension.png",
+                "travelDays":5,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":2,
+                "routeFile":"eldham-shikyomo.png",
+                "travelDays":3,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":9,
+                "routeFile":"eldham-clydesdale.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"eldham-riverton.png",
+                "travelDays":6,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":13,
+        "name": "Zamek Pembran",
+        "kingdomIndex":1,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"keep.png",
+        "sealFile":"v.png",
+        "townsquareFile":"pembran.jpg",
+        "backdropFile":"redlands_office.jpg",
+        "guardPortraitFile":"male_quartermaster_notting_pembran.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"military.mp3",
+        "ambianceSecondaryFile":"march.mp3",
+        "stallage":0,
+        "event":null,
+        "quest":null,
+        "timeDial":{
+            "foreground":"castle",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":30,
+            "left":34
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":55,
+                "left":60,
+                "rotation":180
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":30,
+                "left":21,
+                "rotation":340
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":1,
+                "routeFile":"ascension-pembran.png",
+                "travelDays":6,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":4,
+                "routeFile":"pembran-notting.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"riverton-pembran.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":11,
+                "routeFile":"hollow-pembran.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":14,
+                "routeFile":"pembran-hartford.png",
+                "travelDays":3,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":14,
+        "name": "Twierdza Hartford",
+        "kingdomIndex":0,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"keep.png",
+        "sealFile":"s.png",
+        "townsquareFile":"hartford.jpg",
+        "backdropFile":"redlands_office.jpg",
+        "guardPortraitFile":"male_quartermaster_redlands_hartford.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"military.mp3",
+        "ambianceSecondaryFile":"march.mp3",
+        "stallage":0,
+        "event":null,
+        "quest":null,
+        "timeDial":{
+            "foreground":"castle",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":37,
+            "left":43
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":61,
+                "left":12,
+                "rotation":200
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":21,
+                "left":33,
+                "rotation":50
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":1,
+                "routeFile":"ascension-hartford.png",
+                "travelDays":4,
+                "tolls":3
+            },
+            {
+                "marketplaceIndex":4,
+                "routeFile":"hartford-notting.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":7,
+                "routeFile":"riverton-hartford.png",
+                "travelDays":6,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":8,
+                "routeFile":"hartford-dauphine.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":13,
+                "routeFile":"pembran-hartford.png",
+                "travelDays":2,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":15,
+                "routeFile":"hartford-danburg.png",
+                "travelDays":3,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":15,
+        "name": "Twierdza Danburg",
+        "kingdomIndex":1,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"keep.png",
+        "sealFile":"t.png",
+        "townsquareFile":"danburg.jpg",
+        "backdropFile":"notting_office.jpg",
+        "guardPortraitFile":"male_quartermaster_notting_danburg.png",
+        "musicFile": null,
+        "ambiancePrimaryFile":"military.mp3",
+        "ambianceSecondaryFile":"march.mp3",
+        "stallage":0,
+        "event":null,
+        "quest":null,
+        "timeDial":{
+            "foreground":"castle",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":53,
+            "left":39
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":60,
+                "left":33,
+                "rotation":180
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":39,
+                "left":53,
+                "rotation":90
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":0,
+                "routeFile":"danburg-boone.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":4,
+                "routeFile":"notting-danburg.png",
+                "travelDays":3,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":8,
+                "routeFile":"dauphine-danburg.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":10,
+                "routeFile":"danburg-warg.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":14,
+                "routeFile":"hartford-danburg.png",
+                "travelDays":4,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":4,
+                "routeFile":"notting-danburg.png",
+                "travelDays":7,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":16,
+        "name": "Ingress Rock",
+        "kingdomIndex":5,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"desert_city.png",
+        "sealFile":"c.png",
+        "townsquareFile":"ingress_rock.jpg",
+        "backdropFile":"ingress_rock.jpg",
+        "guardPortraitFile":"",
+        "musicFile": "Loop_Market_Day.mp3",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"port.mp3",
+        "stallage":1,
+        "event":{
+            "name": "Dzień rynkowy",
+            "frequency": null,
+            "characterName": null,
+            "scene":null,
+            "datetime":null,
+            "data":{
+                "maxBiasShift": 25,
+                "minBias": -50,
+                "maxBias": 200,
+                "debtLimit": 100,
+                "stockLimit": 3,
+                "maxPriceHistoryLength": 14,
+                "stockReplenishChance": 3,
+                "insiderTipItemName": null,
+                "priceLedgerLastUpdate": null,
+                "includedItems": [
+                    "uncommon sunflower",
+                    "legendary saffron",
+                    "rare sapphire",
+                    "rare emerald",
+                    "rare nova ingot",
+                    "rare plazer ingot"
+                ],
+                "priceHistories": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ],
+                "borrowedItems": [
+                    
+                ]
+            }
+        },
+        "quest":{
+            "name": "Król złodziei",
+            "todo": "Przynieś 10 słoneczników Jazeerowi",
+            "scene":"welcomeIngress",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "sunflower"
+            ],
+            "data":{
+                "sunflowersNeeded": 10,
+                "silverIncentive": 20,
+                "daysSinceBorrowed": 0,
+                "loanDaysTotal": 7,
+                "questItemName": "uncommon sunflower",
+                "questItemFilename": "sunflower",
+                "biasBasePercent": 400,
+                "biasMinIncreaseFactor": 1.25,
+                "biasMaxIncreaseFactor": 1.75,
+                "flowersBorrowed": false,
+                "flowersReturned": false
+            }
+        },
+        "timeDial":{
+            "foreground":"coast",
+            "clouds":"heavy",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":6,
+            "maxLoafValue":50,
+            "maxQuantity":6,
+            "maxSize":10
+        },
+        "bias":[
+            {
+                "tag":"jewelry",
+                "percent":-20
+            },
+            {
+                "tag":"legendary saffron",
+                "percent":0
+            },
+            {
+                "tag":"rare sapphire",
+                "percent":0
+            },
+            {
+                "tag":"rare emerald",
+                "percent":0
+            },
+            {
+                "tag":"rare nova ingot",
+                "percent":0
+            },
+            {
+                "tag":"rare plazer ingot",
+                "percent":0
+            },
+            {
+                "tag":"uncommon sunflower",
+                "percent":650
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":44,
+            "left":15
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":45,
+                "left":30,
+                "rotation":270
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":6,
+                "left":52,
+                "rotation":90
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":3,
+                "left":31,
+                "rotation":270
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":56,
+                "left":53,
+                "rotation":90
+            },
+            {
+                "index":4,
+                "characterIndex":null,
+                "top":80,
+                "left":30,
+                "rotation":270
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":4,
+                "routeFile":"notting-ingress.png",
+                "travelDays":9,
+                "tolls":2
+            },
+            {
+                "marketplaceIndex":10,
+                "routeFile":"ingress-warg.png",
+                "travelDays":3,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":18,
+                "routeFile":"ingress-oasis.png",
+                "travelDays":7,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":6,
+                "routeFile":"ingress-kai.png",
+                "travelDays":6,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":19,
+                "routeFile":"kazuujan-ingress.png",
+                "travelDays":6,
+                "tolls":0
+            }
+        ]
+    },
+    {
+        "index":17,
+        "name": "Egilsdóttir",
+        "kingdomIndex":5,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"desert_city.png",
+        "sealFile":"a.png",
+        "townsquareFile":"egilsdottir.jpg",
+        "backdropFile":"egilsdottir.jpg",
+        "guardPortraitFile":"",
+        "musicFile": null,
+        "ambiancePrimaryFile":"winter_winds.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":0,
+        "event":{
+            "name": "Niedostępne",
+            "frequency": null,
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "Nekromanta",
+            "todo": "Zdobądź Amulet Wirusowości z Cytadeli",
+            "scene":"welcomeEgilsdottir",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [
+                "urand_vitality"
+            ],
+            "data":{
+                "coinReward": false,
+                "itemReward": false
+            }
+        },
+        "timeDial":{
+            "foreground":"mountain_blue",
+            "clouds":"clouds",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                1,
+                3,
+                4
+            ]
+        },
+        "theft":{
+            "percent":0,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"bread",
+                "percent":20
+            },
+            {
+                "tag":"grains",
+                "percent":20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":0,
+            "left":3
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":70,
+                "left":58,
+                "rotation":90
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":1,
+                "left":31,
+                "rotation":1
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":19,
+                "routeFile":"egil-kazuujan.png",
+                "travelDays":20,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":5,
+                "routeFile":"egil-citadel.png",
+                "travelDays":16,
+                "tolls":0
+            }
+        ]
+    },
+    {
+        "index":18,
+        "name": "Oaza schronienia",
+        "kingdomIndex":5,
+        "isCapitol":false,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"desert_city.png",
+        "sealFile":"x.png",
+        "townsquareFile":"oasis_refuge.jpg",
+        "backdropFile":"oasis_refuge.jpg",
+        "guardPortraitFile":"",
+        "musicFile": null,
+        "ambiancePrimaryFile":"desert.mp3",
+        "ambianceSecondaryFile":null,
+        "stallage":0,
+        "event":{
+            "name": "Aukcja",
+            "frequency": "W każdą niedzielę",
+            "characterName": "Zah",
+            "scene":"startOasisAuction",
+            "datetime":{
+                "day":1,
+                "week":null,
+                "season":null,
+                "year":null
+            },
+            "data":{
+            }
+        },
+        "quest":{
+            "name": "Dzień handlu",
+            "todo": "Weź udział w aukcji w niedzielę",
+            "scene":"welcomeOasis",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "greatGift": false,
+                "goodGift": false,
+                "poorGift": false,
+                "terribleGift": false
+            }
+        },
+        "timeDial":{
+            "foreground":"desert",
+            "clouds":"light",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":2,
+            "maxLoafValue":20,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"coins",
+                "percent":-20
+            },
+            {
+                "tag":"monster parts",
+                "percent":-10
+            },
+            {
+                "tag":"ingots",
+                "percent":20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":48,
+            "left":4
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":30,
+                "left":40,
+                "rotation":90
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":2,
+                "left":15,
+                "rotation":1
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":60,
+                "left":24,
+                "rotation":180
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":30,
+                "left":1,
+                "rotation":270
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":19,
+                "routeFile":"kazuujan-oasis.png",
+                "travelDays":10,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":16,
+                "routeFile":"ingress-oasis.png",
+                "travelDays":7,
+                "tolls":1
+            }
+        ]
+    },
+    {
+        "index":19,
+        "name": "Kazuujan",
+        "kingdomIndex":5,
+        "isCapitol":true,
+        "unlocked":false,
+        "visited":false,
+        "settlementFile":"desert_city.png",
+        "sealFile":"i.png",
+        "townsquareFile":"kazuujan.jpg",
+        "backdropFile":"kazuujan.jpg",
+        "guardPortraitFile":"",
+        "musicFile": "Loop_The_Bards_Tale.wav",
+        "ambiancePrimaryFile":"market.mp3",
+        "ambianceSecondaryFile":"large_crowd.wav",
+        "stallage":0,
+        "event":{
+            "name": "Dzień Smoka",
+            "frequency": "W każdy poniedziałek",
+            "characterName": null,
+            "scene":null,
+            "datetime":null
+        },
+        "quest":{
+            "name": "Bank Smoka",
+            "todo": "Przekonaj Krisa, by pozwolił ci spotkać się ze Smokiem",
+            "scene":"welcomeKazuujan",
+            "started":false,
+            "finished":false,
+            "wonVote":false,
+            "outcome":null,
+            "questItems": [],
+            "data":{
+                "costToSeeDragon": 800
+            }
+        },
+        "timeDial":{
+            "foreground":"desert_dark",
+            "clouds":"light",
+            "rainSeasons":[
+                
+            ],
+            "snowSeasons":[
+                
+            ]
+        },
+        "theft":{
+            "percent":4,
+            "maxLoafValue":30,
+            "maxQuantity":3,
+            "maxSize":5
+        },
+        "bias":[
+            {
+                "tag":"gold coins",
+                "percent":-20
+            }
+        ],
+        "warehouseBuilt": false,
+        "inventory": [],
+        "location":{
+            "top":29,
+            "left":10
+        },
+        "stalls":[
+            {
+                "index":0,
+                "characterIndex":null,
+                "top":40,
+                "left":20,
+                "rotation":270
+            },
+            {
+                "index":1,
+                "characterIndex":null,
+                "top":76,
+                "left":75,
+                "rotation":120
+            },
+            {
+                "index":2,
+                "characterIndex":null,
+                "top":28,
+                "left":60,
+                "rotation":1
+            },
+            {
+                "index":3,
+                "characterIndex":null,
+                "top":79,
+                "left":27,
+                "rotation":270
+            }
+        ],
+        "connections":[
+            {
+                "marketplaceIndex":4,
+                "routeFile":"kazuujan-notting.png",
+                "travelDays":9,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":16,
+                "routeFile":"kazuujan-ingress.png",
+                "travelDays":6,
+                "tolls":1
+            },
+            {
+                "marketplaceIndex":17,
+                "routeFile":"egil-kazuujan.png",
+                "travelDays":20,
+                "tolls":0
+            },
+            {
+                "marketplaceIndex":18,
+                "routeFile":"kazuujan-oasis.png",
+                "travelDays":10,
+                "tolls":0
+            }
+        ]
+    }
+]

@@ -1,0 +1,125 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Merchant! Słyszałem doniesienia, że wspierasz ruch oporu. Przeszukujemy twoje rzeczy...",
+        "tone": "bothered",
+        "callback": "startSearch",
+        "responses": []
+    },
+    "caught": {
+        "slug": "caught",
+        "characterSays": "Co my tu mamy? Oznaki ruchu oporu? Król zadecyduje dziś o twoim losie!",
+        "tone": "ah",
+        "callback": "setCaught",
+        "responses": [
+            {
+                "nextStep": "go_to_king",
+                "text": "Proszę, nie wiedziałem, co to znaczy",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "go_to_king",
+                "text": "Ruch oporu zwycięży!",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "bribe_attempt",
+                "text": "Może uda mi się przekonać cię do przeoczenia tego",
+                "class": "blue_button"
+            }
+        ]
+    },
+    "go_to_king": {
+        "slug": "go_to_king",
+        "characterSays": "Podążaj za mną.",
+        "tone": "offended",
+        "callback": "sendToKing",
+        "responses": []
+    },
+    "bribe_attempt": {
+        "slug": "bribe_attempt",
+        "characterSays": "...",
+        "tone": "offended",
+        "callback": "attemptBribe",
+        "responses": []
+    },
+    "bribe_declined": {
+        "slug": "bribe_declined",
+        "characterSays": "Nie będziesz targować się z tym sprzedawcą.",
+        "tone": "offended",
+        "callback": "sendToKing",
+        "responses": []
+    },
+    "bribe_start": {
+        "slug": "bribe_start",
+        "characterSays": "Hmm... Daj mi to, a nie będziesz miał problemów.",
+        "tone": "laugh",
+        "callback": "offerBribe",
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Może się potargujemy?",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "go_to_king",
+                "text": "Brak umowy",
+                "class": "red_button"
+            }
+        ]
+    },
+    "haggle": {
+        "slug": "haggle",
+        "characterSays": "Nie możesz się targować. Zaakceptuj to teraz albo chodź ze mną.",
+        "tone": "offended",
+        "callback": "offerBribe",
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "go_to_king",
+                "text": "Brak umowy",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal": {
+        "slug": "deal",
+        "characterSays": "Jesteś mądrzejszy niż na to wyglądasz. Sugeruję, abyś opuścił Shikyomo, zanim spotkają cię kolejne kłopoty.",
+        "tone": "offended",
+        "callback": "acceptBribe",
+        "responses": [
+            {
+                "nextStep": "no_barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_barter": {
+        "slug": "no_barter",
+        "characterSays": "Nie.",
+        "tone": "offended",
+        "callback": "",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Biblioteka w końcu ukończona! Twój wkład przyniesie korzyści przyszłym pokoleniom.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_go",
+                "text": "Zabierz mnie do biblioteki",
+                "class": "green_button",
+                "callback": "showCollection"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "lets_go": {
+        "slug": "lets_go",
+        "characterSays": "Chodźmy.",
+        "tone": "generic",
+        "callback": false,
+        "responses": []
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Jeśli chcesz wziąć udział w aukcji, wpłać depozyt w wysokości 5 złotych monet, który zostanie zwrócony po zakończeniu aukcji.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": []
+    },
+    "start": {
+        "slug": "start",
+        "characterSays": "Aukcja rozpocznie się za kilka chwil. Poczekaj tutaj z innymi.",
+        "tone": "generic",
+        "callback": "startAuction",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Rozumiem",
+                "class": "green_button"
+            }
+        ]
+    }
+}

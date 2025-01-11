@@ -1,0 +1,84 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Kupiec! Szukałem cię. Rewolucja się wydarzyła! Król został obalony!",
+        "tone": "ah",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "reward",
+                "text": "Czy to oznacza, że mogę wrócić?",
+                "class": ""
+            }
+        ]
+    },
+    "reward": {
+        "slug": "reward",
+        "characterSays": "Nie tylko jesteś mile widziany z powrotem, ale mam dla ciebie nagrodę za twoje poświęcenie w zeszłym roku.",
+        "tone": "ah",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "thanks",
+                "text": "Dziękuję!",
+                "class": ""
+            },
+            {
+                "nextStep": "what_now",
+                "text": "Kto teraz przewodzi Shikyomo?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "thanks": {
+        "slug": "thanks",
+        "characterSays": "Nie, dziękuję Merchant!",
+        "tone": "laugh",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "what_now",
+                "text": "Kto teraz przewodzi Shikyomo?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_now": {
+        "slug": "what_now",
+        "characterSays": "Nikt. Walka o władzę potrwa wiele lat, ale powinienem mieć jakiś wpływ, jeśli napotkasz jakieś okazje.",
+        "tone": "bothered",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

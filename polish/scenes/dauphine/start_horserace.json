@@ -1,0 +1,119 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Dzień dobry kupcze. Wybierasz się dziś na wyścigi konne?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_betting",
+                "text": "Tak, chciałbym postawić zakład",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "select_horse",
+                "text": "Tak, chciałbym zgłosić konia",
+                "class": "green_button convo_enter_horse"
+            },
+            {
+                "nextStep": "start_betting",
+                "text": "Tak, chciałbym zgłosić mojego konia",
+                "class": "green_button convo_reenter_horse"
+            },
+            {
+                "nextStep": false,
+                "text": "Nie, dziękuję",
+                "class": "red_button"
+            }
+        ]
+    },
+    "select_horse": {
+        "slug": "select_horse",
+        "characterSays": "Doskonale. Którego konia chciałbyś zgłosić?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "half_button red_button tall_button",
+                "callback": "cancelEnterHorse"
+            }
+        ]
+    },
+    "nevermind": {
+        "slug": "nevermind",
+        "characterSays": "Wybierasz się dziś na wyścigi konne?",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "start_betting",
+                "text": "Tak",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "select_horse",
+                "text": "Tak, chciałbym zgłosić konia",
+                "class": "green_button convo_enter_horse"
+            },
+            {
+                "nextStep": "start_betting",
+                "text": "Tak, chciałbym zgłosić mojego konia",
+                "class": "green_button convo_reenter_horse"
+            },
+            {
+                "nextStep": false,
+                "text": "Nie, dziękuję",
+                "class": "red_button"
+            }
+        ]
+    },
+    "horse_entered": {
+        "slug": "horse_entered",
+        "characterSays": "W porządku, i proszę o wpisowe w wysokości 5 miedziaków.",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "half_button red_button tall_button",
+                "callback": "cancelEnterHorse"
+            }
+        ]
+    },
+    "entry_fee_paid": {
+        "slug": "entry_fee_paid",
+        "characterSays": "Doskonale. Jeszcze jedna sprawa. Jak nazywa się ten koń?",
+        "tone": "deal",
+        "callback": "nameHorseSkip",
+        "responses": []
+    },
+    "horse_named": {
+        "slug": "horse_named",
+        "characterSays": "Licytacja rozpocznie się za kilka minut, a następnie rozpocznie się wyścig. Możesz obstawiać tylko własnego konia.",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Rozumiem",
+                "class": "green_button"
+            }
+        ]
+    },
+    "start_betting": {
+        "slug": "start_betting",
+        "characterSays": "Licytacja rozpocznie się za kilka minut. Powodzenia.",
+        "tone": "generic",
+        "callback": "startBetting",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Rozumiem",
+                "class": "green_button"
+            }
+        ]
+    }
+}

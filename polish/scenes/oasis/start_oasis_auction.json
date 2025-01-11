@@ -1,0 +1,33 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Gotowy do rozpoczęcia aukcji?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start",
+                "text": "Jestem gotowy",
+                "class": "green_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Nie dzisiaj",
+                "class": "red_button"
+            }
+        ]
+    },
+    "start": {
+        "slug": "start",
+        "characterSays": "Aukcja rozpocznie się za kilka chwil. Poczekaj tutaj z innymi.",
+        "tone": "generic",
+        "callback": "startAuction",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Rozumiem",
+                "class": "green_button"
+            }
+        ]
+    }
+}

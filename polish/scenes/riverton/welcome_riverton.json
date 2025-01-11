@@ -1,0 +1,220 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Nie sądzę, abyśmy się poznali. Jestem Baldric, przywódca tutejszej gildii i licytator w każdy czwartek.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "need_help",
+                "text": "Miło cię poznać.",
+                "class": ""
+            }
+        ]
+    },
+    "need_help": {
+        "slug": "need_help",
+        "characterSays": "Słuchaj, potrzebuję nieznanej tutaj twarzy do pomocy przy konkretnym przedmiocie, który sprzedaję. Jesteś zainteresowany?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_is_it",
+                "text": "Co to jest?",
+                "class": ""
+            }
+        ]
+    },
+    "what_is_it": {
+        "slug": "what_is_it",
+        "characterSays": "Nabyłem rzadki obraz Simona Crowella z epoki First Notting. Mam konkretnego klienta, który uważa go za bezcenny.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_he_need_help",
+                "text": "Wygląda na to, że powinien się sprzedać.",
+                "class": ""
+            }
+        ]
+    },
+    "why_he_need_help": {
+        "slug": "why_he_need_help",
+        "characterSays": "Nie wszyscy zgadzają się, że Simon Crowell był geniuszem. Bez konkurencyjnego oferenta obawiam się, że wygra go za okazyjną cenę.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "bid_against_him",
+                "text": "Mam licytować przeciwko niemu?",
+                "class": ""
+            }
+        ]
+    },
+    "bid_against_him": {
+        "slug": "bid_against_him",
+        "characterSays": "Szybko łapiesz. Nie wiem, ile pieniędzy przyniesie, ale wiem, że będzie licytował każdą monetę, aby wygrać.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "compensation",
+                "text": "Jakie jest moje wynagrodzenie?",
+                "class": ""
+            }
+        ]
+    },
+    "compensation": {
+        "slug": "compensation",
+        "characterSays": "Zapłacę ci złoto za każdą ofertę złożoną na ten przedmiot.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Dwa złota",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "private_sale",
+                "text": "Dlaczego nie sprzedaż prywatna?",
+                "class": ""
+            },
+            {
+                "nextStep": "drop_out",
+                "text": "Co się stanie, jeśli zrezygnuje?",
+                "class": ""
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie będę miał nic wspólnego z tą sztuczką.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "private_sale": {
+        "slug": "private_sale",
+        "characterSays": "Wie, że nie mam innych kupców. Będzie czekał na uczciwą cenę. Właśnie dlatego prowadzę aukcje. Ludzie stają się impulsywni i bojaźliwi.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Dwa złota",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "drop_out",
+                "text": "Co się stanie, jeśli zrezygnuje?",
+                "class": ""
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie będę miał nic wspólnego z tą sztuczką.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "haggle": {
+        "slug": "haggle",
+        "characterSays": "Nie targuj się ze mną. Mogę znaleźć kogoś innego. Ostateczna oferta.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "private_sale",
+                "text": "Dlaczego nie sprzedaż prywatna?",
+                "class": ""
+            },
+            {
+                "nextStep": "drop_out",
+                "text": "Co się stanie, jeśli zrezygnuje?",
+                "class": ""
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie będę miał nic wspólnego z tą sztuczką.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "drop_out": {
+        "slug": "drop_out",
+        "characterSays": "Otrzymasz taką samą zapłatę niezależnie od tego, kto wygra, ale jeśli wygrasz, będziesz musiał kupić obraz.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "private_sale",
+                "text": "Dlaczego nie sprzedaż prywatna?",
+                "class": ""
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Dwa złota za każdą ofertę",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie będę miał nic wspólnego z tą sztuczką.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal": {
+        "slug": "deal",
+        "characterSays": "Kaucja wpisowa wynosi 5 sztuk złota. Zatrzymam przedmiot do czasu, aż to zrobisz. A teraz kup coś, żeby to spotkanie nie wyglądało podejrzanie.",
+        "tone": "generic",
+        "callback": "setMerchantDealTrue",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "rejected": {
+        "slug": "rejected",
+        "characterSays": "Niech tak będzie. Mam nadzieję, że mimo to weźmiesz udział w aukcji. Kaucja wynosi 5 sztuk złota.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

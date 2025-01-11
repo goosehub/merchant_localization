@@ -1,0 +1,829 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj Merchant. Kris powiedział mi, że chciałeś się ze mną spotkać. Czego szukasz?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai szuka pożyczki",
+                "class": "blue_button seeking_only_kai_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            }
+        ]
+    },
+    "nevermind_loan": {
+        "slug": "nevermind_loan",
+        "characterSays": "Więc jaki jest powód twojej obecności przede mną?",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "nevermind_story": {
+        "slug": "nevermind_story",
+        "characterSays": "Ludzie mają tak mało cierpliwości.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_wisdom": {
+        "slug": "seeking_wisdom",
+        "characterSays": "Mądrość przez naśladowanie jest łatwa; Mądrość przez refleksję jest szlachetna; Mądrość przez doświadczenie jest wieczna.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_story": {
+        "slug": "seeking_story",
+        "characterSays": "To bardzo długa historia.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_a",
+                "text": "Proszę, powiedz mi",
+                "class": ""
+            },
+            {
+                "nextStep": "nevermind_story",
+                "text": "W takim razie nieważne",
+                "class": "red_button"
+            }
+        ]
+    },
+    "story_part_a": {
+        "slug": "story_part_a",
+        "characterSays": "Smoki zostały wyczarowane jako ostateczna broń w Wojnie Odrodzenia. Masywne, latające, ziejące ogniem stworzenia o nieprzeniknionej skórze.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_b",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_b": {
+        "slug": "story_part_b",
+        "characterSays": "Ale ich błąd sprawił, że staliśmy się inteligentni. Ostatecznie to smok zabił jedyną osobę zdolną do wyczarowania smoków za pomocą magii.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_c",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_c": {
+        "slug": "story_part_c",
+        "characterSays": "Po Odrodzeniu ludzie skierowali swoje armie przeciwko smokom. Twierdzili, że niszczymy wioski. Prawdziwą motywacją była chciwość i duma.",
+        "tone": "offended",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_d",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_d": {
+        "slug": "story_part_d",
+        "characterSays": "Pojechaliśmy na zachód. Nie chciałem być dalej popychany. Postanowiłem wykorzystać ich chciwość i dumę przeciwko nim. Zostałem pożyczkodawcą.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_e",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_e": {
+        "slug": "story_part_e",
+        "characterSays": "Całe złoto w tym pokoju pochodzi z małej sakiewki pozostawionej przez uciekającego szlachcica.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_f",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_f": {
+        "slug": "story_part_f",
+        "characterSays": "Przysiągłem, że pewnego dnia wykorzystam swoje bogactwo, by ukarać ludzi za to, co zrobili i nadal robią.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_g",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_g": {
+        "slug": "story_part_g",
+        "characterSays": "Jednak nie znasz ludzi, dopóki nie wejdziesz z nimi w interesy...",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_h",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_h": {
+        "slug": "story_part_h",
+        "characterSays": "Każdy człowiek, bogaty czy biedny, jest ofiarą okoliczności i sam jest niekończącym się źródłem cierpienia.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_i",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_i": {
+        "slug": "story_part_i",
+        "characterSays": "I tak, nie mam żadnej wendety do zakończenia, ale nie mam też ochoty uwolnić ich od ich własnych ran.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_part_j",
+                "text": "...",
+                "class": ""
+            }
+        ]
+    },
+    "story_part_j": {
+        "slug": "story_part_j",
+        "characterSays": "Nie mam celu, więc nadal powiększam swoje bogactwo i władzę, przygotowując się na dzień, w którym mój cel zostanie ujawniony.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "story_response_sad",
+                "text": "To tragiczna historia",
+                "class": ""
+            },
+            {
+                "nextStep": "story_response_good",
+                "text": "To dobra historia",
+                "class": ""
+            },
+            {
+                "nextStep": "story_response_boring",
+                "text": "To nudna historia",
+                "class": ""
+            }
+        ]
+    },
+    "story_response_sad": {
+        "slug": "story_response_sad",
+        "characterSays": "Być może, ale takie jest życie.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "story_response_good": {
+        "slug": "story_response_good",
+        "characterSays": "Mówiłem to już tyle razy, że słowa straciły całe znaczenie.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "story_response_boring": {
+        "slug": "story_response_boring",
+        "characterSays": "Szczerze mówiąc, wolałbym o tym wszystkim zapomnieć.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Staram się o pożyczkę",
+                "class": "seeking_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_loan": {
+        "slug": "seeking_loan",
+        "characterSays": "Udzielam pożyczek tym, którzy dostarczają plany. Z jakiego powodu potrzebujesz pożyczki?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_personal_loan",
+                "text": "Będę ciężko pracował w barterze i zwrócę ci pieniądze.",
+                "class": "blue_button seeking_personal_loan"
+            },
+            {
+                "nextStep": "seeking_citadel_loan",
+                "text": "Incantato potrzebuje pomocy w przemycie magicznych przedmiotów",
+                "class": "blue_button seeking_citadel_loan"
+            },
+            {
+                "nextStep": "seeking_ayr_loan",
+                "text": "Kościół w Ayr chce potworów z zachodu",
+                "class": "blue_button seeking_ayr_loan"
+            },
+            {
+                "nextStep": "seeking_notting_loan",
+                "text": "Królowa Notting musi sfinansować swoją wojnę",
+                "class": "blue_button seeking_notting_loan"
+            },
+            {
+                "nextStep": "seeking_shikyomo_loan",
+                "text": "Ryuko z Shikyomo chce rozpocząć wysyłkę do Ascension",
+                "class": "blue_button seeking_shikyomo_loan"
+            },
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai chce wygrać Unity Chief",
+                "class": "blue_button seeking_kai_loan"
+            }
+        ]
+    },
+    "seeking_personal_loan": {
+        "slug": "seeking_personal_loan",
+        "characterSays": "Wymagam konkretnych możliwości biznesowych. Jeśli ich nie masz, sugeruję, abyś wrócił, gdy je zdobędziesz.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_personal_loan",
+                "text": "Będę ciężko pracował w barterze i zwrócę ci pieniądze.",
+                "class": "blue_button seeking_personal_loan"
+            },
+            {
+                "nextStep": "seeking_citadel_loan",
+                "text": "Incantato potrzebuje pomocy w przemycie magicznych przedmiotów",
+                "class": "blue_button seeking_citadel_loan"
+            },
+            {
+                "nextStep": "seeking_ayr_loan",
+                "text": "Kościół w Ayr chce potworów z zachodu",
+                "class": "blue_button seeking_ayr_loan"
+            },
+            {
+                "nextStep": "seeking_notting_loan",
+                "text": "Królowa Notting musi sfinansować swoją wojnę",
+                "class": "blue_button seeking_notting_loan"
+            },
+            {
+                "nextStep": "seeking_shikyomo_loan",
+                "text": "Ryuko z Shikyomo chce rozpocząć wysyłkę do Ascension",
+                "class": "blue_button seeking_shikyomo_loan"
+            },
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai chce wygrać Unity Chief",
+                "class": "blue_button seeking_kai_loan"
+            },
+            {
+                "nextStep": "nevermind_loan",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_citadel_loan": {
+        "slug": "seeking_citadel_loan",
+        "characterSays": "Nie jestem zainteresowany. Zalewał rynki przez stulecie, a jego ceny będą nadal spadać.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_personal_loan",
+                "text": "Będę ciężko pracował w barterze i zwrócę ci pieniądze.",
+                "class": "blue_button seeking_personal_loan"
+            },
+            {
+                "nextStep": "seeking_citadel_loan",
+                "text": "Incantato potrzebuje pomocy w przemycie magicznych przedmiotów",
+                "class": "blue_button seeking_citadel_loan"
+            },
+            {
+                "nextStep": "seeking_ayr_loan",
+                "text": "Kościół w Ayr chce potworów z zachodu",
+                "class": "blue_button seeking_ayr_loan"
+            },
+            {
+                "nextStep": "seeking_notting_loan",
+                "text": "Królowa Notting musi sfinansować swoją wojnę",
+                "class": "blue_button seeking_notting_loan"
+            },
+            {
+                "nextStep": "seeking_shikyomo_loan",
+                "text": "Ryuko z Shikyomo chce rozpocząć wysyłkę do Ascension",
+                "class": "blue_button seeking_shikyomo_loan"
+            },
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai chce wygrać Unity Chief",
+                "class": "blue_button seeking_kai_loan"
+            },
+            {
+                "nextStep": "nevermind_loan",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_ayr_loan": {
+        "slug": "seeking_ayr_loan",
+        "characterSays": "Czy według ich książek części potworów nie są sprzeczne z Bogiem?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_ayr_loan_follow_up",
+                "text": "Właśnie dodali Juggernauta do swojej kolekcji",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_ayr_loan_follow_up": {
+        "slug": "seeking_ayr_loan_follow_up",
+        "characterSays": "Więc to ty byłeś tym szalonym kupcem ciągnącym Juggernauta do Ayr? Musieli ci dobrze zapłacić!",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_ayr_loan_accept",
+                "text": "Chcą kupić więcej",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_ayr_loan_accept": {
+        "slug": "seeking_ayr_loan_accept",
+        "characterSays": "Każdy, kto jest w stanie przewieźć Juggernauta do Ayr, musi znać się na transporcie. Może wynegocjujemy umowę.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_ayr_negotiate",
+                "text": "Jaki rodzaj umowy?",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_notting_loan": {
+        "slug": "seeking_notting_loan",
+        "characterSays": "Dlaczego miałaby zaufać zwykłemu kupcowi?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_notting_loan_follow_up",
+                "text": "Powiedziałem jej, kto zabił jej ojca",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_notting_loan_follow_up": {
+        "slug": "seeking_notting_loan_follow_up",
+        "characterSays": "Interesujące... Jej ojciec nie zaakceptował mojej pomocy, ale podejrzewam, że nie będzie miała wyboru.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_notting_loan_accept",
+                "text": "Ona potrzebuje naszej pomocy",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_notting_loan_accept",
+                "text": "Jest gotowa do walki",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_notting_loan_accept",
+                "text": "Jest gotowa wydać",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_notting_loan_accept": {
+        "slug": "seeking_notting_loan_accept",
+        "characterSays": "Potrzebna będzie operacja przemycenia wysokiej jakości broni z Ascension przez linię frontu.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_notting_negotiate",
+                "text": "Poradzę sobie z tym",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_shikyomo_loan": {
+        "slug": "seeking_shikyomo_loan",
+        "characterSays": "Słyszałem pogłoski o rewolucji. Czy byłeś jej częścią?",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_shikyomo_loan_follow_up",
+                "text": "Pomogłem rozprzestrzenić oznaki oporu",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_shikyomo_loan_follow_up",
+                "text": "To była cała Ryuko",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_shikyomo_loan_follow_up": {
+        "slug": "seeking_shikyomo_loan_follow_up",
+        "characterSays": "Czekałem wieki, aż Shikyomo otworzy się na świat.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_shikyomo_negotiate",
+                "text": "Czy mamy umowę?",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_kai_loan": {
+        "slug": "seeking_kai_loan",
+        "characterSays": "To interesująca propozycja... Ile złota potrzebuje?",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan_amount_needed",
+                "text": "Osiemset sztabek złota",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_kai_loan_amount_needed": {
+        "slug": "seeking_kai_loan_amount_needed",
+        "characterSays": "Jak planuje spłacić dług?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan_how_repay",
+                "text": "Dwieście ton przypraw rocznie",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_kai_loan_how_repay": {
+        "slug": "seeking_kai_loan_how_repay",
+        "characterSays": "Hmmm... Składa dobrą ofertę... i jest to wyjątkowa okazja....",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan_deal",
+                "text": "Czy mamy umowę?",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_kai_loan_deal": {
+        "slug": "seeking_kai_loan_deal",
+        "characterSays": "Umowa. Udzielę tej pożyczki Natii z Kai.",
+        "tone": "deal",
+        "callback": "kaiQuestUpdate",
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan_what_now",
+                "text": "Co teraz?",
+                "class": "not_seeking_only_kai_loan"
+            },
+            {
+                "nextStep": "seeking_only_kai_loan_what_now",
+                "text": "Co teraz?",
+                "class": "seeking_only_kai_loan"
+            },
+            {
+                "nextStep": "seeking_kai_loan_request_gold",
+                "text": "Czy mogę dostać złoto?",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_kai_loan_request_gold": {
+        "slug": "seeking_kai_loan_request_gold",
+        "characterSays": "Nie bądź niedorzeczny. Wyślę małą armię, by przetransportowała złoto.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan_what_now",
+                "text": "Co teraz?",
+                "class": "not_seeking_only_kai_loan"
+            },
+            {
+                "nextStep": "seeking_only_kai_loan_what_now",
+                "text": "Co teraz?",
+                "class": "seeking_only_kai_loan"
+            }
+        ]
+    },
+    "seeking_only_kai_loan_what_now": {
+        "slug": "seeking_only_kai_loan_what_now",
+        "characterSays": "Wróć do Kai i upewnij się, że nie ma żadnych problemów. Następnie udaj się do Wniebowstąpienia, aby wynająć marynarza do transportu przyprawy.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_kai_loan_what_now": {
+        "slug": "seeking_kai_loan_what_now",
+        "characterSays": "Będę potrzebował pomocy w sprzedaży dwustu ton przypraw rocznie. Chciałbym zatrudnić Cię do tego zadania.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_negotiate",
+                "text": "Co otrzymam?",
+                "class": ""
+            }
+        ]
+    },
+    "seeking_kai_negotiate": {
+        "slug": "seeking_kai_negotiate",
+        "characterSays": "Założę firmę transportową w Ascension. Mogę zaoferować ci niewielki udział we własności i podział zysków.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": []
+    },
+    "seeking_ayr_negotiate": {
+        "slug": "seeking_ayr_negotiate",
+        "characterSays": "Założę firmę transportową w Ascension. Mogę zaoferować ci niewielki udział we własności i podział zysków.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": []
+    },
+    "seeking_notting_negotiate": {
+        "slug": "seeking_notting_negotiate",
+        "characterSays": "Założę firmę transportową w Ascension. Mogę zaoferować ci niewielki udział we własności i podział zysków.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": []
+    },
+    "seeking_shikyomo_negotiate": {
+        "slug": "seeking_shikyomo_negotiate",
+        "characterSays": "Założę firmę transportową w Ascension. Mogę zaoferować ci niewielki udział we własności i podział zysków.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": []
+    },
+    "seeking_loan_accept": {
+        "slug": "seeking_loan_accept",
+        "characterSays": "Umowa. Spotkaj się z moim kontaktem w Ascension. Jesteśmy teraz partnerami. Nie zawiedź mnie.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_kai_loan_accept": {
+        "slug": "seeking_kai_loan_accept",
+        "characterSays": "Umowa. Wróć do Kaia i upewnij się, że nie ma żadnych problemów. Następnie spotkaj się z moim kontaktem w Ascension. Jesteśmy teraz partnerami. Nie zawiedź mnie.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam twojej mądrości",
+                "class": ""
+            },
+            {
+                "nextStep": "seeking_story",
+                "text": "Chcę usłyszeć twoją historię",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

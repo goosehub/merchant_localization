@@ -1,0 +1,20 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Turniej odbywa się w każdą środę. 10 miedziaków za udział. Przynieś swoją najlepszą talię! Oto kilka kart na początek.",
+        "tone": "ah",
+        "callback": "giveCards",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

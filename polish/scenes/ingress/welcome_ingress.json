@@ -1,0 +1,249 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witamy w Ingress Rock Merchant. Jestem przywódcą lokalnej gildii, choć bardziej znany jestem jako Król Złodziei.",
+        "tone": "greeting",
+        "callback": "requestFlowers",
+        "responses": [
+            {
+                "nextStep": "king_of_thieves",
+                "text": "Jesteś kupcem i złodziejem?",
+                "class": ""
+            }
+        ]
+    },
+    "king_of_thieves": {
+        "slug": "king_of_thieves",
+        "characterSays": "To pseudonim, ponieważ zarabiam, pożyczając rzeczy od innych. Skoro o tym mowa, mam propozycję biznesową.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_are_you_offering",
+                "text": "Co oferujesz?",
+                "class": ""
+            }
+        ]
+    },
+    "what_are_you_offering": {
+        "slug": "what_are_you_offering",
+        "characterSays": "Oferuję informacje, kompleksową księgę cen różnych przedmiotów na dany dzień w Ingress.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_you_want",
+                "text": "Czego chcesz w zamian?",
+                "class": ""
+            },
+            {
+                "nextStep": "how_is_that_useful",
+                "text": "W jaki sposób jest to przydatne?",
+                "class": ""
+            }
+        ]
+    },
+    "how_is_that_useful": {
+        "slug": "how_is_that_useful",
+        "characterSays": "Będziesz mógł kupować przedmioty, gdy są tanie, i wiedzieć, kiedy sprzedać je po najwyższej cenie.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_you_want",
+                "text": "Czego chcesz w zamian?",
+                "class": ""
+            }
+        ]
+    },
+    "what_do_you_want": {
+        "slug": "what_do_you_want",
+        "characterSays": "Chciałbym pożyczyć dziesięć słoneczników na tydzień.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "where_to_find",
+                "text": "Gdzie mogę znaleźć słoneczniki?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_sunflowers",
+                "text": "Dlaczego słoneczniki?",
+                "class": ""
+            }
+        ]
+    },
+    "why_sunflowers": {
+        "slug": "why_sunflowers",
+        "characterSays": "Nie słyszałeś o szaleństwie słoneczników? Cena jest astronomiczna. Doskonała okazja do zarobienia pieniędzy.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "where_to_find",
+                "text": "Gdzie mogę znaleźć słoneczniki?",
+                "class": ""
+            },
+            {
+                "nextStep": "how_do_you_make_coin_borrowing",
+                "text": "Jak zarobić monetę pożyczając coś?",
+                "class": ""
+            }
+        ]
+    },
+    "how_do_you_make_coin_borrowing": {
+        "slug": "how_do_you_make_coin_borrowing",
+        "characterSays": "Sprzedaję przedmioty, które pożyczam. Kiedy nadchodzi czas ich zwrotu, odkupuję je po niższej cenie i zyskuję różnicę.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "where_to_find",
+                "text": "Gdzie mogę znaleźć słoneczniki?",
+                "class": ""
+            },
+            {
+                "nextStep": "sounds_like_scam",
+                "text": "Brzmi jak oszustwo",
+                "class": ""
+            }
+        ]
+    },
+    "sounds_like_scam": {
+        "slug": "sounds_like_scam",
+        "characterSays": "Słonecznikowy szał to prawdziwe oszustwo. Zawsze zwracam to, co pożyczam.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "where_to_find",
+                "text": "Gdzie mogę znaleźć słoneczniki?",
+                "class": ""
+            }
+        ]
+    },
+    "where_to_find": {
+        "slug": "where_to_find",
+        "characterSays": "Wszyscy w Ingress Rock nimi handlują. Pożycz mi dziesięć słoneczników na tydzień, a będziesz miał pełny dostęp do księgi.",
+        "tone": "generic",
+        "callback": "citadelHook",
+        "responses": [
+            {
+                "nextStep": "agree_to_get",
+                "text": "Zaraz wrócę z kilkoma słonecznikami",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "negotiate",
+                "text": "Chcę trochę srebra za ten wysiłek",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "agree_to_get",
+                "text": "Zastanowię się nad tym",
+                "class": ""
+            }
+        ]
+    },
+    "negotiate": {
+        "slug": "negotiate",
+        "characterSays": "To uczciwe. Dam ci 20 srebrników na odsetki. Tylko pożycz mi słoneczniki. Czy w międzyczasie chciałbyś zawrzeć jakieś transakcje?",
+        "tone": "inquire",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "agree_to_get": {
+        "slug": "agree_to_get",
+        "characterSays": "Czy w międzyczasie chciałbyś zawrzeć jakieś transakcje?",
+        "tone": "inquire",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Naprawdę?",
+        "tone": "inquire",
+        "callback": "playerOfferSunflowers",
+        "responses": [
+            {
+                "nextStep": "giveSunflowers",
+                "text": "Proszę bardzo",
+                "class": "give_sunflowers_button green_button"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "giveSunflowers": {
+        "slug": "giveSunflowers",
+        "characterSays": "Doskonale. Zwrócę je za siedem dni. I trochę srebra na odsetki. Chcesz zobaczyć księgę?",
+        "tone": "laugh",
+        "callback": "giveSunflowers",
+        "responses": [
+            {
+                "nextStep": "start_cutscene",
+                "text": "Pokaż mi księgę rachunkową",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "nevermind": {
+        "slug": "nevermind",
+        "characterSays": "Nie interesują mnie twoje gry.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "start_cutscene": {
+        "slug": "start_cutscene",
+        "characterSays": "Oczywiście. Chodź ze mną.",
+        "tone": "generic",
+        "callback": "loadCutscene",
+        "responses": []
+    }
+}

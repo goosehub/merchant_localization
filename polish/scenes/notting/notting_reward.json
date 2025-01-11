@@ -1,0 +1,152 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Uwaga obywatele. Król ogłasza, że księżniczka zostanie poślubiona księciu Fray, wzmacniając najsilniejszy sojusz w królestwie.",
+        "tone": "ah",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "after_herald",
+                "text": "...",
+                "class": "",
+                "callback": "setNextCharacter"
+            }
+        ]
+    },
+    "after_herald": {
+        "slug": "after_herald",
+        "characterSays": "Ten cholerny król. Ten drań. Nie ujdzie mu to na sucho.",
+        "tone": "offended",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "what_happened",
+                "text": "Co się stało?",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Gdzie jest moja nagroda?",
+                "class": "green_button"
+            }
+        ]
+    },
+    "what_happened": {
+        "slug": "what_happened",
+        "characterSays": "Była piękna jak księżyc. Wziąłem ją za rękę i tańczyliśmy i rozmawialiśmy godzinami.",
+        "tone": "ah",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "what_happened_next",
+                "text": "A potem?",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Gdzie jest moja nagroda?",
+                "class": "green_button"
+            }
+        ]
+    },
+    "what_happened_next": {
+        "slug": "what_happened_next",
+        "characterSays": "Król zażądał, bym zdjął maskę. Kiedy moja tożsamość została ujawniona, obraził mnie na oczach całej szlachty Notting.",
+        "tone": "bothered",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "why_insult",
+                "text": "Dlaczego cię obraził?",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Gdzie jest moja nagroda?",
+                "class": "green_button"
+            }
+        ]
+    },
+    "why_insult": {
+        "slug": "why_insult",
+        "characterSays": "Nazwał mnie głupcem, sądząc, że księżniczka może pokochać kupca. Mimo całego mojego bogactwa, bez ziemi jestem nikim dla tych ludzi.",
+        "tone": "offended",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "sorry_that_happened",
+                "text": "Przykro mi, że tak się stało",
+                "class": ""
+            },
+            {
+                "nextStep": "reward",
+                "text": "Gdzie jest moja nagroda?",
+                "class": "green_button"
+            }
+        ]
+    },
+    "sorry_that_happened": {
+        "slug": "sorry_that_happened",
+        "characterSays": "Tak będzie najlepiej. Oto twoja nagroda. Jestem wdzięczny, że teraz wiem, co muszę zrobić.",
+        "tone": "generic",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "what_will_you_do",
+                "text": "Co zamierzasz zrobić?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reward": {
+        "slug": "reward",
+        "characterSays": "Oczywiście. Proszę bardzo. Dziękuję za pomoc. Teraz wiem, co trzeba zrobić.",
+        "tone": "generic",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "what_will_you_do",
+                "text": "Co zamierzasz zrobić?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_will_you_do": {
+        "slug": "what_will_you_do",
+        "characterSays": "Lepiej, żebyś nie wiedział. Jeśli ktoś o mnie pyta, to znaczy, że nigdy się nie spotkaliśmy.",
+        "tone": "bothered",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

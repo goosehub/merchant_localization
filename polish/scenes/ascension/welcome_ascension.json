@@ -1,0 +1,163 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Witamy w Ascension, kupcu. Proszę nie sprawiać kłopotów i przeszkadzać mi tak mało, jak to możliwe.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "who_are_you",
+				"text": "Kim jesteś?",
+				"class": ""
+			}
+		]
+	},
+	"who_are_you": {
+		"slug": "who_are_you",
+		"characterSays": "Jestem Audric, <i class=\"green_color\">Królem Monety</i>. Wszyscy przywódcy cechów kupieckich raportują bezpośrednio do mnie.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_king",
+				"text": "Jak zostałeś Królem Monety?",
+				"class": ""
+			}
+		]
+	},
+	"how_king": {
+		"slug": "how_king",
+		"characterSays": "Posiadam East Coast Shipping Company. Zwykłe targowanie na ulicy daleko cię nie zaprowadzi.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "become_king",
+				"text": "Jak mogę zostać Królem Monety?",
+				"class": ""
+			}
+		]
+	},
+	"become_king": {
+		"slug": "become_king",
+		"characterSays": "Nie bądź śmieszny. Czy to poważne pytanie?",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "insist_become_king",
+				"text": "Tak, naprawdę chcę wiedzieć",
+				"class": ""
+			},
+			{
+				"nextStep": "insist_become_king",
+				"text": "Po prostu powiedz mi, ty nadęty osiołku",
+				"class": ""
+			}
+		]
+	},
+	"insist_become_king": {
+		"slug": "insist_become_king",
+		"characterSays": "W <i class=\"blue_color\">ostatnią sobotę zimy</i> kupcy przybywają do Ascension, aby głosować na <i class=\"green_color\">Króla Monety</i>.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_to_run",
+				"text": "Jak kandydować na Króla Monety?",
+				"class": ""
+			}
+		]
+	},
+	"how_to_run": {
+		"slug": "how_to_run",
+		"characterSays": "Opłata za zgłoszenie wynosi pięćset złotych monet. Następnie musisz pokonać mnie w debacie przed cechem.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_to_get_gold",
+				"text": "Jak zdobyć 500 złotych monet?",
+				"class": ""
+			},
+			{
+				"nextStep": "ask_debate",
+				"text": "Jak działa debata?",
+				"class": ""
+			},
+			{
+				"nextStep": "easy",
+				"text": "Proste. Niedługo zostanę Królem Monety.",
+				"class": ""
+			}
+		]
+	},
+	"how_to_get_gold": {
+		"slug": "how_to_get_gold",
+		"characterSays": "To nie mój problem. Teraz proszę iść, jestem zajętym człowiekiem.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Chcesz się targować?",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"ask_debate": {
+		"slug": "ask_debate",
+		"characterSays": "Nie jestem tutaj, żeby cię prowadzić za rękę, jak mnie zastąpić. Kup coś albo idź przeszkadzać komuś innemu.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Chcesz się targować?",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"easy": {
+		"slug": "easy",
+		"characterSays": "Jasne. Powodzenia. Teraz idź przeszkadzać komuś innemu.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "barter",
+				"text": "Chcesz się targować?",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"start_cutscene": {
+		"slug": "start_cutscene",
+		"characterSays": "...",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "start_cutscene",
+				"text": "Zaczynajmy",
+				"class": "green_button",
+				"callback": "startCutscene"
+			}
+		]
+	}
+}

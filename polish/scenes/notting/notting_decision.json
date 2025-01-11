@@ -1,0 +1,160 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Obywatele Notting! Król nie żyje! Za pomoc w doprowadzeniu zabójcy przed oblicze sprawiedliwości oferowana jest nagroda pieniężna.",
+        "tone": "offended",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "after_herald",
+                "text": "Wiem, kto mógł to zrobić",
+                "class": "green_button",
+                "callback": "setNextCharacter"
+            },
+            {
+                "nextStep": false,
+                "text": "Nic nie wiem",
+                "class": "red_button"
+            }
+        ]
+    },
+    "after_herald": {
+        "slug": "after_herald",
+        "characterSays": "Rozumiem, że może pan wiedzieć, kto popełnił przestępstwo?",
+        "tone": "inquire",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "reveal_killer",
+                "text": "To był Elric",
+                "class": ""
+            },
+            {
+                "nextStep": "know_nothing",
+                "text": "Nic nie wiem",
+                "class": "red_button"
+            }
+        ]
+    },
+    "know_nothing": {
+        "slug": "know_nothing",
+        "characterSays": "Nie marnuj mojego czasu w chwili żałoby. Zejdź mi z oczu. Mam nadzieję, że już nigdy się nie spotkamy.",
+        "tone": "offended",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "reveal_killer",
+                "text": "To był Elric",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reveal_killer": {
+        "slug": "reveal_killer",
+        "characterSays": "Moje obawy się potwierdziły. Mój ojciec ma wielu wrogów, ale Elric był czerwony jak rana po tym, jak mój ojciec nas rozdzielił.",
+        "tone": "bothered",
+        "callback": "turnInElric",
+        "responses": [
+            {
+                "nextStep": "sorry_this_happened",
+                "text": "Przykro mi, że tak się stało",
+                "class": ""
+            },
+            {
+                "nextStep": "heard_there_was_a_reward",
+                "text": "Słyszałem, że jest nagroda",
+                "class": ""
+            }
+        ]
+    },
+    "heard_there_was_a_reward": {
+        "slug": "heard_there_was_a_reward",
+        "characterSays": "Tak. Mam nadzieję, że to wystarczy. Jeśli masz chwilę, muszę wiedzieć. Czy naprawdę mnie kochał?",
+        "tone": "yes",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "love",
+                "text": "Kochał cię",
+                "class": ""
+            },
+            {
+                "nextStep": "no_love",
+                "text": "Chciał być tylko królem",
+                "class": ""
+            }
+        ]
+    },
+    "sorry_this_happened": {
+        "slug": "sorry_this_happened",
+        "characterSays": "Mam nadzieję, że ta nagroda wystarczy. Muszę cię o to zapytać. Czy naprawdę mnie kochał?",
+        "tone": "inquire",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "love",
+                "text": "Kochał cię",
+                "class": ""
+            },
+            {
+                "nextStep": "no_love",
+                "text": "Chciał być tylko królem",
+                "class": ""
+            }
+        ]
+    },
+    "love": {
+        "slug": "love",
+        "characterSays": "Taka tragedia. Bez względu na moje uczucia, musi zapłacić za swoją zbrodnię. Resztę swoich dni spędzi zamknięty w najgłębszym lochu.",
+        "tone": "bothered",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "no_barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_love": {
+        "slug": "no_love",
+        "characterSays": "Kolejny człowiek wykorzystujący mnie do zdobycia władzy. Zapłaci za tę zdradę życiem, a jego śmierć będzie publiczna.",
+        "tone": "uninterested",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "no_barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_barter": {
+        "slug": "no_barter",
+        "characterSays": "Nie. Przykro mi, ale to nie jest dobry moment.",
+        "tone": "no",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

@@ -1,0 +1,290 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witam. Widzę, że masz tutaj dzieło sztuki. Czy jest na sprzedaż?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "take_a_look",
+                "text": "Jasne, spójrz",
+                "class": ""
+            }
+        ]
+    },
+    "take_a_look": {
+        "slug": "take_a_look",
+        "characterSays": "To jest piękne. Mogę zadać kilka pytań?",
+        "tone": "generic",
+        "callback": "putPaintingOnOffer",
+        "responses": [
+            {
+                "nextStep": "first_question",
+                "text": "Pytaj dalej",
+                "class": ""
+            }
+        ]
+    },
+    "first_question": {
+        "slug": "first_question",
+        "characterSays": "Skąd to masz?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "second_question",
+                "text": "Kupiec w Hollow Lake",
+                "class": ""
+            },
+            {
+                "nextStep": "second_question",
+                "text": "Zakupiony na aukcji w Riverton",
+                "class": ""
+            },
+            {
+                "nextStep": "second_question",
+                "text": "Kupiony od kolekcjonera w Ayr",
+                "class": ""
+            },
+            {
+                "nextStep": "second_question",
+                "text": "Sprzedał mi go nieznajomy",
+                "class": ""
+            }
+        ]
+    },
+    "second_question": {
+        "slug": "second_question",
+        "characterSays": "Skąd wiesz, że to prawda?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "third_question",
+                "text": "Zweryfikowałem to w Ayr",
+                "class": ""
+            },
+            {
+                "nextStep": "third_question",
+                "text": "Zweryfikowałem to w Riverton",
+                "class": ""
+            },
+            {
+                "nextStep": "third_question",
+                "text": "Sprzedawca zapewnił mnie",
+                "class": ""
+            },
+            {
+                "nextStep": "third_question",
+                "text": "Tylko Winston Roberts mógł namalować to arcydzieło",
+                "class": ""
+            }
+        ]
+    },
+    "third_question": {
+        "slug": "third_question",
+        "characterSays": "Przysięgniesz, że to prawda?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "response_to_questions",
+                "text": "Przysięgam",
+                "class": ""
+            },
+            {
+                "nextStep": "response_to_questions",
+                "text": "Przysięgam na Boga",
+                "class": ""
+            },
+            {
+                "nextStep": "response_to_questions",
+                "text": "Przysięgam na moją reputację",
+                "class": ""
+            },
+            {
+                "nextStep": "response_to_questions",
+                "text": "Nie składam żadnych obietnic",
+                "class": ""
+            }
+        ]
+    },
+    "response_to_questions": {
+        "slug": "response_to_questions",
+        "characterSays": "Cóż, to naprawdę arcydzieło. Szkoda, że to falsyfikat.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_can_you_tell",
+                "text": "Jak to stwierdzić?",
+                "class": ""
+            }
+        ]
+    },
+    "how_can_you_tell": {
+        "slug": "how_can_you_tell",
+        "characterSays": "Ponieważ prawdziwy ma duże rozdarcie na środku i leży w mojej szafie zbierając kurz.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "replacement",
+                "text": "Potrzebujesz zamiennika?",
+                "class": ""
+            },
+            {
+                "nextStep": "this_is_real",
+                "text": "Twój był podrobiony. Ten jest prawdziwy.",
+                "class": ""
+            },
+            {
+                "nextStep": "how_much_did_you_pay",
+                "text": "Ile za niego zapłaciłeś?",
+                "class": ""
+            },
+            {
+                "nextStep": "where_to_sell",
+                "text": "Gdzie mogę to sprzedać?",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "replacement": {
+        "slug": "replacement",
+        "characterSays": "Nie. Winston nie żyje i jest to marnowanie idealnie dobrej farby bez dołączonego nazwiska.",
+        "tone": "no",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "this_is_real",
+                "text": "Twój był podrobiony. Ten jest prawdziwy.",
+                "class": ""
+            },
+            {
+                "nextStep": "how_much_did_you_pay",
+                "text": "Ile za niego zapłaciłeś?",
+                "class": ""
+            },
+            {
+                "nextStep": "where_to_sell",
+                "text": "Gdzie mogę to sprzedać?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "this_is_real": {
+        "slug": "this_is_real",
+        "characterSays": "Mój został zweryfikowany przez Kolekcjonera z Ayr. On nigdy się nie myli. A przynajmniej ufam mu o wiele bardziej niż kupcowi.",
+        "tone": "offerInsulting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "replacement",
+                "text": "Potrzebujesz zamiennika?",
+                "class": ""
+            },
+            {
+                "nextStep": "how_much_did_you_pay",
+                "text": "Ile za niego zapłaciłeś?",
+                "class": ""
+            },
+            {
+                "nextStep": "where_to_sell",
+                "text": "Gdzie mogę to sprzedać?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "how_much_did_you_pay": {
+        "slug": "how_much_did_you_pay",
+        "characterSays": "Tylko dziesięć złotych monet. Teraz muszą być warte co najmniej dwa razy tyle.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "replacement",
+                "text": "Potrzebujesz zamiennika?",
+                "class": ""
+            },
+            {
+                "nextStep": "this_is_real",
+                "text": "Twój był podrobiony. Ten jest prawdziwy.",
+                "class": ""
+            },
+            {
+                "nextStep": "where_to_sell",
+                "text": "Gdzie mogę to sprzedać?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "where_to_sell": {
+        "slug": "where_to_sell",
+        "characterSays": "Zawsze możesz odsprzedać go Kolekcjonerowi w Ayr. Powiedz mu, że kupiłeś go ode mnie.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "replacement",
+                "text": "Potrzebujesz zamiennika?",
+                "class": ""
+            },
+            {
+                "nextStep": "this_is_real",
+                "text": "Twój był podrobiony. Ten jest prawdziwy.",
+                "class": ""
+            },
+            {
+                "nextStep": "how_much_did_you_pay",
+                "text": "Ile za niego zapłaciłeś?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

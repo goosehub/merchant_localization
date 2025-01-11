@@ -1,0 +1,43 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Prezent dla uczciwego kupca.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "thanks",
+                "text": "Dziękuję",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "thanks": {
+        "slug": "thanks",
+        "characterSays": "My, orkowie, mamy takie powiedzenie. Pomagając innym, pomagasz sobie.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

@@ -1,0 +1,2864 @@
+[
+    {
+        "alchemist": {
+            "slug": "alchemist",
+            "bias": [
+                {
+                    "tag": "aromatics",
+                    "percent": -30
+                },
+                {
+                    "tag": "potions",
+                    "percent": -30
+                },
+                {
+                    "tag": "remedies",
+                    "percent": -30
+                },
+                {
+                    "tag": "solutions",
+                    "percent": -30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": -30
+                },
+                {
+                    "tag": "tools",
+                    "percent": 30
+                },
+                {
+                    "tag": "magic",
+                    "percent": -30
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": 50
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 50
+                },
+                {
+                    "tag": "animals",
+                    "percent": 50
+                },
+                {
+                    "tag": "botanicals",
+                    "percent": 50
+                },
+                {
+                    "tag": "graves",
+                    "percent": -50
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "alchemy",
+                    "quantityMin": 2,
+                    "quantityMax": 20
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "drinks",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "monster parts",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "magic",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "pottery",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "graves",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "baker": {
+            "slug": "baker",
+            "bias": [
+                {
+                    "tag": "bread",
+                    "percent": -50
+                },
+                {
+                    "tag": "deserts",
+                    "percent": -30
+                },
+                {
+                    "tag": "rare sugar cane",
+                    "percent": 80
+                },
+                {
+                    "tag": "food",
+                    "percent": 20
+                },
+                {
+                    "tag": "dairy",
+                    "percent": 50
+                },
+                {
+                    "tag": "spices",
+                    "percent": 20
+                },
+                {
+                    "tag": "copper",
+                    "percent": 30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "tools",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -50
+                },
+                {
+                    "tag": "grains",
+                    "percent": 50
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "bread",
+                    "quantityMin": 10,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "deserts",
+                    "quantityMin": 3,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "copper",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "silver",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "baskets",
+                    "quantityMin": 1,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "household",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "grains",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                }
+            ]
+        },
+        "beggar": {
+            "slug": "beggar",
+            "bias": [
+                {
+                    "tag": "copper coins",
+                    "percent": -20
+                },
+                {
+                    "tag": "food",
+                    "percent": 50
+                },
+                {
+                    "tag": "daggers",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "daggers",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "household",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "butcher": {
+            "slug": "butcher",
+            "bias": [
+                {
+                    "tag": "meat",
+                    "percent": -40
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -50
+                },
+                {
+                    "tag": "spices",
+                    "percent": 50
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "livestock",
+                    "percent": 50
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "meat",
+                    "quantityMin": 10,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "spices",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "crates",
+                    "quantityMin": 0,
+                    "quantityMax": 4
+                },
+                {
+                    "tag": "household",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                }
+            ]
+        },
+        "barkeep": {
+            "slug": "barkeep",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": -20
+                },
+                {
+                    "tag": "daggers",
+                    "percent": 30
+                },
+                {
+                    "tag": "food",
+                    "percent": -30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": -50
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 20
+                },
+                {
+                    "tag": "statues",
+                    "percent": 20
+                },
+                {
+                    "tag": "books",
+                    "percent": -30
+                },
+                {
+                    "tag": "household",
+                    "percent": 10
+                },
+                {
+                    "tag": "copper",
+                    "percent": 30
+                },
+                {
+                    "tag": "glass",
+                    "percent": 30
+                },
+                {
+                    "tag": "grains",
+                    "percent": 30
+                },
+                {
+                    "tag": "fabrics",
+                    "percent": 20
+                },
+                {
+                    "tag": "music",
+                    "percent": -30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 1000
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 10,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "drinks",
+                    "quantityMin": 10,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "flags",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "coat of arms",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "furniture",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "barrels",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "copper",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "glass",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "household",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "sacks",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "paintings",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "candles",
+                    "quantityMin": 0,
+                    "quantityMax": 15
+                }
+            ]
+        },
+        "blacksmith": {
+            "slug": "blacksmith",
+            "bias": [
+                {
+                    "tag": "tools",
+                    "percent": 20
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "ingots",
+                    "percent": 20
+                },
+                {
+                    "tag": "ore",
+                    "percent": 50
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -40
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "armor",
+                    "percent": -30
+                },
+                {
+                    "tag": "copper",
+                    "percent": 30
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 30
+                },
+                {
+                    "tag": "rocks",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 200
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "ore",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "ingots",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "iron ingot",
+                    "quantityMin": 0,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "weapons",
+                    "quantityMin": 5,
+                    "quantityMax": 15
+                },
+                {
+                    "tag": "armor",
+                    "quantityMin": 3,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 0,
+                    "quantityMax": 6
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "crates",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "chests",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "anvil",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "grindstone",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "cook": {
+            "slug": "cook",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "spices",
+                    "percent": 30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": -30
+                },
+                {
+                    "tag": "copper",
+                    "percent": 50
+                },
+                {
+                    "tag": "silver",
+                    "percent": 50
+                },
+                {
+                    "tag": "glass",
+                    "percent": 50
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "household",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 10,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "spices",
+                    "quantityMin": 0,
+                    "quantityMax": 20
+                },
+                {
+                    "tag": "drinks",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "copper",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "silver",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "household",
+                    "quantityMin": 2,
+                    "quantityMax": 4
+                },
+                {
+                    "tag": "crates",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                }
+            ]
+        },
+        "farmer": {
+            "slug": "farmer",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": -50
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "household",
+                    "percent": 30
+                },
+                {
+                    "tag": "botanicals",
+                    "percent": -50
+                },
+                {
+                    "tag": "clothes",
+                    "percent": 30
+                },
+                {
+                    "tag": "animals",
+                    "percent": -30
+                },
+                {
+                    "tag": "packhorses",
+                    "percent": -20
+                },
+                {
+                    "tag": "seeds",
+                    "percent": 30
+                },
+                {
+                    "tag": "grains",
+                    "percent": -20
+                },
+                {
+                    "tag": "candles",
+                    "percent": 10
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 10,
+                    "quantityMax": 150
+                },
+                {
+                    "tag": "animals",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "livestock",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "botanicals",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "household",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "furniture",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "cages",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "sacks",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "seeds",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "grains",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                }
+            ]
+        },
+        "fighter": {
+            "slug": "fighter",
+            "bias": [
+                {
+                    "tag": "coins",
+                    "percent": -30
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": -30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": 30
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "potions",
+                    "percent": 30
+                },
+                {
+                    "tag": "remedies",
+                    "percent": 30
+                },
+                {
+                    "tag": "armor",
+                    "percent": 30
+                },
+                {
+                    "tag": "arrows",
+                    "percent": 30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": -30
+                },
+                {
+                    "tag": "jewelry",
+                    "percent": -30
+                },
+                {
+                    "tag": "magic",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 300
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 200
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "monster parts",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "weapons",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "armor",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "arrows",
+                    "quantityMin": 0,
+                    "quantityMax": 15
+                },
+                {
+                    "tag": "bows",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "statues",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "jewelry",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "magic",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "maps",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "alchemy",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "storage",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "fletcher": {
+            "slug": "fletcher",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -20
+                },
+                {
+                    "tag": "bows",
+                    "percent": -40
+                },
+                {
+                    "tag": "arrows",
+                    "percent": -40
+                },
+                {
+                    "tag": "tunics",
+                    "percent": 30
+                },
+                {
+                    "tag": "gloves",
+                    "percent": 30
+                },
+                {
+                    "tag": "armor",
+                    "percent": 30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 30
+                },
+                {
+                    "tag": "wood",
+                    "percent": 50
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 30
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 15
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "wood arrow",
+                    "quantityMin": 1,
+                    "quantityMax": 200
+                },
+                {
+                    "tag": "arrows",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "bows",
+                    "quantityMin": 1,
+                    "quantityMax": 6
+                },
+                {
+                    "tag": "shields",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packs",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                }
+            ]
+        },
+        "fisher": {
+            "slug": "fisher",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "seafood",
+                    "percent": -70
+                },
+                {
+                    "tag": "tools",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "spears",
+                    "percent": 50
+                },
+                {
+                    "tag": "remedies",
+                    "percent": 30
+                },
+                {
+                    "tag": "gloves",
+                    "percent": 30
+                },
+                {
+                    "tag": "shoes",
+                    "percent": 30
+                },
+                {
+                    "tag": "graves",
+                    "percent": 80
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "barrels",
+                    "percent": 30
+                },
+                {
+                    "tag": "magic",
+                    "percent": -30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 15
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "seafood",
+                    "quantityMin": 20,
+                    "quantityMax": 200
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "daggers",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "spears",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "barrels",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "remedies",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "maps",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "crates",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                }
+            ]
+        },
+        "knight": {
+            "slug": "knight",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": 30
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "armor",
+                    "percent": 50
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 50
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": -30
+                },
+                {
+                    "tag": "graves",
+                    "percent": 80
+                },
+                {
+                    "tag": "potions",
+                    "percent": 50
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 50
+                },
+                {
+                    "tag": "coins",
+                    "percent": -30
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 50
+                },
+                {
+                    "tag": "packhorses",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 300
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 200
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "swords",
+                    "quantityMin": 1,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "armor",
+                    "quantityMin": 1,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "monster parts",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 1,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "chests",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "sword stones",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "deeds",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "merchant": {
+            "slug": "merchant",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": -30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": -30
+                },
+                {
+                    "tag": "giants",
+                    "percent": -30
+                },
+                {
+                    "tag": "spices",
+                    "percent": 20
+                },
+                {
+                    "tag": "coins",
+                    "percent": 20
+                },
+                {
+                    "tag": "jewelry",
+                    "percent": 20
+                },
+                {
+                    "tag": "storage",
+                    "percent": 20
+                },
+                {
+                    "tag": "packhorses",
+                    "percent": 20
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -20
+                },
+                {
+                    "tag": "armor",
+                    "percent": -20
+                },
+                {
+                    "tag": "clothes",
+                    "percent": -20
+                },
+                {
+                    "tag": "animals",
+                    "percent": -20
+                },
+                {
+                    "tag": "botanicals",
+                    "percent": -20
+                },
+                {
+                    "tag": "furniture",
+                    "percent": -20
+                },
+                {
+                    "tag": "tools",
+                    "percent": -20
+                },
+                {
+                    "tag": "alchemy",
+                    "percent": -20
+                },
+                {
+                    "tag": "graves",
+                    "percent": -20
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 20
+                },
+                {
+                    "tag": "ingots",
+                    "percent": -20
+                },
+                {
+                    "tag": "paintings",
+                    "percent": -20
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 30,
+                    "quantityMax": 500
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 20,
+                    "quantityMax": 250
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 10,
+                    "quantityMax": 75
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "jewelry",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "crystals",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "ingots",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 10,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "spices",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "storage",
+                    "quantityMin": 2,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "furniture",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 0,
+                    "quantityMax": 8
+                },
+                {
+                    "tag": "alchemy",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "maps",
+                    "quantityMin": 1,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "fabrics",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                }
+            ]
+        },
+        "miner": {
+            "slug": "miner",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": -20
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "supplies",
+                    "percent": -30
+                },
+                {
+                    "tag": "tools",
+                    "percent": 30
+                },
+                {
+                    "tag": "gloves",
+                    "percent": 20
+                },
+                {
+                    "tag": "clothes",
+                    "percent": 30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 20
+                },
+                {
+                    "tag": "jewelry",
+                    "percent": -40
+                },
+                {
+                    "tag": "rocks",
+                    "percent": -50
+                },
+                {
+                    "tag": "candles",
+                    "percent": 10
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 15
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "ore",
+                    "quantityMin": 0,
+                    "quantityMax": 150
+                },
+                {
+                    "tag": "coal",
+                    "quantityMin": 0,
+                    "quantityMax": 30
+                },
+                {
+                    "tag": "rocks",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "gems",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "crystals",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                }
+            ]
+        },
+        "noble": {
+            "slug": "noble",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "coins",
+                    "percent": -30
+                },
+                {
+                    "tag": "copper coins",
+                    "percent": -20
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 50
+                },
+                {
+                    "tag": "household",
+                    "percent": 50
+                },
+                {
+                    "tag": "books",
+                    "percent": 30
+                },
+                {
+                    "tag": "statues",
+                    "percent": 50
+                },
+                {
+                    "tag": "clothes",
+                    "percent": 30
+                },
+                {
+                    "tag": "aromatics",
+                    "percent": 30
+                },
+                {
+                    "tag": "flowers",
+                    "percent": 50
+                },
+                {
+                    "tag": "flags",
+                    "percent": 50
+                },
+                {
+                    "tag": "coat of arms",
+                    "percent": 50
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 50
+                },
+                {
+                    "tag": "deeds",
+                    "percent": 50
+                },
+                {
+                    "tag": "fabrics",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 30,
+                    "quantityMax": 250
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 20,
+                    "quantityMax": 150
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 10,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "maps",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "furniture",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "jewelry",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "statues",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "banners",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "flags",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "coat of arms",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "pottery",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "chests",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "deeds",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "quartermaster": {
+            "slug": "quartermaster",
+            "bias": [
+                {
+                    "tag": "coins",
+                    "percent": -15
+                },
+                {
+                    "tag": "graves",
+                    "percent": 80
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": 30
+                },
+                {
+                    "tag": "armor",
+                    "percent": 30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 30
+                },
+                {
+                    "tag": "storage",
+                    "percent": 30
+                },
+                {
+                    "tag": "supplies",
+                    "percent": 30
+                },
+                {
+                    "tag": "packhorses",
+                    "percent": 30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "potions",
+                    "percent": 30
+                },
+                {
+                    "tag": "remedies",
+                    "percent": 30
+                },
+                {
+                    "tag": "tools",
+                    "percent": 30
+                },
+                {
+                    "tag": "ore",
+                    "percent": 30
+                },
+                {
+                    "tag": "ingots",
+                    "percent": 30
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 0
+                },
+                {
+                    "tag": "grains",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 200,
+                    "quantityMax": 800
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 150,
+                    "quantityMax": 600
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 100,
+                    "quantityMax": 300
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 1,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 30,
+                    "quantityMax": 300
+                },
+                {
+                    "tag": "swords",
+                    "quantityMin": 10,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "armor",
+                    "quantityMin": 10,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 10,
+                    "quantityMax": 100
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 5,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "carts",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "storage",
+                    "quantityMin": 10,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 5,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "grains",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "fabrics",
+                    "quantityMin": 0,
+                    "quantityMax": 20
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "educational",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "military",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "sailor": {
+            "slug": "sailor",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": 30
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 30
+                },
+                {
+                    "tag": "alchemy",
+                    "percent": 30
+                },
+                {
+                    "tag": "swords",
+                    "percent": 30
+                },
+                {
+                    "tag": "gloves",
+                    "percent": 30
+                },
+                {
+                    "tag": "shoes",
+                    "percent": 30
+                },
+                {
+                    "tag": "coins",
+                    "percent": -40
+                },
+                {
+                    "tag": "graves",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 30
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "seafood",
+                    "quantityMin": 0,
+                    "quantityMax": 30
+                },
+                {
+                    "tag": "daggers",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "armor",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "statues",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "maps",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "jewelry",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "magic",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "barrels",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                }
+            ]
+        },
+        "seamstress": {
+            "slug": "seamstress",
+            "bias": [
+                {
+                    "tag": "weapons",
+                    "percent": -50
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "clothes",
+                    "percent": -40
+                },
+                {
+                    "tag": "solutions",
+                    "percent": 30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 30
+                },
+                {
+                    "tag": "flags",
+                    "percent": -30
+                },
+                {
+                    "tag": "fabrics",
+                    "percent": 20
+                },
+                {
+                    "tag": "fibers",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 5,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "flags",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "furniture",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packs",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "baskets",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "spindle and wheel",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "loom",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "fabrics",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "fibers",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                }
+            ]
+        },
+        "soldier": {
+            "slug": "soldier",
+            "bias": [
+                {
+                    "tag": "coins",
+                    "percent": -30
+                },
+                {
+                    "tag": "swords",
+                    "percent": 50
+                },
+                {
+                    "tag": "armor",
+                    "percent": 50
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 50
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": -50
+                },
+                {
+                    "tag": "graves",
+                    "percent": 50
+                },
+                {
+                    "tag": "alchemy",
+                    "percent": 30
+                },
+                {
+                    "tag": "shoes",
+                    "percent": 30
+                },
+                {
+                    "tag": "coat of arms",
+                    "percent": -30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 80
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 40
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 8
+                },
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "swords",
+                    "quantityMin": 1,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "armor",
+                    "quantityMin": 1,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "monster parts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "clothes",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "sacks",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "flags",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "coat of arms",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                }
+            ]
+        },
+        "thief": {
+            "slug": "thief",
+            "bias": [
+                {
+                    "tag": "daggers",
+                    "percent": 30
+                },
+                {
+                    "tag": "jewelry",
+                    "percent": -50
+                },
+                {
+                    "tag": "magic",
+                    "percent": -50
+                },
+                {
+                    "tag": "books",
+                    "percent": -30
+                },
+                {
+                    "tag": "food",
+                    "percent": -30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": 30
+                },
+                {
+                    "tag": "books",
+                    "percent": -50
+                },
+                {
+                    "tag": "games",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 30
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "daggers",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "jewelry",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "magic",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "lockpick",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "toolmaker": {
+            "slug": "toolmaker",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "supplies",
+                    "percent": 30
+                },
+                {
+                    "tag": "wood",
+                    "percent": 30
+                },
+                {
+                    "tag": "tools",
+                    "percent": -40
+                },
+                {
+                    "tag": "fabrics",
+                    "percent": -30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": -40
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "supplies",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "tools",
+                    "quantityMin": 0,
+                    "quantityMax": 20
+                },
+                {
+                    "tag": "furniture",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "packs",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "crates",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "fabrics",
+                    "quantityMin": 0,
+                    "quantityMax": 20
+                }
+            ]
+        },
+        "hunter": {
+            "slug": "hunter",
+            "bias": [
+                {
+                    "tag": "meat",
+                    "percent": -60
+                },
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "daggers",
+                    "percent": 30
+                },
+                {
+                    "tag": "spears",
+                    "percent": 30
+                },
+                {
+                    "tag": "bows",
+                    "percent": 30
+                },
+                {
+                    "tag": "arrows",
+                    "percent": 30
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": -30
+                },
+                {
+                    "tag": "hunting box trap",
+                    "percent": 50
+                },
+                {
+                    "tag": "hunting foot trap",
+                    "percent": 50
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "bows",
+                    "quantityMin": 1,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "arrows",
+                    "quantityMin": 3,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "spears",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "monster parts",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "animals",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "meat",
+                    "quantityMin": 0,
+                    "quantityMax": 30
+                },
+                {
+                    "tag": "cages",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "storage",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "packhorses",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "bard": {
+            "slug": "bard",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -40
+                },
+                {
+                    "tag": "armor",
+                    "percent": -30
+                },
+                {
+                    "tag": "statues",
+                    "percent": 50
+                },
+                {
+                    "tag": "jewelry",
+                    "percent": 50
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 50
+                },
+                {
+                    "tag": "paints",
+                    "percent": 50
+                },
+                {
+                    "tag": "music",
+                    "percent": 50
+                },
+                {
+                    "tag": "aromatics",
+                    "percent": 30
+                },
+                {
+                    "tag": "paintings",
+                    "percent": -30
+                },
+                {
+                    "tag": "flags",
+                    "percent": -30
+                },
+                {
+                    "tag": "coat of arms",
+                    "percent": -30
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": 30
+                },
+                {
+                    "tag": "fabrics",
+                    "percent": 10
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 20
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "games",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 1,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "paints",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "music",
+                    "quantityMin": 1,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "aromatics",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "paintings",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "flags",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "coat of arms",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "pottery",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "glyph stones",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "fabrics",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                }
+            ]
+        },
+        "religious": {
+            "slug": "religious",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "gold coins",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "furniture",
+                    "percent": 50
+                },
+                {
+                    "tag": "statues",
+                    "percent": 30
+                },
+                {
+                    "tag": "graves",
+                    "percent": -50
+                },
+                {
+                    "tag": "books",
+                    "percent": -30
+                },
+                {
+                    "tag": "paintings",
+                    "percent": 30
+                },
+                {
+                    "tag": "drinks",
+                    "percent": -99
+                },
+                {
+                    "tag": "magic",
+                    "percent": -90
+                },
+                {
+                    "tag": "fabrics",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 25
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 5
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "statues",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "graves",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "jewelry",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "pottery",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "fabric",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        },
+        "magic": {
+            "slug": "magic",
+            "bias": [
+                {
+                    "tag": "food",
+                    "percent": 30
+                },
+                {
+                    "tag": "weapons",
+                    "percent": -30
+                },
+                {
+                    "tag": "magic",
+                    "percent": 30
+                },
+                {
+                    "tag": "coins",
+                    "percent": -30
+                },
+                {
+                    "tag": "monster parts",
+                    "percent": -30
+                },
+                {
+                    "tag": "alchemy",
+                    "percent": 50
+                },
+                {
+                    "tag": "jewelry",
+                    "percent": 30
+                },
+                {
+                    "tag": "dragons",
+                    "percent": 30
+                }
+            ],
+            "obtainableItems": [
+                {
+                    "tag": "any",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "copper coins",
+                    "quantityMin": 0,
+                    "quantityMax": 250
+                },
+                {
+                    "tag": "silver coins",
+                    "quantityMin": 0,
+                    "quantityMax": 150
+                },
+                {
+                    "tag": "gold coins",
+                    "quantityMin": 0,
+                    "quantityMax": 50
+                },
+                {
+                    "tag": "food",
+                    "quantityMin": 0,
+                    "quantityMax": 10
+                },
+                {
+                    "tag": "magic",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "alchemy",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "monster parts",
+                    "quantityMin": 0,
+                    "quantityMax": 3
+                },
+                {
+                    "tag": "books",
+                    "quantityMin": 0,
+                    "quantityMax": 2
+                },
+                {
+                    "tag": "crystals",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                },
+                {
+                    "tag": "Map of the West",
+                    "quantityMin": 0,
+                    "quantityMax": 1
+                }
+            ]
+        }
+    }
+]

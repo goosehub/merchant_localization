@@ -1,0 +1,61 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj kupcze. Moje zadanie nie jest jeszcze gotowe do wykonania. Chcesz porozmawiać?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_chat",
+                "text": "Jasne",
+                "class": "half_button"
+            },
+            {
+                "nextStep": "no_chat",
+                "text": "Nie, dziękuję",
+                "class": "half_button"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "lets_chat": {
+        "slug": "lets_chat",
+        "characterSays": "Czasami lubię leżeć na podłodze i udawać, że jestem marchewką.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "init",
+                "text": "Interesujące",
+                "class": ""
+            }
+        ]
+    },
+    "no_chat": {
+        "slug": "no_chat",
+        "characterSays": "Niech tak będzie.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

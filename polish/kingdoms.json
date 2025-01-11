@@ -1,0 +1,119 @@
+[
+	{
+		"index":0,
+		"name":"Imperium Czerwonych Ziem",
+		"leader":"Król Dawid Drugi",
+		"religion":"Bóstwo",
+		"religionSymbolFile":"divinity.png",
+		"flagFile":"redlands_empire.png",
+		"thiefPortraitFile":"male_thief.png",
+		"color":"#AB3428",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic"
+		]
+	},
+	{
+		"index":0,
+		"name":"Dynastia Notting",
+		"leader":"Król Krzysztof Szósty",
+		"religion":"Odrodzenie",
+		"religionSymbolFile":"revivalism.png",
+		"flagFile":"notting_dynasty.png",
+		"thiefPortraitFile":"male_theif_older.png",
+		"color":"#476C9B",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic"
+		]
+	},
+	{
+		"index":0,
+		"name":"Fray",
+		"leader":"Król Robert Drugi",
+		"religion":"Bóstwo",
+		"religionSymbolFile":"divinity.png",
+		"flagFile":"the_fray.png",
+		"thiefPortraitFile":"male_thief_hood.png",
+		"color":"#628B48",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic",
+			"monster parts"
+		]
+	},
+	{
+		"index":0,
+		"name":"Kaichi",
+		"leader":"Satoshi Nimoto",
+		"religion":"Mistycyzm",
+		"religionSymbolFile":"mysticism.png",
+		"flagFile":"hermit_kingdom.png",
+		"thiefPortraitFile":"female_theif.png",
+		"color":"#4F345A",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"shikyomo resistance",
+			"magic",
+			"monster parts",
+			"coins",
+			"weapons"
+		]
+	},
+	{
+		"index":0,
+		"name":"Republika Wysp",
+		"leader":"Wódz Koda",
+		"religion":"Przywołanie",
+		"religionSymbolFile":"conjure.png",
+		"flagFile":"island_republic.png",
+		"thiefPortraitFile":"female_thief_kazuujan.png",
+		"color":"#83B692",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			"magic"
+		]
+	},
+	{
+		"index":0,
+		"name":"Zachodnie Narody",
+		"leader":"Smok Kazuujanu",
+		"religion":"Elementalizm",
+		"religionSymbolFile":"elementalism.png",
+		"flagFile":"western_nations.png",
+		"thiefPortraitFile":"female_thief_kazuujan.png",
+		"color":"#CF995F",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			
+		]
+	},
+	{
+		"index":0,
+		"name":"Wygnany Zakon",
+		"leader":"Zaklinacz",
+		"religion":"Magia",
+		"religionSymbolFile":"magic.png",
+		"flagFile":"exiled_order.png",
+		"thiefPortraitFile":"female_theif.png",
+		"color":"#8F95D3",
+		"bias":[
+			
+		],
+		"illegalItemTags":[
+			
+		]
+	}
+]

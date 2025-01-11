@@ -1,0 +1,20 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Co za bieg! Naprawdę mi zaimponowałeś. Zasłużyłeś na tę nagrodę i mój szacunek.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

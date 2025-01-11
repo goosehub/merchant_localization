@@ -1,0 +1,43 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Dzięki twojej pomocy odnaleźliśmy zmiennokształtnego. Oto obiecana nagroda.",
+        "tone": "greeting",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "what_happens",
+                "text": "Co stanie się ze zmiennokształtnym?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_happens": {
+        "slug": "what_happens",
+        "characterSays": "Zgodził się wykorzystać swoje umiejętności, aby pomóc Wygnanemu Zakonowi, w zamian za możliwość zachowania swoich zdolności.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

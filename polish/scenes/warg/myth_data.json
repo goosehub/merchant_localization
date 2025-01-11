@@ -1,0 +1,398 @@
+{
+    "dialogue": {
+        "onStart": [
+            "Good luck."
+        ],
+        "onDraw": [
+            "We must be evenly matched."
+        ],
+        "onLose": [
+            "Well played."
+        ],
+        "onWin": [
+            "Better luck next time."
+        ]
+    },
+    "cards": [
+        {
+            "name": "sun",
+            "points": 1,
+            "isSky": true,
+            "requires": [],
+            "removes": [
+                "stars",
+                "dreams"
+            ]
+        },
+        {
+            "name": "stars",
+            "points": 1,
+            "isSky": true,
+            "requires": [],
+            "removes": [
+                "sun"
+            ]
+        },
+        {
+            "name": "moon",
+            "points": 1,
+            "isSky": true,
+            "requires": [],
+            "removes": []
+        },
+        {
+            "name": "clouds",
+            "points": 1,
+            "isSky": true,
+            "requires": [
+                "water"
+            ],
+            "removes": []
+        },
+        {
+            "name": "lightning",
+            "points": 3,
+            "isSky": true,
+            "requires": [
+                "clouds"
+            ],
+            "removes": []
+        },
+        {
+            "name": "birth",
+            "points": 1,
+            "isBirth": true,
+            "requires": [
+                "fertility"
+            ],
+            "removes": []
+        },
+        {
+            "name": "death",
+            "points": 5,
+            "isDeath": true,
+            "requires": [
+                "war"
+            ],
+            "removes": []
+        },
+        {
+            "name": "dreams",
+            "points": 2,
+            "requires": [
+                "stars"
+            ],
+            "removes": []
+        },
+        {
+            "name": "water",
+            "points": 1,
+            "requires": [],
+            "removes": []
+        },
+        {
+            "name": "fish",
+            "points": 2,
+            "requires": [
+                "water"
+            ],
+            "removes": [
+                "fish"
+            ]
+        },
+        {
+            "name": "ice",
+            "points": 2,
+            "requires": [
+                "water"
+            ],
+            "removes": []
+        },
+        {
+            "name": "fire",
+            "points": 1,
+            "requires": [],
+            "removes": [
+                "ice",
+                "plants"
+            ]
+        },
+        {
+            "name": "plants",
+            "points": 1,
+            "requires": [
+                "water"
+            ],
+            "removes": []
+        },
+        {
+            "name": "animals",
+            "points": 3,
+            "requires": [
+                "plants"
+            ],
+            "removes": [
+                "animals"
+            ]
+        },
+        {
+            "name": "harvest",
+            "points": 5,
+            "requires": [
+                "plants"
+            ],
+            "removes": [
+                "plants"
+            ]
+        },
+        {
+            "name": "fertility",
+            "points": 2,
+            "requires": [
+                "moon"
+            ],
+            "removes": []
+        },
+        {
+            "name": "madness",
+            "points": 1,
+            "requires": [
+                "moon"
+            ],
+            "removes": []
+        },
+        {
+            "name": "war",
+            "points": 3,
+            "requires": [
+                "madness"
+            ],
+            "removes": [
+                "harvest"
+            ]
+        },
+        {
+            "name": "love",
+            "points": 1,
+            "requires": [],
+            "removes": [
+                "madness"
+            ]
+        },
+        {
+            "name": "peace",
+            "points": 2,
+            "requires": [
+                "love"
+            ],
+            "removes": [
+                "war"
+            ]
+        }
+    ],
+    "decks": {
+        "default": [
+            "sun",
+            "stars",
+            "moon"
+        ]
+    },
+    "players": [
+        {
+            "name": "Faraday Casey",
+            "deck": "default"
+        },
+        {
+            "name": "Corey",
+            "deck": "default"
+        },
+        {
+            "name": "Roark Sheehan",
+            "deck": "default"
+        },
+        {
+            "name": "Kaitlyn O'Callaghan",
+            "deck": "default"
+        },
+        {
+            "name": "Boyd O'Connell",
+            "deck": "default"
+        },
+        {
+            "name": "Kella Flynn",
+            "deck": "default"
+        },
+        {
+            "name": "Robert the Third",
+            "deck": "default"
+        },
+        {
+            "name": "Kas",
+            "deck": "default"
+        },
+        {
+            "name": "Daichi",
+            "deck": "default"
+        },
+        {
+            "name": "Tua",
+            "deck": "default"
+        },
+        {
+            "name": "Drake",
+            "deck": "default"
+        },
+        {
+            "name": "Cob",
+            "deck": "default"
+        },
+        {
+            "name": "Remi",
+            "deck": "default"
+        },
+        {
+            "name": "Stanley",
+            "deck": "default"
+        },
+        {
+            "name": "Zehaan",
+            "deck": "default"
+        },
+        {
+            "name": "Liv",
+            "deck": "default"
+        },
+        {
+            "name": "Kabir",
+            "deck": "default"
+        },
+        {
+            "name": "Midori",
+            "deck": "default"
+        },
+        {
+            "name": "Zyla",
+            "deck": "default"
+        },
+        {
+            "name": "Charlie Murphy",
+            "deck": "default"
+        },
+        {
+            "name": "Terric Nash",
+            "deck": "default"
+        },
+        {
+            "name": "William Rockly",
+            "deck": "default"
+        },
+        {
+            "name": "Paul",
+            "deck": "default"
+        },
+        {
+            "name": "Baldric",
+            "deck": "default"
+        },
+        {
+            "name": "Natia",
+            "deck": "default"
+        },
+        {
+            "name": "Giles Cooper",
+            "deck": "default"
+        },
+        {
+            "name": "Simon",
+            "deck": "default"
+        },
+        {
+            "name": "Pedal",
+            "deck": "default"
+        },
+        {
+            "name": "Stuart",
+            "deck": "default"
+        },
+        {
+            "name": "Jazeer",
+            "deck": "default"
+        },
+        {
+            "name": "Sato",
+            "deck": "default"
+        },
+        {
+            "name": "Darjus Zdanovic",
+            "deck": "default"
+        },
+        {
+            "name": "Desmond",
+            "deck": "default"
+        },
+        {
+            "name": "Nicholas Godfrey",
+            "deck": "default"
+        },
+        {
+            "name": "Audric",
+            "deck": "default"
+        },
+        {
+            "name": "Mackenzie",
+            "deck": "default"
+        },
+        {
+            "name": "Kris",
+            "deck": "default"
+        },
+        {
+            "name": "Omair",
+            "deck": "default"
+        },
+        {
+            "name": "Miriam",
+            "deck": "default"
+        },
+        {
+            "name": "Sam",
+            "deck": "default"
+        },
+        {
+            "name": "Estrilda",
+            "deck": "default"
+        },
+        {
+            "name": "Yoshimasa",
+            "deck": "default"
+        },
+        {
+            "name": "James Anker",
+            "deck": "default"
+        },
+        {
+            "name": "Penny",
+            "deck": "default"
+        },
+        {
+            "name": "Odo",
+            "deck": "default"
+        },
+        {
+            "name": "Saida",
+            "deck": "default"
+        },
+        {
+            "name": "Madeline Lane",
+            "deck": "default"
+        },
+        {
+            "name": "Zalia",
+            "deck": "default"
+        },
+        {
+            "name": "Nevin Quinn",
+            "deck": "default"
+        }
+    ]
+}

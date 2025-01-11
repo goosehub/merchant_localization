@@ -1,0 +1,22 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Draft przydziału magii odbędzie się dzisiaj. Jeśli chcesz wziąć udział, prosimy o dostarczenie jednego kryształu jako zapłaty.",
+        "tone": "greeting",
+        "callback": "requestCyrstal",
+        "responses": []
+    },
+    "entry_fee_paid": {
+        "slug": "entry_fee_paid",
+        "characterSays": "Szkic rozpocznie się za kilka chwil. Poczekaj tutaj z innymi.",
+        "tone": "generic",
+        "callback": "startDraft",
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Rozumiem",
+                "class": "green_button"
+            }
+        ]
+    }
+}

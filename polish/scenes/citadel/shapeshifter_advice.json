@@ -1,0 +1,163 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj handlowcu. Chcesz zawrzeć jakieś transakcje?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "incantato_sent_me",
+                "text": "Oczarowany wysłuchaj mnie",
+                "class": ""
+            }
+        ]
+    },
+    "after_welcome": {
+        "slug": "after_welcome",
+        "characterSays": "Czy to ciebie kupiec Incanto kazał mi oczekiwać?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "incantato_sent_me",
+                "text": "Tak, chodzi o zmiennokształtnego",
+                "class": ""
+            }
+        ]
+    },
+    "incantato_sent_me": {
+        "slug": "incantato_sent_me",
+        "characterSays": "Dobry Boże. Tu chodzi o Randy'ego, prawda?",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "whos_randy",
+                "text": "Kim jest Randy?",
+                "class": ""
+            }
+        ]
+    },
+    "whos_randy": {
+        "slug": "whos_randy",
+        "characterSays": "Jestem złodziejem od dłuższego czasu, ale zacząłem od nauczania magii iluzji. Nadal uczę, gdy znajdę kogoś z potencjałem.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "you_taught_randy",
+                "text": "Nauczyłeś Randy'ego zmiany kształtu?",
+                "class": ""
+            }
+        ]
+    },
+    "you_taught_randy": {
+        "slug": "you_taught_randy",
+        "characterSays": "Przypuszczam, że zaufałem niewłaściwej osobie. Nawet po tylu latach złodziejstwa wciąż nie potrafię dobrze ocenić charakteru.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "need_to_find",
+                "text": "Muszę go znaleźć",
+                "class": ""
+            }
+        ]
+    },
+    "need_to_find": {
+        "slug": "need_to_find",
+        "characterSays": "To będzie trudne. Wybrałem go ze względu na jego niesamowitą zdolność do podszywania się pod ludzi bez użycia magii.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "looks",
+                "text": "Czy potrafię dostrzec różnicę?",
+                "class": ""
+            }
+        ]
+    },
+    "looks": {
+        "slug": "looks",
+        "characterSays": "Mało prawdopodobne. Dzięki magii i intensywnej dbałości o szczegóły będzie wyglądał identycznie.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "voice",
+                "text": "Co z jego głosem?",
+                "class": ""
+            }
+        ]
+    },
+    "voice": {
+        "slug": "voice",
+        "characterSays": "Nie potrzebuje magii, aby zrobić doskonałe wrażenie.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "items",
+                "text": "Czy ma jakieś nawyki?",
+                "class": ""
+            }
+        ]
+    },
+    "items": {
+        "slug": "items",
+        "characterSays": "Nie. Źle o tym myślisz. On jest idealnym naśladowcą. Nie pomija żadnych szczegółów.",
+        "tone": "no",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "so_how",
+                "text": "Jak więc je znaleźć?",
+                "class": ""
+            }
+        ]
+    },
+    "so_how": {
+        "slug": "so_how",
+        "characterSays": "Hmmm... Nie wie, jak handlować. Kradnie to, czego potrzebuje. Byłby kiepskim kupcem.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_mistakes",
+                "text": "Jakie błędy mógłby popełnić?",
+                "class": ""
+            }
+        ]
+    },
+    "what_mistakes": {
+        "slug": "what_mistakes",
+        "characterSays": "Poszukaj handlarza, który sprzedaje swoje monety po niskiej cenie. To będzie Randy.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "is_that_it",
+                "text": "Czy to wszystko?",
+                "class": ""
+            }
+        ]
+    },
+    "is_that_it": {
+        "slug": "is_that_it",
+        "characterSays": "Zapłacę ci dobrą monetę za tracker.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

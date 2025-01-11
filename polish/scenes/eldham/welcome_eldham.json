@@ -1,0 +1,441 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj handlarzu. Nie chcę przeszkadzać, ale bardzo potrzebuję pomocy.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_you_need",
+                "text": "Czego potrzebujesz?",
+                "class": "",
+                "callback": ""
+            },
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": "",
+                "callback": ""
+            },
+            {
+                "nextStep": "what_do_i_get",
+                "text": "Co z tego będę miał?",
+                "class": "",
+                "callback": ""
+            }
+        ]
+    },
+    "what_do_i_get": {
+        "slug": "what_do_i_get",
+        "characterSays": "Zapłacę pięćdziesiąt srebrników z góry i na zawsze pozostanę twoim dłużnikiem.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_you_need",
+                "text": "Czego potrzebujesz?",
+                "class": "",
+                "callback": ""
+            },
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": "",
+                "callback": ""
+            }
+        ]
+    },
+    "who_are_you": {
+        "slug": "who_are_you",
+        "characterSays": "Przepraszam. Jestem Sarah, alchemik i kupiec w porcie Eldham.",
+        "tone": "generic",
+        "callback": "giveName",
+        "responses": [
+            {
+                "nextStep": "what_do_you_need",
+                "text": "Czego potrzebujesz?",
+                "class": "",
+                "callback": ""
+            },
+            {
+                "nextStep": "what_do_i_get",
+                "text": "Co z tego będę miał?",
+                "class": "",
+                "callback": ""
+            }
+        ]
+    },
+    "what_do_you_need": {
+        "slug": "what_do_you_need",
+        "characterSays": "Mój mąż cierpi na rzadką i wyniszczającą chorobę. Niedługo jego serce nie będzie już w stanie się regenerować.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "cure",
+                "text": "Czy istnieje lekarstwo?",
+                "class": "",
+                "callback": ""
+            }
+        ]
+    },
+    "cure": {
+        "slug": "cure",
+        "characterSays": "Do wyleczenia potrzebna jest roślina Fated Star Plant, którą można znaleźć tylko w tundrze Egilsdóttir w północno-zachodniej części królestwa.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "just_a_plant",
+                "text": "Wszystko czego potrzebujesz to roślina?",
+                "class": "",
+                "callback": ""
+            }
+        ]
+    },
+    "just_a_plant": {
+        "slug": "just_a_plant",
+        "characterSays": "Tak. Dam pięćdziesiąt srebrników, a jeśli wrócisz z rośliną, darmowe mikstury na całe życie. Proszę kupcze, potrzebuję twojej pomocy.",
+        "tone": "yes",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Postaram się jak najlepiej",
+                "class": "green_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Będę potrzebował stu srebrników",
+                "class": "blue_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "wont_do_it",
+                "text": "Nie mogę ci pomóc",
+                "class": "red_button",
+                "callback": ""
+            }
+        ]
+    },
+    "resume": {
+        "slug": "resume",
+        "characterSays": "Jestem wdzięczny, że się rozważyłeś. Dam ci pięćdziesiąt srebrników, a jeśli wrócisz w ciągu trzech lat, darmowe eliksiry do końca życia.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Postaram się jak najlepiej",
+                "class": "green_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Będę potrzebował stu srebrników",
+                "class": "blue_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "wont_do_it_again",
+                "text": "Po namyśle, nadal nie mogę ci pomóc",
+                "class": "red_button",
+                "callback": ""
+            }
+        ]
+    },
+    "haggle": {
+        "slug": "haggle",
+        "characterSays": "Bez względu na wszystko. Oto sto srebrników na pokrycie wydatków i mapa do Egilsdóttir. Niech bóg chroni cię w podróży.",
+        "tone": "deal",
+        "callback": "giveItemsAfterHaggle",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "do_it": {
+        "slug": "do_it",
+        "characterSays": "Oto pięćdziesiąt srebrników na pokrycie wydatków i mapa do Egilsdóttir. Powodzenia i niech Bóg ma cię w opiece podczas podróży.",
+        "tone": "generic",
+        "callback": "giveItemsWithoutHaggle",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "wont_do_it": {
+        "slug": "wont_do_it",
+        "characterSays": "Mam nadzieję, że to rozważysz.",
+        "tone": "bothered",
+        "callback": "rejectQuest",
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Nie mogę niczego obiecać",
+                "class": "green_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Będę potrzebował stu srebrników",
+                "class": "blue_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "wont_do_it_again": {
+        "slug": "wont_do_it_again",
+        "characterSays": "Dlaczego musisz grać w te gierki z moim sercem, ty lumpowaty ośle.",
+        "tone": "bothered",
+        "callback": "rejectQuest",
+        "responses": [
+            {
+                "nextStep": "resume",
+                "text": "Nie mogę niczego obiecać",
+                "class": "green_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Będę potrzebował stu srebrników",
+                "class": "blue_button",
+                "callback": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "you_have_the_treatment": {
+        "slug": "you_have_the_treatment",
+        "characterSays": "Masz roślinę!",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "giveTreatment",
+                "text": "Tutaj możesz go mieć",
+                "class": "give_treatment_button green_button"
+            },
+            {
+                "nextStep": "giveCure",
+                "text": "Zamiast tego powinieneś mieć ten Amulet Witalności",
+                "class": "give_cure_button green_button"
+            },
+            {
+                "nextStep": "not_for_free",
+                "text": "Niestety, nie mogę dać ci tego za darmo",
+                "class": "red_button"
+            }
+        ]
+    },
+    "you_have_the_cure": {
+        "slug": "you_have_the_cure",
+        "characterSays": "Masz legendarny amulet witalności?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "giveCure",
+                "text": "Tutaj możesz go mieć",
+                "class": "give_cure_button green_button"
+            },
+            {
+                "nextStep": "not_for_free",
+                "text": "Niestety, nie mogę dać ci tego za darmo",
+                "class": "red_button"
+            }
+        ]
+    },
+    "not_for_free": {
+        "slug": "not_for_free",
+        "characterSays": "Rozumiem. W końcu jesteś kupcem. Ile?",
+        "tone": "inquire",
+        "callback": "allowBarter",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Wymieńmy się za to",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "giveTreatment",
+                "text": "Właściwie możesz mieć Fated Star Plant",
+                "class": "give_treatment_button green_button"
+            },
+            {
+                "nextStep": "giveCure",
+                "text": "W rzeczywistości możesz mieć Legendarny Amulet Witalności",
+                "class": "give_cure_button green_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reward": {
+        "slug": "reward",
+        "characterSays": "Naprawdę!?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "giveTreatment",
+                "text": "Przyniosłem roślinę Fated Star Plant",
+                "class": "give_treatment_button green_button"
+            },
+            {
+                "nextStep": "giveCure",
+                "text": "Przyniosłem Legendarny Amulet Witalności",
+                "class": "give_cure_button green_button"
+            },
+            {
+                "nextStep": "caution_about_treatment",
+                "text": "Nekromanta powiedział, że to nie jest lekarstwo",
+                "class": "necromancer_question"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "giveCure": {
+        "slug": "giveCure",
+        "characterSays": "Cudowne! To błogosławieństwo, którego nigdy nie mógłbym spłacić. Już nigdy nie będziesz musiał płacić za moje mikstury. Przyjdź do mnie w każdej chwili po więcej.",
+        "tone": "laugh",
+        "callback": "giveCure",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "giveTreatment": {
+        "slug": "giveTreatment",
+        "characterSays": "Lekarstwo! Zapamiętam ten cudowny dzień. Nigdy więcej nie będziesz musiał płacić za moje mikstury. Przyjdź do mnie w każdej chwili po więcej.",
+        "tone": "laugh",
+        "callback": "giveTreatment",
+        "responses": [
+            {
+                "nextStep": "ask_about_treatment",
+                "text": "Czy wierzysz, że to lekarstwo zadziała?",
+                "class": "necromancer_question"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "caution_about_treatment": {
+        "slug": "caution_about_treatment",
+        "characterSays": "Nieśmiertelność uczyniła ją niesympatyczną i niechętną wytrwałości. Nie rozumie, dlaczego walczymy ze śmiercią.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "giveTreatment",
+                "text": "Przyniosłem roślinę Fated Star Plant",
+                "class": "give_treatment_button green_button"
+            },
+            {
+                "nextStep": "giveCure",
+                "text": "Przyniosłem Legendarny Amulet Witalności",
+                "class": "give_cure_button green_button"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "ask_about_treatment": {
+        "slug": "ask_about_treatment",
+        "characterSays": "Nie pytałbym, gdybym nie wierzył, że jest szansa. Dałeś nam nadzieję. Dziękuję.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "nevermind": {
+        "slug": "nevermind",
+        "characterSays": "Co to za żart?",
+        "tone": "offended",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

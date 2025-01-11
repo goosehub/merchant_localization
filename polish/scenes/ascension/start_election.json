@@ -1,0 +1,106 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Dziś są wybory. Czy chcesz rzucić wyzwanie Audricowi o tytuł Króla Monety?",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "yes_run",
+				"text": "Tak",
+				"class": "green_button half_button"
+			},
+			{
+				"nextStep": "no_run",
+				"text": "Nie",
+				"class": "red_button half_button"
+			}
+		]
+	},
+	"no_run": {
+		"slug": "no_run",
+		"characterSays": "Wygląda na to, że Audric znowu pozostanie bez rywala. Może w przyszłym roku.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "no_barter",
+				"text": "Chcesz się targować?",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "Nie dzisiaj, mój przyjacielu, muszę iść powiedzieć Audricowi.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"yes_run": {
+		"slug": "yes_run",
+		"characterSays": "Czy masz pięćset złotych monet jako opłatę za wejście?",
+		"tone": "inquire",
+		"callback": "offerGoldCoins",
+		"responses": [
+		]
+	},
+	"fee_paid": {
+		"slug": "fee_paid",
+		"characterSays": "Doskonale. Zbiorę cech i zaczniemy debatę.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "goodbye_running",
+				"text": "Dobrze, jestem gotowy",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "debate",
+				"text": "Będzie debata?",
+				"class": ""
+			}
+		]
+	},
+	"debate": {
+		"slug": "debate",
+		"characterSays": "Oczywiście. To twoja szansa, aby przedstawić swoje argumenty i przekonać niezdecydowanych wyborców.",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "goodbye_running",
+				"text": "Dobrze, jestem gotowy",
+				"class": "green_button"
+			}
+		]
+	},
+	"goodbye_running": {
+		"slug": "goodbye_running",
+		"characterSays": "Wracam za chwilę.",
+		"tone": "goodbye",
+		"callback": "startScene",
+		"responses": [
+		]
+	},
+	"goodbye_not_running": {
+		"slug": "goodbye_not_running",
+		"characterSays": "Do widzenia.",
+		"tone": "goodbye",
+		"callback": "endScene",
+		"responses": [
+		]
+	}
+}

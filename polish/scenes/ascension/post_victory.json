@@ -1,0 +1,143 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Gratulacje z okazji wczorajszego zwycięstwa --player_name--, a może powinienem powiedzieć Królu Monety?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "as_king",
+				"text": "Mów mi Król Monety",
+				"class": ""
+			},
+			{
+				"nextStep": "as_king",
+				"text": "Nie musisz być taki formalny",
+				"class": ""
+			},
+			{
+				"nextStep": "as_king",
+				"text": "Wciąż jestem pijany po świętowaniu",
+				"class": ""
+			}
+		]
+	},
+	"as_king": {
+		"slug": "as_king",
+		"characterSays": "Jako Król Monety korzystasz teraz z obniżonych opłat i możesz kontrolować opłaty cechowe. Czy chcesz wprowadzić zmiany?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Zostaw je takie, jakie są",
+				"class": "blue_button",
+				"callback": "setGuildFeesSame"
+			},
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Podnieś je",
+				"class": "blue_button",
+				"callback": "setGuildFeesHigh"
+			},
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Obniż je",
+				"class": "blue_button",
+				"callback": "setGuildFeesLow"
+			},
+			{
+				"nextStep": "restrict_supplies",
+				"text": "Usuń je",
+				"class": "blue_button",
+				"callback": "setGuildFeesNone"
+			}
+		]
+	},
+	"restrict_supplies": {
+		"slug": "restrict_supplies",
+		"characterSays": "Jeszcze jedna sprawa; Audric ograniczyłby dostawy, aby podnieść ceny w całym królestwie. Czy interesuje cię takie działanie?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "pick_supply",
+				"text": "Tak, zaróbmy trochę złota",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "end",
+				"text": "Nie wierzę w manipulowanie cenami rynkowymi",
+				"class": "red_button"
+			}
+		]
+	},
+	"pick_supply": {
+		"slug": "pick_supply",
+		"characterSays": "Co chciałbyś ograniczyć? Możesz zmienić tę decyzję w dowolnym momencie.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "end",
+				"text": "Przyprawy",
+				"class": "blue_button",
+				"callback": "setRestrictSpices"
+			},
+			{
+				"nextStep": "end",
+				"text": "Części potworów",
+				"class": "blue_button",
+				"callback": "setRestrictParts"
+			},
+			{
+				"nextStep": "end",
+				"text": "Mikstury",
+				"class": "blue_button",
+				"callback": "setRestrictPotions"
+			},
+			{
+				"nextStep": "end",
+				"text": "Magia",
+				"class": "blue_button",
+				"callback": "setRestrictMagic"
+			},
+			{
+				"nextStep": "end",
+				"text": "Nieważne",
+				"class": "red_button"
+			}
+		]
+	},
+	"no_barter": {
+		"slug": "no_barter",
+		"characterSays": "Nie dzisiaj, mój przyjacielu, muszę wrócić i przekazać Smokowi z Kazuujan nowiny.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	},
+	"end": {
+		"slug": "end",
+		"characterSays": "W porządku, to wszystko. Jeśli zmienisz zdanie, zawsze możesz zmienić wybory będąc w Ascension.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"no_barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	}
+}

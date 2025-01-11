@@ -1,0 +1,20 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Dobre prowadzenie biznesu",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

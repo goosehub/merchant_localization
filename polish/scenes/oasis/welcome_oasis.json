@@ -1,0 +1,379 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Pokój z tobą Merchant. Witamy w Oazie. Daj mi znać, jeśli czegoś potrzebujesz.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "thanks",
+                "text": "Dzięki",
+                "class": ""
+            },
+            {
+                "nextStep": "tell_me_about_this_place",
+                "text": "Opowiedz mi o tym miejscu",
+                "class": ""
+            }
+        ]
+    },
+    "thanks": {
+        "slug": "thanks",
+        "characterSays": "Czy przyniosłeś wystarczającą ilość sztabek żelaza na aukcję?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "need_ingots",
+                "text": "Czy mogę kupić sztabki żelaza?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "have_ingots",
+                "text": "Mam wystarczająco dużo sztabek żelaza",
+                "class": ""
+            },
+            {
+                "nextStep": "tell_me_about_the_auction",
+                "text": "Dlaczego potrzebuję sztabek żelaza?",
+                "class": ""
+            }
+        ]
+    },
+    "tell_me_about_this_place": {
+        "slug": "tell_me_about_this_place",
+        "characterSays": "Ta oaza jest punktem pośrednim między królestwem ludzi i orków. To doskonałe miejsce do prowadzenia aukcji.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "tell_me_about_the_auction",
+                "text": "Opowiedz mi o aukcji",
+                "class": ""
+            }
+        ]
+    },
+    "tell_me_about_the_auction": {
+        "slug": "tell_me_about_the_auction",
+        "characterSays": "Orkowie przynoszą przesyłki z królestwa orków w zamian za sztabki żelaza. Czy masz wystarczającą ilość sztabek żelaza na aukcję?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "need_ingots",
+                "text": "Czy mogę kupić sztabki żelaza?",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "have_ingots",
+                "text": "Mam wystarczająco dużo sztabek żelaza",
+                "class": ""
+            }
+        ]
+    },
+    "have_ingots": {
+        "slug": "have_ingots",
+        "characterSays": "Mam nadzieję, że zobaczymy się w niedzielę. W międzyczasie, jesteś zainteresowany czymkolwiek, co mam?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "need_ingots": {
+        "slug": "need_ingots",
+        "characterSays": "Orkowa tradycja nie pozwalała kobietom \"sprzedawać\" sztabek ludziom.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "gift_ingots",
+                "text": "Gdzie mogę zdobyć sztabki?",
+                "class": ""
+            }
+        ]
+    },
+    "gift_ingots": {
+        "slug": "gift_ingots",
+        "characterSays": "Być może podaruję ci sztabki. A może ty podarujesz mi coś w zamian?",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "agree_to_terms_as_deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "agree_to_terms_as_okay",
+                "text": "Dobrze",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Nie, dziękuję, do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "agree_to_terms_as_deal": {
+        "slug": "agree_to_terms_as_deal",
+        "characterSays": "Nie nazywaj tego transakcją. Po prostu rozważ to... płacąc do przodu. Tylko ten jeden raz. Ile sztabek żelaza potrzebujesz?",
+        "tone": "offerInsulting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "player_given_gift",
+                "text": "Kilka",
+                "class": "green_button",
+                "callback": "giveAFew"
+            },
+            {
+                "nextStep": "player_given_gift",
+                "text": "Tuzin",
+                "class": "green_button",
+                "callback": "giveOneDozen"
+            },
+            {
+                "nextStep": "player_given_gift",
+                "text": "Dwa tuziny",
+                "class": "green_button",
+                "callback": "giveTwoDozen"
+            },
+            {
+                "nextStep": "player_asks_too_much",
+                "text": "Sto",
+                "class": "green_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Nieważne, do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "agree_to_terms_as_okay": {
+        "slug": "agree_to_terms_as_okay",
+        "characterSays": "Dobrze, tylko ten jeden raz. Ile potrzebujesz.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "player_given_gift",
+                "text": "Kilka",
+                "class": "green_button",
+                "callback": "giveAFew"
+            },
+            {
+                "nextStep": "player_given_gift",
+                "text": "Tuzin",
+                "class": "green_button",
+                "callback": "giveOneDozen"
+            },
+            {
+                "nextStep": "player_given_gift",
+                "text": "Dwa tuziny",
+                "class": "green_button",
+                "callback": "giveTwoDozen"
+            },
+            {
+                "nextStep": "player_asks_too_much",
+                "text": "Sto",
+                "class": "green_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Nieważne, do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "player_asks_too_much": {
+        "slug": "player_asks_too_much",
+        "characterSays": "Musisz myśleć, że jestem na tyle szalony, by dać ci tyle w prezencie.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "player_given_gift",
+                "text": "Kilka",
+                "class": "green_button",
+                "callback": "giveAFew"
+            },
+            {
+                "nextStep": "player_given_gift",
+                "text": "Tuzin",
+                "class": "green_button",
+                "callback": "giveOneDozen"
+            },
+            {
+                "nextStep": "player_given_gift",
+                "text": "Dwa tuziny",
+                "class": "green_button",
+                "callback": "giveTwoDozen"
+            },
+            {
+                "nextStep": false,
+                "text": "Nieważne, do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "player_given_gift": {
+        "slug": "player_given_gift",
+        "characterSays": "Obdarzam cię tym \"darem\".",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "player_gives_gift",
+                "text": "Dziękuję. Ja również mam dla ciebie prezent.",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "leave_without_paying",
+                "text": "Dzięki, do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "leave_without_paying": {
+        "slug": "leave_without_paying",
+        "characterSays": "Hej, dokąd idziesz? Nie masz prezentu w zamian?",
+        "tone": "offerInsulting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "player_gives_gift",
+                "text": "Mój błąd. Mam dla ciebie prezent.",
+                "class": "green_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Nie, do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "player_gives_gift": {
+        "slug": "player_gives_gift",
+        "characterSays": "To byłoby bardzo miłe z twojej strony.",
+        "tone": "inquire",
+        "callback": "clearOffers",
+        "responses": []
+    },
+    "great_gift": {
+        "slug": "great_gift",
+        "characterSays": "Dziękuję za ten hojny dar. Jesteś kupcem o pryncypialnym charakterze.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "any_adivce",
+                "text": "Wszelkie porady dotyczące aukcji",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "fair_gift": {
+        "slug": "fair_gift",
+        "characterSays": "Dziękuję za miły prezent. Jesteś honorowym kupcem.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "any_adivce",
+                "text": "Wszelkie porady dotyczące aukcji",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "poor_gift": {
+        "slug": "poor_gift",
+        "characterSays": "Spodziewałem się... czegoś więcej, ale jestem wdzięczny za ten prezent.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "any_adivce",
+                "text": "Wszelkie porady dotyczące aukcji",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "terrible_gift": {
+        "slug": "terrible_gift",
+        "characterSays": "To jest obraza. Zatrzymaj swoje śmieci.",
+        "tone": "offerInsulting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "player_gives_gift",
+                "text": "Mój błąd. Mam dla ciebie odpowiedni prezent.",
+                "class": "green_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "any_adivce": {
+        "slug": "any_adivce",
+        "characterSays": "Uważaj na kupowanie ciężkich przesyłek. Podróżowanie z tak dużym ciężarem może być kosztowne.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj kupcze. Chciałbyś wygrać trochę miedzi?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how",
+                "text": "Oczywiście",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "how",
+                "text": "Jak?",
+                "class": ""
+            }
+        ]
+    },
+    "how": {
+        "slug": "how",
+        "characterSays": "Jestem bukmacherem na wyścigi konne w każdy wtorek. Przy odrobinie szczęścia można wygrać sporo miedziaków.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "interested",
+                "text": "Czuję się szczęśliwy",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "reject",
+                "text": "Nie uprawiam hazardu",
+                "class": "red_button"
+            }
+        ]
+    },
+    "interested": {
+        "slug": "interested",
+        "characterSays": "Przy okazji warto zgłosić do wyścigu jednego z własnych koni.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_enter",
+                "text": "Jak wziąć udział w wyścigu?",
+                "class": ""
+            },
+            {
+                "nextStep": "interested_in_enter_horse",
+                "text": "Ile wynosi nagroda?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reject": {
+        "slug": "reject",
+        "characterSays": "Inteligentny. Hazard to głupia gra. Prawdziwą miedzią jest wygrana w wyścigu. Powinieneś wprowadzić konia",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_enter",
+                "text": "Jak wziąć udział w wyścigu?",
+                "class": ""
+            },
+            {
+                "nextStep": "interested_in_enter_horse",
+                "text": "Ile wynosi nagroda?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "interested_in_enter_horse": {
+        "slug": "interested_in_enter_horse",
+        "characterSays": "Nagroda za pierwsze miejsce to 60 miedziaków. Drugie miejsce to 15 miedziaków. Trzecie miejsce to 10.",
+        "tone": "offerClose",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_enter",
+                "text": "Jak wziąć udział w wyścigu?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "how_to_enter": {
+        "slug": "how_to_enter",
+        "characterSays": "Wyścigi odbywają się w każdy wtorek. Wystarczy przynieść konia i 5 miedziaków na wpisowe.",
+        "tone": "offerClose",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "interested_in_enter_horse",
+                "text": "Ile wynosi nagroda?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

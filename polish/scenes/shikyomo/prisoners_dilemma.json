@@ -1,0 +1,111 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Merchant, dlaczego je masz?",
+        "tone": "ah",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "excuse",
+                "text": "Nie wiedziałem, co mają na myśli",
+                "class": ""
+            },
+            {
+                "nextStep": "excuse",
+                "text": "Popieram opór",
+                "class": ""
+            },
+            {
+                "nextStep": "excuse",
+                "text": "Zostałem wrobiony",
+                "class": ""
+            },
+            {
+                "nextStep": "excuse",
+                "text": "Mam wiele rzeczy",
+                "class": ""
+            }
+        ]
+    },
+    "excuse": {
+        "slug": "excuse",
+        "characterSays": "Nieważne. Mogę powiedzieć, że ich nie zrobiłeś. Więc skąd się wzięły?",
+        "tone": "bothered",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "snitch",
+                "text": "Kupiec Ryuko",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no_snitch",
+                "text": "Nie pamiętam",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "no_snitch",
+                "text": "Nie wiem",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "no_snitch",
+                "text": "Nigdy nie powiem",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_snitch": {
+        "slug": "no_snitch",
+        "characterSays": "Powiedz mi, skąd je masz, albo zabiorę ci połowę twoich monet, przypraw i biżuterii i wygnam cię na zawsze.",
+        "tone": "offended",
+        "callback": "putHalfOnOffer",
+        "responses": [
+            {
+                "nextStep": "snitch",
+                "text": "Kupiec Ryuko",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no_snitch_insist",
+                "text": "Nie pamiętam",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "no_snitch_insist",
+                "text": "Nie wiem",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "no_snitch_insist",
+                "text": "Nigdy nie powiem",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_snitch_insist": {
+        "slug": "no_snitch_insist",
+        "characterSays": "Niech tak będzie. Zabierz tego kupca na następny statek do Eldham...",
+        "tone": "laugh",
+        "callback": "takeHalfAndSendPlayer",
+        "responses": []
+    },
+    "snitch": {
+        "slug": "snitch",
+        "characterSays": "Ryuko! Zapłaci za to życiem. Co do ciebie Merchant, jesteś wolny. W drogę.",
+        "tone": "laugh",
+        "callback": "snitch",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

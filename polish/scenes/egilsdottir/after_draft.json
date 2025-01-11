@@ -1,0 +1,135 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Mogę spytać, czy ktoś z Egilsdóttir poprosił cię o przyniesienie jej tego amuletu?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Tak",
+                "class": "green_button half_button"
+            },
+            {
+                "nextStep": "no",
+                "text": "Nie",
+                "class": "red_button half_button"
+            },
+            {
+                "nextStep": "why_do_you_ask",
+                "text": "Dlaczego pytasz?",
+                "class": ""
+            }
+        ]
+    },
+    "yes": {
+        "slug": "yes",
+        "characterSays": "Powiedz jej, że w każdej chwili może nas odwiedzić w Cytadeli.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "is_she_banned",
+                "text": "Powiedziała, że została zbanowana",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no": {
+        "slug": "no",
+        "characterSays": "Jestem pewien, że prosiła o dyskrecję. Niech wie, że może sama kupić amulety.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "is_she_banned",
+                "text": "Powiedziała, że została zbanowana",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "why_do_you_ask": {
+        "slug": "why_do_you_ask",
+        "characterSays": "Od wieków wysyła kurierów, by przynosili jej amulety witalności. Niech wie, że może je kupić sama.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "is_she_banned",
+                "text": "Powiedziała, że została zbanowana",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "is_she_banned": {
+        "slug": "is_she_banned",
+        "characterSays": "Ułaskawiłem ją prawie trzy wieki temu.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_crime",
+                "text": "Jakie było przestępstwo?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_crime": {
+        "slug": "what_crime",
+        "characterSays": "Odmówiła ożywienia Wielkiej Maho. Uwięzienie jej było poważnym błędem, którego może nigdy nie wybaczyć.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

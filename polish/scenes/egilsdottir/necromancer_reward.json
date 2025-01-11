@@ -1,0 +1,50 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Czy otrzymałeś Amulet Witalności?",
+        "tone": "inquire",
+        "callback": "putQuestItemOnOffer",
+        "responses": []
+    },
+    "reward": {
+        "slug": "reward",
+        "characterSays": "Dziękuję. Oto twoja nagroda. Do widzenia.",
+        "tone": "generic",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "mention_enchanter",
+                "text": "Powiedział, że nie jesteś zbanowany",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "mention_enchanter": {
+        "slug": "mention_enchanter",
+        "characterSays": "Chce mnie zwabić z powrotem, abym użył nekromancji i uwięzi mnie, abym mógł to zrobić. Nie wierz mu.",
+        "tone": "uninterested",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

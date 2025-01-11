@@ -1,0 +1,307 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witamy w Hollow Lake. Życzymy bezpiecznego i udanego pobytu w naszej spokojnej wiosce.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "offering_art",
+                "text": "Dziękuję",
+                "class": ""
+            }
+        ]
+    },
+    "offering_art": {
+        "slug": "offering_art",
+        "characterSays": "Maluję między klientami. Czy byłbyś zainteresowany zakupem mojego najnowszego dzieła za kilka srebrników?",
+        "tone": "inquire",
+        "callback": "putOriginalArtOnOffer",
+        "responses": []
+    },
+    "not_interested_in_original_art": {
+        "slug": "not_interested_in_original_art",
+        "characterSays": "Rozumiem. Sztuka nie jest warta farby, z której jest zrobiona, chyba że artysta nie żyje. Mam coś, co bardziej cię zainteresuje.",
+        "tone": "uninterested",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "offer_forgery",
+                "text": "Co to jest?",
+                "class": ""
+            }
+        ]
+    },
+    "first_deal": {
+        "slug": "first_deal",
+        "characterSays": "Umowa, jak sądzę. Wygląda na to, że sztuka nie jest wiele warta, chyba że artysta od dawna nie żyje. Mam coś, co może cię bardziej zainteresować.",
+        "tone": "deal",
+        "callback": "makeTransaction",
+        "responses": [
+            {
+                "nextStep": "offer_forgery",
+                "text": "Co to jest?",
+                "class": ""
+            }
+        ]
+    },
+    "great_first_deal": {
+        "slug": "great_first_deal",
+        "characterSays": "Wow, naprawdę widzisz dużą wartość w mojej sztuce. Powiedzmy, że mam coś jeszcze, co może cię zainteresować.",
+        "tone": "deal",
+        "callback": "makeTransaction",
+        "responses": [
+            {
+                "nextStep": "offer_forgery",
+                "text": "Co to jest?",
+                "class": ""
+            }
+        ]
+    },
+    "offer_forgery": {
+        "slug": "offer_forgery",
+        "characterSays": "Jest to bezcenne i historyczne arcydzieło Winstona Robertsona z jego wczesnego okresu.",
+        "tone": "inquire",
+        "callback": "introduceForgery",
+        "responses": [
+            {
+                "nextStep": "looks_beautiful",
+                "text": "Wygląda pięknie",
+                "class": ""
+            },
+            {
+                "nextStep": "how_much",
+                "text": "Ile?",
+                "class": ""
+            },
+            {
+                "nextStep": "verify",
+                "text": "Skąd mam wiedzieć, że to prawda?",
+                "class": ""
+            }
+        ]
+    },
+    "how_much": {
+        "slug": "how_much",
+        "characterSays": "Jest bezcenny, ale również sfałszowany. Zrobiłem skrupulatne notatki na temat oryginału i odtworzyłem go idealnie. Jest wart fortunę dla odpowiedniego nabywcy.",
+        "tone": "laugh",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "where_is_the_original",
+                "text": "Gdzie jest oryginał?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_not_lie",
+                "text": "Po co mówić, że to fałszerstwo?",
+                "class": ""
+            },
+            {
+                "nextStep": "reject_forgery",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "verify": {
+        "slug": "verify",
+        "characterSays": "Nie byłbyś w stanie. Zrobiłem skrupulatne notatki na temat oryginału i odtworzyłem go idealnie. Jest wart fortunę dla odpowiedniego nabywcy.",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "where_is_the_original",
+                "text": "Gdzie jest oryginał?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_not_lie",
+                "text": "Po co mówić, że to fałszerstwo?",
+                "class": ""
+            },
+            {
+                "nextStep": "reject_forgery",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "looks_beautiful": {
+        "slug": "looks_beautiful",
+        "characterSays": "Niektórzy twierdzą, że fałszerstwo nie może być piękne.",
+        "tone": "laugh",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "its_a_forgery",
+                "text": "To jest fałszerstwo?",
+                "class": ""
+            }
+        ]
+    },
+    "its_a_forgery": {
+        "slug": "its_a_forgery",
+        "characterSays": "Zrobiłem skrupulatne notatki na temat oryginału, gdy był jeszcze w Ayr i odtworzyłem go idealnie. Jest wart fortunę dla odpowiedniego nabywcy.",
+        "tone": "ah",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "where_is_the_original",
+                "text": "Gdzie jest oryginał?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_not_lie",
+                "text": "Po co mówić, że to fałszerstwo?",
+                "class": ""
+            },
+            {
+                "nextStep": "reject_forgery",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Obiecuję, że będzie to najlepsza inwestycja w sztukę, jakiej kiedykolwiek dokonasz.",
+        "tone": "laugh",
+        "callback": "introduceForgery",
+        "responses": [
+            {
+                "nextStep": "where_is_the_original",
+                "text": "Gdzie jest oryginał?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_not_lie",
+                "text": "Po co mówić, że to fałszerstwo?",
+                "class": ""
+            },
+            {
+                "nextStep": "reject_forgery",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "where_is_the_original": {
+        "slug": "where_is_the_original",
+        "characterSays": "Widziałem go na wystawie w kościele w Ayr osiem lat temu. Wkrótce potem został sprzedany i od tamtej pory go nie widziano.",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "why_not_lie",
+                "text": "Po co mówić, że to fałszerstwo?",
+                "class": ""
+            },
+            {
+                "nextStep": "reject_forgery",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "why_not_lie": {
+        "slug": "why_not_lie",
+        "characterSays": "Dobrzy kupcy nigdy nie okłamują innych kupców. Bez siebie nawzajem jesteśmy niczym.",
+        "tone": "laugh",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "where_is_the_original",
+                "text": "Gdzie jest oryginał?",
+                "class": ""
+            },
+            {
+                "nextStep": "reject_forgery",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal_forgery": {
+        "slug": "deal_forgery",
+        "characterSays": "Transakcja. Jest dwóch nabywców, którym polecam sprzedać ten przedmiot. Jeden mieszka w Riverton, a drugi w Ingress Rock.",
+        "tone": "deal",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "buyer_riverton",
+                "text": "Kto jest kupującym w Riverton?",
+                "class": ""
+            },
+            {
+                "nextStep": "buyer_ingress_rock",
+                "text": "Kto jest kupującym w Ingress Rock?",
+                "class": ""
+            }
+        ]
+    },
+    "buyer_riverton": {
+        "slug": "buyer_riverton",
+        "characterSays": "Nicholas Godfrey jest najsłynniejszym kolekcjonerem sztuki na świecie. Winston Robert jest jednym z jego ulubionych artystów. Zapłaci za niego więcej niż ktokolwiek inny w tym świecie.",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "buyer_ingress_rock",
+                "text": "Kto jest kupującym w Ingress Rock?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "buyer_ingress_rock": {
+        "slug": "buyer_ingress_rock",
+        "characterSays": "Zehaan jest ekscentrycznym zachodnim szlachcicem, który zdobył wielkie bogactwo, mimo że bez wysiłku wydaje swoje monety i łatwo go przekonać.",
+        "tone": "generic",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "buyer_riverton",
+                "text": "Kto jest kupującym w Riverton?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reject_forgery": {
+        "slug": "reject_forgery",
+        "characterSays": "Zapraszam do zakupu, jeśli zmienisz zdanie.",
+        "tone": "rejected",
+        "callback": "rejectForgery",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

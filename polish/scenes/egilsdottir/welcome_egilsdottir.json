@@ -1,0 +1,535 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj kupcze. Jestem Nekromantą z Egilsdóttir. Co sprowadza cię do naszej małej, odległej wioski?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "looking_for_coin",
+                "text": "Szukam monety",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "looking_for_items",
+                "text": "Szukam egzotycznych przedmiotów",
+                "class": "short_button",
+                "callback": "setRewardItems"
+            },
+            {
+                "nextStep": "looking_for_exiled",
+                "text": "Szukam Zakonu Wygnanych",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "curious",
+                "text": "Byłem ciekawy, co tu jest",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "revive_the_dead",
+                "text": "Czy możesz przywrócić zmarłych do życia?",
+                "class": "short_button"
+            }
+        ]
+    },
+    "curious": {
+        "slug": "curious",
+        "characterSays": "Zabawne, w ten sposób sam odkryłem to miejsce. Ale to było dawno temu.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_long_ago",
+                "text": "Jak dawno temu?",
+                "class": ""
+            },
+            {
+                "nextStep": "looking_for_coin",
+                "text": "Szukam monety",
+                "class": ""
+            },
+            {
+                "nextStep": "looking_for_items",
+                "text": "Szukam egzotycznych przedmiotów",
+                "class": "",
+                "callback": "setRewardItems"
+            },
+            {
+                "nextStep": "looking_for_exiled",
+                "text": "Szukam Zakonu Wygnanych",
+                "class": ""
+            },
+            {
+                "nextStep": "revive_the_dead",
+                "text": "Czy możesz przywrócić zmarłych do życia?",
+                "class": ""
+            }
+        ]
+    },
+    "how_long_ago": {
+        "slug": "how_long_ago",
+        "characterSays": "Po odrodzeniu wyruszyłem na skraj królestwa. Wędrowałem przez dziesięciolecia, zanim sto lat temu odkryłem tę wioskę.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "looking_for_coin",
+                "text": "Szukam monety",
+                "class": ""
+            },
+            {
+                "nextStep": "looking_for_items",
+                "text": "Szukam egzotycznych przedmiotów",
+                "class": "",
+                "callback": "setRewardItems"
+            },
+            {
+                "nextStep": "looking_for_exiled",
+                "text": "Szukam Zakonu Wygnanych",
+                "class": ""
+            },
+            {
+                "nextStep": "revive_the_dead",
+                "text": "Czy możesz przywrócić zmarłych do życia?",
+                "class": ""
+            }
+        ]
+    },
+    "revive_the_dead": {
+        "slug": "revive_the_dead",
+        "characterSays": "Tak, robiłem to wcześniej. Spotkasz niektórych z nich. To mała wioska.",
+        "tone": "yes",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "revive_cost",
+                "text": "Ile wynosi opłata?",
+                "class": ""
+            },
+            {
+                "nextStep": "looking_for_coin",
+                "text": "Szukam monety",
+                "class": ""
+            },
+            {
+                "nextStep": "looking_for_items",
+                "text": "Szukam egzotycznych przedmiotów",
+                "class": "",
+                "callback": "setRewardItems"
+            },
+            {
+                "nextStep": "looking_for_exiled",
+                "text": "Szukam Zakonu Wygnanych",
+                "class": ""
+            }
+        ]
+    },
+    "revive_cost": {
+        "slug": "revive_cost",
+        "characterSays": "Nie wykonuję nekromancji za monety. Mogę jednak dać ci Berło Nekromancji w zamian za drobną przysługę.",
+        "tone": "offerBad",
+        "callback": "showRewardItem",
+        "responses": [
+            {
+                "nextStep": "start_explain_errand",
+                "text": "Na czym polega przysługa?",
+                "class": ""
+            },
+            {
+                "nextStep": "scepter_of_necromancy",
+                "text": "Jak używać Berła Nekromancji?",
+                "class": ""
+            }
+        ]
+    },
+    "scepter_of_necromancy": {
+        "slug": "scepter_of_necromancy",
+        "characterSays": "Nie. Jestem jedyną osobą, której kiedykolwiek udało się ożywić zmarłych, ale ludzie zawsze są zdesperowani, by spróbować. Berło można sprzedać za ponad pięćdziesiąt złotych monet.",
+        "tone": "laugh",
+        "callback": "setRewardItems",
+        "responses": [
+            {
+                "nextStep": "start_explain_errand",
+                "text": "Na czym polega przysługa?",
+                "class": ""
+            },
+            {
+                "nextStep": "coin_instead",
+                "text": "A może za pięćdziesiąt złotych monet?",
+                "class": "blue_button",
+                "callback": "setRewardCoin"
+            }
+        ]
+    },
+    "looking_for_coin": {
+        "slug": "looking_for_coin",
+        "characterSays": "Jak widzę, od razu do rzeczy. Zapłacę pięćdziesiąt złotych monet, jeśli załatwisz dla mnie prostą sprawę.",
+        "tone": "uninterested",
+        "callback": "setRewardCoin",
+        "responses": [
+            {
+                "nextStep": "start_explain_errand",
+                "text": "Jakie jest zadanie?",
+                "class": ""
+            }
+        ]
+    },
+    "looking_for_items": {
+        "slug": "looking_for_items",
+        "characterSays": "Tworzę te berła nekromancji. Każde z nich jest warte ponad pięćdziesiąt złotych monet. Jest twoje, jeśli wyświadczysz mi małą przysługę.",
+        "tone": "generic",
+        "callback": "showRewardItem",
+        "responses": [
+            {
+                "nextStep": "start_explain_errand",
+                "text": "Na czym polega przysługa?",
+                "class": ""
+            },
+            {
+                "nextStep": "coin_instead",
+                "text": "A może za pięćdziesiąt złotych monet?",
+                "class": "blue_button",
+                "callback": "setRewardCoin"
+            }
+        ]
+    },
+    "looking_for_exiled": {
+        "slug": "looking_for_exiled",
+        "characterSays": "Być może będę w stanie pomóc... jeśli obiecasz przynieść mi coś, czego potrzebuję. Wynagrodzę cię nawet berłem nekromancji.",
+        "tone": "ah",
+        "callback": "setRewardItems",
+        "responses": [
+            {
+                "nextStep": "start_explain_errand",
+                "text": "Czego potrzebujesz?",
+                "class": ""
+            },
+            {
+                "nextStep": "coin_instead",
+                "text": "A może za pięćdziesiąt złotych monet?",
+                "class": "blue_button",
+                "callback": "setRewardCoin"
+            }
+        ]
+    },
+    "coin_instead": {
+        "slug": "coin_instead",
+        "characterSays": "Oczywiście.",
+        "tone": "yes",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "start_explain_errand",
+                "text": "Na czym polega przysługa?",
+                "class": ""
+            }
+        ]
+    },
+    "start_explain_errand": {
+        "slug": "start_explain_errand",
+        "characterSays": "Potrzebuję nowego Amuletu Witalności. Tylko Incantato może stworzyć ten amulet.",
+        "tone": "generic",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "where_is_he",
+                "text": "Gdzie on jest?",
+                "class": ""
+            }
+        ]
+    },
+    "where_is_he": {
+        "slug": "where_is_he",
+        "characterSays": "Jest przywódcą Wygnanego Zakonu i mieszka w Cytadeli wysoko w górach na wschód stąd.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "can_i_buy",
+                "text": "Czy mogę go od niego kupić?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_not_you",
+                "text": "Dlaczego nie kupisz tego od niego?",
+                "class": ""
+            }
+        ]
+    },
+    "why_not_you": {
+        "slug": "why_not_you",
+        "characterSays": "Zostałem wykluczony z Zakonu Wygnanych. Okrutna ironia.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "can_i_buy",
+                "text": "Czy mogę go od niego kupić?",
+                "class": ""
+            }
+        ]
+    },
+    "can_i_buy": {
+        "slug": "can_i_buy",
+        "characterSays": "Niestety, sprzedaje on swoje najlepsze przedmioty w drafcie przydziału zaklęć.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_is_draft",
+                "text": "Co to jest wersja robocza?",
+                "class": ""
+            }
+        ]
+    },
+    "what_is_draft": {
+        "slug": "what_is_draft",
+        "characterSays": "Kupujący wnoszą opłatę wstępną. Następnie na zmianę wybierają przedmioty, aż do ich wyczerpania.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "buy_in_draft",
+                "text": "Mogę go kupić w drafcie?",
+                "class": ""
+            },
+            {
+                "nextStep": "cost_of_ticket",
+                "text": "Ile wynosi opłata startowa?",
+                "class": ""
+            }
+        ]
+    },
+    "cost_of_ticket": {
+        "slug": "cost_of_ticket",
+        "characterSays": "Jeden kryształ. Przekażę ci opłatę wpisową.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "buy_in_draft",
+                "text": "Mogę go kupić w drafcie?",
+                "class": ""
+            }
+        ]
+    },
+    "buy_in_draft": {
+        "slug": "buy_in_draft",
+        "characterSays": "Jeśli grasz po raz pierwszy, otrzymasz ostatni wybór. Ten przedmiot zniknie, zanim nadejdzie twoja kolej.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "trade_up",
+                "text": "Czy mogę kupić pierwszy pick?",
+                "class": ""
+            }
+        ]
+    },
+    "trade_up": {
+        "slug": "trade_up",
+        "characterSays": "Nie możesz kupować ani sprzedawać picków, ale możesz nimi handlować. Handluj do pierwszego wyboru lub tak wysoko, jak tylko możesz.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "got_it",
+                "text": "Przejdź do draftu, dokonaj wymiany, zdobądź amulet",
+                "class": ""
+            }
+        ]
+    },
+    "got_it": {
+        "slug": "got_it",
+        "characterSays": "Jasne. Dostarczę mapę i opłatę za wejście w wysokości jednego kryształu, a ty wrócisz z Amuletem Witalności i będziesz miał swoją nagrodę.",
+        "tone": "uninterested",
+        "callback": "showUpFrontItems",
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Zrobię to",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Chcę 75 złotych monet",
+                "class": "blue_button coin_reward_option",
+                "callback": "setRewardMoreCoin"
+            },
+            {
+                "nextStep": "hard_haggle",
+                "text": "Chcę 100 złotych monet",
+                "class": "blue_button coin_reward_option"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Chcę dwa berła",
+                "class": "blue_button item_reward_option",
+                "callback": "setRewardMoreItems"
+            },
+            {
+                "nextStep": "hard_haggle",
+                "text": "Chcę trzy berła",
+                "class": "blue_button item_reward_option"
+            },
+            {
+                "nextStep": "not_interested",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Więc, czy .",
+        "tone": "inquire",
+        "callback": "showUpFrontItems",
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Zrobię to",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Chcę 75 złotych monet",
+                "class": "blue_button coin_reward_option",
+                "callback": "setRewardMoreCoin"
+            },
+            {
+                "nextStep": "hard_haggle",
+                "text": "Chcę 100 złotych monet",
+                "class": "blue_button coin_reward_option"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Chcę dwa berła",
+                "class": "blue_button item_reward_option",
+                "callback": "setRewardMoreItems"
+            },
+            {
+                "nextStep": "hard_haggle",
+                "text": "Chcę trzy berła",
+                "class": "blue_button item_reward_option"
+            },
+            {
+                "nextStep": "not_interested",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "hard_haggle": {
+        "slug": "hard_haggle",
+        "characterSays": "Nie.",
+        "tone": "no",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Zrobię to",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Chcę 75 złotych monet",
+                "class": "blue_button coin_reward_option",
+                "callback": "setRewardMoreCoin"
+            },
+            {
+                "nextStep": "hard_haggle",
+                "text": "Chcę 100 złotych monet",
+                "class": "blue_button coin_reward_option"
+            },
+            {
+                "nextStep": "haggle",
+                "text": "Chcę dwa berła",
+                "class": "blue_button item_reward_option",
+                "callback": "setRewardMoreItems"
+            },
+            {
+                "nextStep": "not_interested",
+                "text": "Nie jestem zainteresowany",
+                "class": "red_button"
+            }
+        ]
+    },
+    "haggle": {
+        "slug": "haggle",
+        "characterSays": "Umowa stoi. Tylko nie mów nikomu, że kupujesz to dla mnie.",
+        "tone": "deal",
+        "callback": "givePlayerItems",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "do_it": {
+        "slug": "do_it",
+        "characterSays": "W takim razie umowa stoi. Tylko nie mów nikomu, że kupujesz go dla mnie.",
+        "tone": "deal",
+        "callback": "givePlayerItems",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "not_interested": {
+        "slug": "not_interested",
+        "characterSays": "Niech tak będzie. Daj mi znać, jeśli zmienisz zdanie.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "do_it",
+                "text": "Jeśli zmienię zdanie, zrobię to",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_chat": {
+        "slug": "no_chat",
+        "characterSays": "Do widzenia",
+        "tone": "goodbye",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

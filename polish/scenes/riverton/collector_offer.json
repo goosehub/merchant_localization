@@ -1,0 +1,291 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Nowa twarz! Czy to twoja pierwsza aukcja?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "first_auction",
+                "text": "Tak",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "not_first_auction",
+                "text": "Nie",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "first_auction": {
+        "slug": "first_auction",
+        "characterSays": "Bądź ostrożny. Widziałem wiele osób, które dały się ponieść emocjom i zapłaciły o wiele za dużo.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "not_first_auction": {
+        "slug": "not_first_auction",
+        "characterSays": "Być może brałeś udział w aukcjach na oazie? Jeśli tak, to jestem pewien, że będzie to dla ciebie o wiele mniej frustrujące.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "who_are_you": {
+        "slug": "who_are_you",
+        "characterSays": "Nicholas Godfrey. Zastanawiałem się tylko, czy będziesz licytować utwór Simona Crowella?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Tak",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no",
+                "text": "Nie",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "perhaps",
+                "text": "Być może",
+                "class": ""
+            },
+            {
+                "nextStep": "not_saying",
+                "text": "Nie mówię",
+                "class": ""
+            },
+            {
+                "nextStep": "why_do_you_ask",
+                "text": "Dlaczego pytasz?",
+                "class": ""
+            }
+        ]
+    },
+    "yes": {
+        "slug": "yes",
+        "characterSays": "Ja również. Czy nie byłoby szkoda, gdybyśmy się licytowali? Może moglibyśmy dojść do porozumienia i zaoszczędzić sobie sporo pieniędzy?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "plan_if_yes",
+                "text": "Co masz na myśli?",
+                "class": ""
+            }
+        ]
+    },
+    "no": {
+        "slug": "no",
+        "characterSays": "Hmm... Dziękuję za zaspokojenie mojej ciekawości.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_do_you_ask",
+                "text": "Dlaczego pytasz?",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "perhaps": {
+        "slug": "perhaps",
+        "characterSays": "Cóż, może mógłbym zaoferować trochę monet, aby przekazać ten konkretny przedmiot?",
+        "tone": "offerClose",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "plan_if_perhaps",
+                "text": "Co masz na myśli?",
+                "class": ""
+            }
+        ]
+    },
+    "not_saying": {
+        "slug": "not_saying",
+        "characterSays": "Mogę to uszanować. Życzę powodzenia i dobrej zabawy.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_do_you_ask",
+                "text": "Dlaczego pytasz?",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "why_do_you_ask": {
+        "slug": "why_do_you_ask",
+        "characterSays": "Jestem tylko ciekawy i przyjazny, przyjacielu.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Jestem zainteresowany obrazem",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no",
+                "text": "Nie interesuje mnie obraz",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "perhaps",
+                "text": "Mogę być zainteresowany",
+                "class": ""
+            },
+            {
+                "nextStep": "not_saying",
+                "text": "Nie mówię",
+                "class": ""
+            }
+        ]
+    },
+    "plan_if_yes": {
+        "slug": "plan_if_yes",
+        "characterSays": "Nie licytuj ze mną obrazu, a zapłacę ci 5 sztuk złota. Wszystko, co musisz zrobić, to nie podnosić ręki.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setCollectorDealAt5"
+            },
+            {
+                "nextStep": "deal",
+                "text": "10 sztuk złota i mamy umowę",
+                "class": "blue_button",
+                "callback": "setCollectorDealAt10"
+            },
+            {
+                "nextStep": "deal",
+                "text": "15 sztuk złota i mamy umowę",
+                "class": "green_button",
+                "callback": "setCollectorDealAt15"
+            },
+            {
+                "nextStep": "no_deal",
+                "text": "No Deal",
+                "class": "red_button"
+            }
+        ]
+    },
+    "plan_if_perhaps": {
+        "slug": "plan_if_yes",
+        "characterSays": "Nie licytuj ze mną obrazu, a zapłacę ci 5 sztuk złota. Wszystko, co musisz zrobić, to nie podnosić ręki.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setCollectorDealAt5"
+            },
+            {
+                "nextStep": "deal",
+                "text": "10 sztuk złota i mamy umowę",
+                "class": "blue_button",
+                "callback": "setCollectorDealAt10"
+            },
+            {
+                "nextStep": "haggle_failure",
+                "text": "15 sztuk złota i mamy umowę",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "no_deal",
+                "text": "No Deal",
+                "class": "red_button"
+            }
+        ]
+    },
+    "haggle_failure": {
+        "slug": "haggle_failure",
+        "characterSays": "Nawet nie potwierdziłeś, że na pewno kupujesz obraz i chcesz 15 złota za nic?",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setCollectorDealAt5"
+            },
+            {
+                "nextStep": "deal",
+                "text": "10 sztuk złota i mamy umowę",
+                "class": "blue_button",
+                "callback": "setCollectorDealAt10"
+            },
+            {
+                "nextStep": "haggle_failure",
+                "text": "15 sztuk złota i mamy umowę",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "no_deal",
+                "text": "No Deal",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal": {
+        "slug": "deal",
+        "characterSays": "Rzeczywiście. Otrzymasz płatność po zakończeniu aukcji, jeśli się z niej wywiążesz.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": " red_button"
+            }
+        ]
+    },
+    "no_deal": {
+        "slug": "deal",
+        "characterSays": "Cóż, warto było spróbować. Życzę powodzenia i dobrej zabawy.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": " red_button"
+            }
+        ]
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Zainteresowany przeznaczoną rośliną gwiezdną? Niech zgadnę, szukasz lekarstwa na umierające serce?",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Tak",
+                "class": ""
+            },
+            {
+                "nextStep": "yes",
+                "text": "Skąd wiedziałeś?",
+                "class": ""
+            },
+            {
+                "nextStep": false,
+                "text": "Nie twoja sprawa",
+                "class": ""
+            }
+        ]
+    },
+    "yes": {
+        "slug": "yes",
+        "characterSays": "Wielu podróżników szuka tej rośliny, ponieważ wierzą, że jest ona lekarstwem.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "not_a_cure",
+                "text": "To nie jest lekarstwo?",
+                "class": ""
+            }
+        ]
+    },
+    "not_a_cure": {
+        "slug": "not_a_cure",
+        "characterSays": "Nie. To tylko spowalnia rozkład i przedłuża mękę. Dla kogokolwiek to jest, wyświadcz mu przysługę i wróć z pustymi rękami.",
+        "tone": "no",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "is_there_a_cure",
+                "text": "Czy istnieje lekarstwo?",
+                "class": ""
+            }
+        ]
+    },
+    "is_there_a_cure": {
+        "slug": "is_there_a_cure",
+        "characterSays": "Tylko Legendarny Amulet Witalności może go wyleczyć. Ale odradzam to.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why",
+                "text": "Dlaczego?",
+                "class": ""
+            }
+        ]
+    },
+    "why": {
+        "slug": "why",
+        "characterSays": "Śmierć nie jest czymś, czego należy się obawiać. Zbyt wiele cierpienia i pieniędzy wydają desperaci walczący o kilka dodatkowych lat.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "take_it",
+                "text": "Czy mogę kupić jakąś gwiezdną roślinę?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "take_it": {
+        "slug": "take_it",
+        "characterSays": "Weź to. W końcu przebyłeś całą tę drogę. Mam jednak nadzieję, że zastanowisz się nad tym, co powiedziałem.",
+        "tone": "generic",
+        "callback": "givePlant",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

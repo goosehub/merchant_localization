@@ -1,0 +1,61 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Wyzwanie? A kim dokładnie jest ten kupiec, który uważa, że może zostać Królem Monety?",
+		"tone": "offended",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"no_matter",
+				"text":"Jestem bogatym i wpływowym kupcem",
+				"class":""
+			},
+			{
+				"nextStep":"no_matter",
+				"text":"Jestem właściwym kupcem do tej roli",
+				"class":""
+			},
+			{
+				"nextStep":"no_matter",
+				"text":"Byłem przeznaczony, aby zostać królem",
+				"class":""
+			},
+			{
+				"nextStep":"no_matter",
+				"text":"Jestem prostym wędrownym kupcem",
+				"class":""
+			}
+		]
+	},
+	"no_matter": {
+		"slug": "no_matter",
+		"characterSays": "Nieważne. Tylko marnujesz czas wszystkich. Załatwmy to jak najszybciej.",
+		"tone": "bothered",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"goodbye",
+				"text":"Powodzenia",
+				"class":""
+			},
+			{
+				"nextStep":"goodbye",
+				"text":"Do widzenia",
+				"class":""
+			},
+			{
+				"nextStep":"goodbye",
+				"text":"Zjeżdżaj",
+				"class":""
+			}
+		]
+	},
+	"goodbye": {
+		"slug": "goodbye",
+		"characterSays": "...",
+		"tone": "goodbye",
+		"callback": "startCutscene",
+		"responses": [
+		]
+	}
+}

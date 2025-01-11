@@ -1,0 +1,137 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Przepraszam, czy to ty jesteś --player_name--?",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "introduction",
+				"text": "Tak",
+				"class": ""
+			},
+			{
+				"nextStep": "introduction",
+				"text": "Kto pyta?",
+				"class": ""
+			}
+		]
+	},
+	"introduction": {
+		"slug": "introduction",
+		"characterSays": "Witaj. Nazywam się Rowan Moss. Smok z Kazuujan wysłał mnie, by cię wprowadzić w sprawy.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "name_company",
+				"text": "Co powinienem wiedzieć?",
+				"class": ""
+			}
+		]
+	},
+	"name_company": {
+		"slug": "name_company",
+		"characterSays": "Zarejestrowałem twoją firmę w Ascension. Pierwsza sprawa do załatwienia: jak chcesz ją nazwać?",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+		]
+	},
+	"give_company_name": {
+		"slug": "give_company_name",
+		"characterSays": "Śmiała nazwa. Pozwól, że wpiszę ją na akcjach firmy od razu.",
+		"tone": "laugh",
+		"callback": "prepareCompanyStock",
+		"responses": [
+			{
+				"nextStep": "give_company_stock",
+				"text": "Akcje firmy?",
+				"class": ""
+			}
+		]
+	},
+	"give_company_stock": {
+		"slug": "give_company_stock",
+		"characterSays": "Oczywiście. Oto twoje akcje. Reprezentują one twoje udziały w firmie.",
+		"tone": "generic",
+		"callback": "giveCompanyStock",
+		"responses": [
+			{
+				"nextStep": "explain_company_stock",
+				"text": "Ile są warte?",
+				"class": ""
+			}
+		]
+	},
+	"explain_company_stock": {
+		"slug": "explain_company_stock",
+		"characterSays": "Na razie nic. Im większy sukces firmy, tym bardziej zyskają na wartości, więc trzymaj je na razie.",
+		"tone": "ah",
+		"callback": "clearOffers",
+		"responses": [
+			{
+				"nextStep": "what_now",
+				"text": "Co teraz?",
+				"class": ""
+			}
+		]
+	},
+	"no_stock": {
+		"slug": "no_stock",
+		"characterSays": "Tak. Nie negocjowałeś udziałów w firmie, więc będziesz polegać wyłącznie na podziale zysków.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_now",
+				"text": "Co teraz?",
+				"class": ""
+			}
+		]
+	},
+	"what_now": {
+		"slug": "what_now",
+		"characterSays": "Smok hojnie przekazał trochę złota na zatrudnienie pierwszej załogi. Jesteś gotowy szukać kapitanów?",
+		"tone": "generic",
+		"callback": "giveGold",
+		"responses": [
+			{
+				"nextStep": "lets_go",
+				"text": "Ruszajmy",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "not_now",
+				"text": "Nie teraz",
+				"class": "red_button"
+			}
+		]
+	},
+	"lets_go": {
+		"slug": "lets_go",
+		"characterSays": "Chodź za mną do portu...",
+		"tone": "generic",
+		"callback": "startCutscene",
+		"responses": [
+		]
+	},
+	"not_now": {
+		"slug": "not_now",
+		"characterSays": "Idź do portu, kiedy będziesz gotowy. Powodzenia.",
+		"tone": "uninterested",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	}
+}

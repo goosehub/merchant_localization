@@ -1,0 +1,270 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj kupcze. Witamy w Kai, największym mieście Republiki Wysp.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_request",
+                "text": "Dzięki",
+                "class": ""
+            }
+        ]
+    },
+    "start_request": {
+        "slug": "start_request",
+        "characterSays": "Jako przywódca gildii kupieckiej nie mogę opuścić Kai na dłuższy czas. Potrzebuję pomocy podróżującego kupca.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_you_need",
+                "text": "Czego potrzebujesz?",
+                "class": ""
+            }
+        ]
+    },
+    "what_do_you_need": {
+        "slug": "what_do_you_need",
+        "characterSays": "Mamy ceremonię, aby zdecydować, że Wódz Jedności dla wysp będzie negocjował handel przyprawami z krajami zewnętrznymi.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "explain_ceremony",
+                "text": "Jak działa ceremonia?",
+                "class": ""
+            }
+        ]
+    },
+    "explain_ceremony": {
+        "slug": "explain_ceremony",
+        "characterSays": "W dawnych czasach o zwycięstwie decydowało wrzucenie złota do wulkanu, aby udowodnić, kto jest gotów poświęcić najwięcej.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "sounds_wasteful",
+                "text": "Brzmi nieekonomicznie",
+                "class": ""
+            }
+        ]
+    },
+    "sounds_wasteful": {
+        "slug": "sounds_wasteful",
+        "characterSays": "Tak było. Dlatego już dawno zdecydowano, że złoto musi być tylko prezentowane.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "richest_person_wins",
+                "text": "Więc najbogatsza osoba wygrywa?",
+                "class": ""
+            }
+        ]
+    },
+    "richest_person_wins": {
+        "slug": "richest_person_wins",
+        "characterSays": "Dokładnie. Niewielka wyspa Kona obfituje w złoto. Tytuł ten dzierży od wieków.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "you_want_to_change_that",
+                "text": "Chcesz to zmienić?",
+                "class": ""
+            }
+        ]
+    },
+    "you_want_to_change_that": {
+        "slug": "you_want_to_change_that",
+        "characterSays": "Tak, wykorzystali ten tytuł, aby jeszcze bardziej się wzbogacić i utrudnić usunięcie ich z urzędu.",
+        "tone": "yes",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_much_gold",
+                "text": "Ile złota potrzebujesz?",
+                "class": ""
+            }
+        ]
+    },
+    "how_much_gold": {
+        "slug": "how_much_gold",
+        "tone": "ah",
+        "characterSays": "Szacuję, że jest to co najmniej osiemset sztabek złota.",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "where_to_get_gold",
+                "text": "Skąd weźmiesz tyle złota?",
+                "class": ""
+            }
+        ]
+    },
+    "where_to_get_gold": {
+        "slug": "where_to_get_gold",
+        "tone": "generic",
+        "characterSays": "Muszę uzyskać audiencję u Smoka Kazuujana i poprosić o pożyczkę w wysokości ośmiuset sztabek złota.",
+        "callback": "givePlayerMap",
+        "responses": [
+            {
+                "nextStep": "how_to_convince",
+                "text": "Jak mam go przekonać?",
+                "class": ""
+            },
+            {
+                "nextStep": "a_dragon",
+                "text": "Smok?",
+                "class": ""
+            }
+        ]
+    },
+    "a_dragon": {
+        "slug": "a_dragon",
+        "characterSays": "Smok Kazuujan jest najbogatszym pożyczkodawcą w królestwie. Jest naszą najlepszą nadzieją na wprowadzenie zmian.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_to_convince",
+                "text": "Jak mam go przekonać?",
+                "class": ""
+            }
+        ]
+    },
+    "how_to_convince": {
+        "slug": "how_to_convince",
+        "tone": "ah",
+        "characterSays": "Jej. Mogę zapewnić Smokowi dwieście ton przyprawy rocznie. To powinno wystarczyć, by ją przekonać.",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_i_get",
+                "text": "Co otrzymam?",
+                "class": ""
+            }
+        ]
+    },
+    "what_do_i_get": {
+        "slug": "what_do_i_get",
+        "characterSays": "Jeśli zabezpieczysz pożyczkę, zapłacę ci pięć worków przyprawy za twoje kłopoty.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setRewardSmall"
+            },
+            {
+                "nextStep": "upfront_deal",
+                "text": "Chcę połowę z góry",
+                "class": "blue_button",
+                "callback": "setRewardSmallHalfUpfront"
+            },
+            {
+                "nextStep": "deal",
+                "text": "Chcę dziesięć worków",
+                "class": "blue_button",
+                "callback": "setRewardLarge"
+            },
+            {
+                "nextStep": "negotiate",
+                "text": "Chcę dwadzieścia worków",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "no_deal",
+                "text": "Brak umowy",
+                "class": "red_button"
+            }
+        ]
+    },
+    "negotiate": {
+        "slug": "negotiate",
+        "characterSays": "Dam ci dziesięć worków przyprawy, nie więcej.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setRewardLarge"
+            },
+            {
+                "nextStep": "upfront_deal",
+                "text": "Chcę połowę z góry",
+                "class": "blue_button",
+                "callback": "setRewardLargeHalfUpfront"
+            },
+            {
+                "nextStep": "negotiate",
+                "text": "Chcę dwadzieścia worków",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "no_deal",
+                "text": "Brak umowy",
+                "class": "red_button"
+            }
+        ]
+    },
+    "upfront_deal": {
+        "slug": "upfront_deal",
+        "characterSays": "W porządku, możesz dostać czarny pieprz z góry. Jeśli wrócisz z pomocą Smoka, otrzymasz lepsze przyprawy. Proszę, pomóż nam naprawić tę wielowiekową niesprawiedliwość.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal": {
+        "slug": "deal",
+        "characterSays": "Umowa stoi. Mieszkańcy Kai docenią twoją pomoc. Ta wielowiekowa niesprawiedliwość zostanie w końcu naprawiona.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_deal": {
+        "slug": "no_deal",
+        "characterSays": "Jeśli kiedykolwiek zdarzy ci się rozmawiać ze Smokiem, pamiętaj, że oferta jest aktualna.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

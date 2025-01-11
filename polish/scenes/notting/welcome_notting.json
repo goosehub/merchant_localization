@@ -1,0 +1,263 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj, kupcze, w historycznym Notting Hill. Najwspanialszym mieście, które pobłogosławiło królestwo. Witam cię.",
+        "tone": "greeting",
+        "callback": "setFirstWelcome",
+        "responses": [
+            {
+                "nextStep": "thank_you",
+                "text": "Co sprawia, że Notting Hill jest tak wspaniałe?",
+                "class": ""
+            }
+        ]
+    },
+    "thank_you": {
+        "slug": "thank_you",
+        "characterSays": "Jest to miejsce narodzin cywilizowanego społeczeństwa, kiedy Wielki Notting Pierwszy osiedlił się tutaj pięćset lat przed odrodzeniem.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "interesting",
+                "text": "Interesujące",
+                "class": ""
+            }
+        ]
+    },
+    "interesting": {
+        "slug": "interesting",
+        "characterSays": "A z twoją pomocą możesz uczynić mnie kolejnym królem Notting!",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_king",
+                "text": "Jak kupiec może zostać królem?",
+                "class": ""
+            }
+        ]
+    },
+    "how_king": {
+        "slug": "how_king",
+        "characterSays": "Rodzina królewska organizuje bal maskowy. To właśnie tam przekonam Clementine, księżniczkę Notting, by za mnie wyszła.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "how_help",
+                "text": "Czy zostałeś zaproszony?",
+                "class": ""
+            }
+        ]
+    },
+    "how_help": {
+        "slug": "how_help",
+        "characterSays": "Nie. Zapraszani są tylko szlachcice, a każdy z nich otrzymuje maskę. Być może, jeśli uda ci się przekonać jedną z nich do porzucenia maski, uda mi się zakraść i podbić jej serce.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_do_i_get",
+                "text": "Co otrzymam?",
+                "class": ""
+            }
+        ]
+    },
+    "what_do_i_get": {
+        "slug": "what_do_i_get",
+        "characterSays": "Kiedy zostanę królem, dam ci bogactwa Notting przekraczające twoją wyobraźnię.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "if_not_king",
+                "text": "A jeśli nie zostaniesz królem?",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie jestem zainteresowany.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "if_not_king": {
+        "slug": "if_not_king",
+        "characterSays": "Dam ci statuetkę godną tak ważnej przysługi.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "prefer_coin",
+                "text": "Wolę monety",
+                "class": "blue_button",
+                "callback": "setReward40"
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie jestem zainteresowany.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "prefer_coin": {
+        "slug": "prefer_coin",
+        "characterSays": "Zrozumiałe. Czterdzieści srebrników.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setReward40"
+            },
+            {
+                "nextStep": "deal",
+                "text": "Niech to będzie pięćdziesiąt srebrników",
+                "class": "blue_button",
+                "callback": "setReward50"
+            },
+            {
+                "nextStep": "haggle_big",
+                "text": "Niech będzie osiemdziesiąt srebrników",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie jestem zainteresowany.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "haggle_big": {
+        "slug": "haggle_big",
+        "characterSays": "Mogę zrobić sześćdziesiąt srebrników, nie więcej.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "deal",
+                "text": "Umowa",
+                "class": "green_button",
+                "callback": "setReward60"
+            },
+            {
+                "nextStep": "haggle_big",
+                "text": "Niech będzie osiemdziesiąt srebrników",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "rejected",
+                "text": "Nie jestem zainteresowany.",
+                "class": "red_button"
+            }
+        ]
+    },
+    "rejected": {
+        "slug": "rejected",
+        "characterSays": "Oferta jest ważna w przypadku natrafienia na jakiekolwiek maski.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal": {
+        "slug": "deal",
+        "characterSays": "Umowa. Mała maska, którą mi przyniesiesz, na zawsze zmieni bieg królestwa.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Czy musiałeś wybrać tak dziwną maskę? Nieważne. Wkrótce zdobędę rękę księżniczki. A jutro rano otrzymasz swoją nagrodę.",
+        "tone": "laugh",
+        "callback": "resume",
+        "responses": [
+            {
+                "nextStep": "reward_now",
+                "text": "Oczekuję teraz mojej nagrody",
+                "class": "notting_expect_reward_now"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "reward_now": {
+        "slug": "reward_now",
+        "characterSays": "Nie. Dostaniesz swoją nagrodę po tym, jak ta maska doprowadzi mnie do balu.",
+        "tone": "no",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "oldResumed": {
+        "slug": "oldResumed",
+        "characterSays": "Doskonale. Wkrótce zdobędę rękę księżniczki. Oto obiecana nagroda.",
+        "tone": "laugh",
+        "callback": "resume",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

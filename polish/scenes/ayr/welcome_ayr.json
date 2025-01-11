@@ -1,0 +1,203 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Witamy w historycznym mieście Ayr. Jestem przywódcą cechu i prowadzę Boską Kolekcję dla Kościoła.",
+		"tone": "greeting",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_is_collection",
+				"text": "Czym jest Boska Kolekcja?",
+				"class": ""
+			}
+		]
+	},
+	"what_is_collection": {
+		"slug": "what_is_collection",
+		"characterSays": "To największa kolekcja relikwii, magicznych przedmiotów, rzadkich potworów i innych bezcennych rzeczy.",
+		"tone": "generic",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "illegal",
+				"text": "Czy te rzeczy nie są nielegalne?",
+				"class": ""
+			}
+		]
+	},
+	"illegal": {
+		"slug": "illegal",
+		"characterSays": "Tak, oczywiście. Jednak Kościół ma boskie prawa do całej własności w Królestwie. Zapewniam cię, że bardzo dobrze je chronimy.",
+		"tone": "yes",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_do_you_get_items",
+				"text": "Skąd zdobywacie przedmioty do kolekcji?",
+				"class": ""
+			}
+		]
+	},
+	"how_do_you_get_items": {
+		"slug": "how_do_you_get_items",
+		"characterSays": "Kupujemy je od wędrownych kupców, oczywiście. A skoro o tym mowa, brakuje nam jednego szczególnego przedmiotu...",
+		"tone": "laugh",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "what_is_it",
+				"text": "Co to za przedmiot?",
+				"class": ""
+			}
+		]
+	},
+	"what_is_it": {
+		"slug": "what_is_it",
+		"characterSays": "Legendarny Juggernaut znajduje się tylko na dalekich zachodnich pustyniach. Jednak prawdziwym wyzwaniem jest jego waga.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "how_heavy_is_it",
+				"text": "Jak bardzo jest ciężki?",
+				"class": ""
+			}
+		]
+	},
+	"how_heavy_is_it": {
+		"slug": "how_heavy_is_it",
+		"characterSays": "Potrzebujesz małej armii koni pociągowych, aby go przetransportować do Ayr. Ale jeśli ci się uda, zapłacę ci 40 złotych monet przy dostawie.",
+		"tone": "inquire",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep": "deal",
+				"text": "Umowa stoi",
+				"class": "green_button"
+			},
+			{
+				"nextStep": "make_it_100",
+				"text": "Niech to będzie 100 złotych monet",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "upfront",
+				"text": "Potrzebuję połowy z góry na wydatki",
+				"class": "blue_button"
+			},
+			{
+				"nextStep": "rejected",
+				"text": "Nie jestem zainteresowany.",
+				"class": "red_button"
+			}
+		]
+	},
+	"deal": {
+		"slug": "deal",
+		"characterSays": "Polecam udać się do Oazy Schronienia, gdzie królestwo ludzi styka się z królestwem orków.",
+		"tone": "deal",
+		"callback": "dealAccepted",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	},
+	"make_it_100": {
+		"slug": "make_it_100",
+		"characterSays": "Umowa stoi. Polecam udać się do Oazy Schronienia, gdzie królestwo ludzi styka się z królestwem orków.",
+		"tone": "deal",
+		"callback": "dealMoreCoin",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	},
+	"upfront": {
+		"slug": "upfront",
+		"characterSays": "Brzmi rozsądnie, jak sądzę. Polecam udać się do Oazy Schronienia, gdzie królestwo ludzi styka się z królestwem orków.",
+		"tone": "deal",
+		"callback": "dealUpfront",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	},
+	"rejected": {
+		"slug": "rejected",
+		"characterSays": "Cóż, jeśli zmienisz zdanie, oferta nadal aktualna.",
+		"tone": "bothered",
+		"callback": "dealRejected",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	},
+	"liar": {
+		"slug": "liar",
+		"characterSays": "Nie widzę Juggernauta. Nie zapłacę, dopóki nie będzie przed moimi oczami.",
+		"tone": "offended",
+		"callback": null,
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	},
+	"reward": {
+		"slug": "reward",
+		"characterSays": "Juggernaut! Co za niesamowity okaz. Oto ustalona zapłata. Kościół zapamięta tę świętą misję, którą ukończyłeś.",
+		"tone": "ah",
+		"callback": "reward",
+		"responses": [
+			{
+				"nextStep":"barter",
+				"text":"Chcesz się targować?",
+				"class":"blue_button"
+			},
+			{
+				"nextStep":false,
+				"text":"Do widzenia",
+				"class":"red_button"
+			}
+		]
+	}
+}

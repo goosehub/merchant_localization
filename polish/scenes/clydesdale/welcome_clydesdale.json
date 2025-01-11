@@ -1,0 +1,141 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj kupcze. Pozwól, że się przedstawię. Jestem Nevin Quinn, bibliotekarz i przewodniczący Gildii Kupieckiej Clydesdale.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "pleasures_mine",
+                "text": "Miło mi cię poznać",
+                "class": ""
+            }
+        ]
+    },
+    "pleasures_mine": {
+        "slug": "pleasures_mine",
+        "characterSays": "Cała przyjemność po mojej stronie. Merchant, lubisz książki?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "yes",
+                "text": "Przez cały czas",
+                "class": ""
+            },
+            {
+                "nextStep": "yes",
+                "text": "Przeczytałem kilka",
+                "class": ""
+            },
+            {
+                "nextStep": "no",
+                "text": "Wcale nie",
+                "class": ""
+            },
+            {
+                "nextStep": "no",
+                "text": "Nie mogę czytać",
+                "class": ""
+            }
+        ]
+    },
+    "yes": {
+        "slug": "yes",
+        "characterSays": "Nie ma takiego bogactwa jak wiedza. Buduję najbardziej wszechstronną bibliotekę na świecie. Czy mógłbyś pomóc w realizacji tego szlachetnego celu?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "help",
+                "text": "Jakich książek potrzebujesz?",
+                "class": ""
+            },
+            {
+                "nextStep": "what_about_me",
+                "text": "Co z tego będę miał?",
+                "class": ""
+            }
+        ]
+    },
+    "no": {
+        "slug": "no",
+        "characterSays": "Właściwie to idealnie. Wyślij mi wszystkie książki, których nie potrzebujesz. Tworzę najbardziej wszechstronną bibliotekę na świecie.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "help",
+                "text": "Jakich książek potrzebujesz?",
+                "class": ""
+            },
+            {
+                "nextStep": "what_about_me",
+                "text": "Co z tego będę miał?",
+                "class": ""
+            }
+        ]
+    },
+    "help": {
+        "slug": "help",
+        "characterSays": "Każda książka, której nie ma jeszcze w bibliotece. Chcesz zobaczyć książki, które zebrałem do tej pory?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_go",
+                "text": "Pokaż mi swoją kolekcję",
+                "class": "green_button",
+                "callback": "showCollection"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_about_me": {
+        "slug": "what_about_me",
+        "characterSays": "Kupię książki za uczciwą cenę, ale preferowane są darowizny. Chcesz zobaczyć książki, które zebrałem do tej pory?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_go",
+                "text": "Pokaż mi swoją kolekcję",
+                "class": "green_button",
+                "callback": "showCollection"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Kupię książki za uczciwą cenę, ale preferowane są darowizny. Chcesz zobaczyć książki, które zebrałem do tej pory?",
+        "tone": "generic",
+        "callback": "showCollection",
+        "responses": []
+    },
+    "lets_go": {
+        "slug": "lets_go",
+        "characterSays": "Chodźmy.",
+        "tone": "generic",
+        "callback": false,
+        "responses": []
+    }
+}

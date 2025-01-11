@@ -1,0 +1,38 @@
+{
+	"init": {
+		"slug": "init",
+		"characterSays": "Może przegrałeś, ale wierzę, że jesteś naszą najlepszą szansą na pokonanie Audrica.",
+		"tone": "ah",
+		"callback": false,
+		"responses": [
+			{
+				"nextStep":"give_gold",
+				"text":"Zrobię, co w mojej mocy",
+				"class":""
+			},
+			{
+				"nextStep":"give_gold",
+				"text":"Nigdy się nie poddam",
+				"class":""
+			},
+			{
+				"nextStep":"give_gold",
+				"text":"Audric jest zbyt potężny",
+				"class":""
+			}
+		]
+	},
+	"give_gold": {
+		"slug": "give_gold",
+		"characterSays": "Weź to złoto. Zyskaj więcej sojuszników wśród kupców królestwa, a wygrasz tytuł Króla Monety w przyszłym roku. Wierzę w ciebie.",
+		"tone": "generic",
+		"callback": "givePlayerGold",
+		"responses": [
+			{
+				"nextStep": false,
+				"text": "Do widzenia",
+				"class": "red_button"
+			}
+		]
+	}
+}

@@ -1,0 +1,382 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Nie widziałem cię wcześniej. Jak masz na imię?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": []
+    },
+    "goal": {
+        "slug": "goal",
+        "characterSays": "Po tym nazwisku mogę stwierdzić, że naprawdę urodziłeś się na bagnach. Co sprowadza cię na rynek?",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "merchant",
+                "text": "Chcę zostać podróżującym kupcem",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "travel",
+                "text": "Chcę podróżować przez królestwo",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "fortune",
+                "text": "Chcę zgromadzić dużą fortunę",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "king",
+                "text": "Chcę zostać wielkim królem",
+                "class": "short_button"
+            },
+            {
+                "nextStep": "survive",
+                "text": "Chcę tylko przetrwać",
+                "class": "short_button"
+            }
+        ]
+    },
+    "merchant": {
+        "slug": "merchant",
+        "characterSays": "To błąd. Życie wędrownego kupca jest pozbawione miłości i pełne kłopotów.",
+        "tone": "laugh",
+        "callback": "setGoalMerchant",
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "travel": {
+        "slug": "travel",
+        "characterSays": "Kiedyś podróżowałem po królestwie jako wędrowny kupiec. Nigdy więcej.",
+        "tone": "laugh",
+        "callback": "setGoalTravel",
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "fortune": {
+        "slug": "fortune",
+        "characterSays": "Straciłem wszystko, próbując zbić fortunę, ale podejrzewam, że ty nie masz wiele do stracenia.",
+        "tone": "laugh",
+        "callback": "setGoalFortune",
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "king": {
+        "slug": "king",
+        "characterSays": "Spotkałem się z królami z całego królestwa. Żaden z nich nie wydawał mi się szczęśliwy.",
+        "tone": "laugh",
+        "callback": "setGoalKing",
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "survive": {
+        "slug": "survive",
+        "characterSays": "Czyż nie jesteśmy wszyscy.",
+        "tone": "laugh",
+        "callback": "setGoalSurvive",
+        "responses": [
+            {
+                "nextStep": "who_are_you",
+                "text": "Kim jesteś?",
+                "class": ""
+            }
+        ]
+    },
+    "who_are_you": {
+        "slug": "who_are_you",
+        "characterSays": "Edward. Podróżowałem po Sześciu Królestwach jako kupiec. Teraz prowadzę handel wymienny z niewielkim zyskiem tutaj, w Boone.",
+        "tone": "generic",
+        "callback": "whoAreYou",
+        "responses": [
+            {
+                "nextStep": "teach_me",
+                "text": "Czy możesz nauczyć mnie, jak zostać kupcem?",
+                "class": ""
+            }
+        ]
+    },
+    "no_teach": {
+        "slug": "no_teach",
+        "characterSays": "Nie jestem nauczycielem. Kup coś albo wynoś się stąd.",
+        "tone": "offended",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "teach_me": {
+        "slug": "teach_me",
+        "characterSays": "Nie jestem nauczycielem, ale kupiec stanie się wszystkim za odpowiednią cenę. Daj mi <i class=\"orange_color\">Statuę</i>, a cię nauczę.",
+        "tone": "inquire",
+        "callback": "requestFirstItem",
+        "responses": []
+    },
+    "reject_first_deal": {
+        "slug": "reject_first_deal",
+        "characterSays": "Już się uczysz. W takim razie <i class=\"orange_color\">Gloves</i>. Wydaje się to uczciwą stawką za lata wiedzy.",
+        "tone": "rejected",
+        "callback": "requestSecondItem",
+        "responses": []
+    },
+    "reject_second_deal": {
+        "slug": "reject_second_deal",
+        "characterSays": "To już jest uczciwy układ, ale jestem dziś w dobrym nastroju. Może podzielisz się ze mną <i class=\"orange_color\">Cebulą</i>? Ostateczna oferta.",
+        "tone": "rejected",
+        "callback": "requestThirdItem",
+        "responses": []
+    },
+    "reject_third_deal": {
+        "slug": "reject_third_deal",
+        "characterSays": "Do zobaczenia, jeśli zmienisz zdanie.",
+        "tone": "rejected",
+        "callback": "updateJournal",
+        "responses": []
+    },
+    "first_deal": {
+        "slug": "first_deal",
+        "characterSays": "Pierwszy błąd. Zawsze się targuj.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "inquire",
+                "text": "Co muszę wiedzieć?",
+                "class": ""
+            }
+        ]
+    },
+    "second_deal": {
+        "slug": "second_deal",
+        "characterSays": "Doskonałe targowanie się. Co chcesz wiedzieć najpierw?",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "inquire",
+                "text": "Co muszę wiedzieć?",
+                "class": ""
+            }
+        ]
+    },
+    "third_deal": {
+        "slug": "third_deal",
+        "characterSays": "Dobra, zróbmy to, zanim zmienię zdanie.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "inquire",
+                "text": "Co muszę wiedzieć?",
+                "class": ""
+            }
+        ]
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Wiedziałem, że wrócisz. W porządku, zróbmy to.",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "inquire",
+                "text": "Co muszę wiedzieć?",
+                "class": ""
+            }
+        ]
+    },
+    "inquire": {
+        "slug": "inquire",
+        "characterSays": "Ludzie podchodzą do sprzedawców tylko wtedy, gdy czegoś potrzebują. Zapytaj ich, co <i class=\"blue_color\">sprzedają</i> lub <i class=\"blue_color\">kupują</i>.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "make_offer",
+                "text": "Co sprzedajesz?",
+                "class": "selling_button half_button"
+            },
+            {
+                "nextStep": "request_coin",
+                "text": "Co kupujesz?",
+                "class": "buying_button half_button"
+            }
+        ]
+    },
+    "request_coin": {
+        "slug": "request_coin",
+        "characterSays": "Kupcy są zawsze zainteresowani monetami.",
+        "tone": "inquire",
+        "callback": "requestCoin",
+        "responses": []
+    },
+    "make_offer": {
+        "slug": "make_offer",
+        "characterSays": "Chcę sprzedać ten chleb.",
+        "tone": "inquire",
+        "callback": "offerItems",
+        "responses": []
+    },
+    "good_deal": {
+        "slug": "good_deal",
+        "characterSays": "To trudna umowa, ale uczciwa dla nas obu. Pamiętaj, że klient nigdy nie powinien wychodzić zbyt zadowolony.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "final_offer",
+                "text": "Jak mogę wynegocjować lepszą ofertę?",
+                "class": ""
+            }
+        ]
+    },
+    "great_deal": {
+        "slug": "great_deal",
+        "characterSays": "To zbyt hojna oferta. Oczywiście, że się zgodzę. Ale pamiętaj, klient nigdy nie powinien wychodzić zbyt zadowolony.",
+        "tone": "deal",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "final_offer",
+                "text": "Jak mogę wynegocjować lepszą ofertę?",
+                "class": ""
+            }
+        ]
+    },
+    "final_offer": {
+        "slug": "final_offer",
+        "characterSays": "Możesz złożyć <i class=\"red_color\">Ostateczną Ofertę</i>, aby wynegocjować lepszą ofertę, ale jeśli to się nie uda, klient odejdzie.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "hide_magic",
+                "text": "Brzmi ryzykownie",
+                "class": "green_button half_button tall_button"
+            },
+            {
+                "nextStep": "hide_magic",
+                "text": "Brzmi inteligentnie",
+                "class": "red_button half_button tall_button"
+            }
+        ]
+    },
+    "hide_magic": {
+        "slug": "hide_magic",
+        "characterSays": "Powinieneś <i class=\"red_color\">Ukryć</i> ten amulet. Magiczne przedmioty są cenne, ale nie pozwól, by strażnicy odkryli, że go sprzedajesz.",
+        "tone": "generic",
+        "callback": "hideMagic",
+        "responses": [
+            {
+                "nextStep": "give_sack",
+                "text": "Ukryję to",
+                "class": "green_button half_button tall_button"
+            },
+            {
+                "nextStep": "give_sack",
+                "text": "Nie dam się złapać",
+                "class": "red_button half_button tall_button"
+            }
+        ]
+    },
+    "give_sack": {
+        "slug": "give_sack",
+        "characterSays": "Te worki pomogą ci <i class=\"blue_color\">Nosić</i> twoje rzeczy. Gdy ciężar stanie się zbyt duży, potrzebne będą konie juczne, które pomogą <i class=\"green_color\">ciągnąć</i> przedmioty.",
+        "tone": "generic",
+        "callback": "giveSack",
+        "responses": [
+            {
+                "nextStep": "give_map",
+                "text": "Dziękuję",
+                "class": ""
+            }
+        ]
+    },
+    "give_map": {
+        "slug": "give_map",
+        "characterSays": "Ta mapa pomoże ci odnaleźć się w regionie. Poszukaj nowych map, aby odkryć nowe rynki.",
+        "tone": "generic",
+        "callback": "giveMap",
+        "responses": [
+            {
+                "nextStep": "more_advice",
+                "text": "Co mam teraz zrobić?",
+                "class": ""
+            }
+        ]
+    },
+    "where_to_go": {
+        "slug": "where_to_go",
+        "characterSays": "Ascension to najbogatsze miasto w królestwie. Znajdź tam Króla Monet, który może ci pomóc.",
+        "tone": "ah",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "more_advice",
+                "text": "Co mam teraz zrobić?",
+                "class": ""
+            }
+        ]
+    },
+    "more_advice": {
+        "slug": "more_advice",
+        "characterSays": "Zacznij od wymiany jedzenia. Każdy musi jeść. Znajdź rolnika i kup jak najwięcej.",
+        "tone": "uninterested",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "last_words",
+                "text": "Dzięki za wszystkie rady",
+                "class": ""
+            }
+        ]
+    },
+    "last_words": {
+        "slug": "last_words",
+        "characterSays": "Handlowcy potrzebują siebie nawzajem. Pomaganie sobie nawzajem ma sens.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

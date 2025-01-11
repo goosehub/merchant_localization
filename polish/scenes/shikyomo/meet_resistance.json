@@ -1,0 +1,321 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Nowy kupiec. Założę się, że sporo zapłaciłeś, żeby się tu dostać. Co chciałeś dostać w Shikyomo?",
+        "tone": "ah",
+        "callback": null,
+        "responses": [
+            {
+                "nextStep": "turn_back",
+                "text": "Przyszedłem zarobić pieniądze",
+                "class": ""
+            },
+            {
+                "nextStep": "turn_back",
+                "text": "Przyszedłem po rzadkie przedmioty",
+                "class": ""
+            },
+            {
+                "nextStep": "came_for_city",
+                "text": "Dowiedziałem się o Shikyomo",
+                "class": ""
+            },
+            {
+                "nextStep": "came_for_resistance",
+                "text": "Przyszedłem pomóc ruchowi oporu",
+                "class": ""
+            },
+            {
+                "nextStep": "came_for_nothing",
+                "text": "Po prostu skończyłem tutaj",
+                "class": ""
+            }
+        ]
+    },
+    "turn_back": {
+        "slug": "turn_back",
+        "characterSays": "Cóż, zawróć teraz. Król zarządza rynkiem. Decyduje, kto zyskuje, a kto głoduje. Zezwala na przybycie osób z zewnątrz tylko po to, by mógł je osuszyć.",
+        "tone": "offended",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "wont_leave",
+                "text": "Zamierzam zostać",
+                "class": ""
+            },
+            {
+                "nextStep": "will_leave",
+                "text": "W takim razie wychodzę",
+                "class": ""
+            }
+        ]
+    },
+    "came_for_city": {
+        "slug": "came_for_city",
+        "characterSays": "Cóż, Shikyomo to niegdyś wielkie miasto, które zostało zniszczone przez szalonego króla i jego głupie plany.",
+        "tone": "inquire",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "will_help",
+                "text": "Czy mogę pomóc?",
+                "class": ""
+            },
+            {
+                "nextStep": "wont_help",
+                "text": "Powodzenia",
+                "class": ""
+            }
+        ]
+    },
+    "came_for_resistance": {
+        "slug": "came_for_resistance",
+        "characterSays": "Czy wieści dotarły na kontynent? Cóż, rozmawiasz z właściwą osobą. Mógłbyś je rozdawać dla dobra sprawy?",
+        "tone": "inquire",
+        "callback": "giveSigns",
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "came_for_nothing": {
+        "slug": "came_for_nothing",
+        "characterSays": "Cóż, być może twoje obojętne spojrzenie można wykorzystać dla dobra. Mógłbyś mi je rozdać?",
+        "tone": "inquire",
+        "callback": "giveSigns",
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "will_help": {
+        "slug": "will_help",
+        "characterSays": "Czy mógłbyś rozpowszechniać te znaki oporu dla sprawy?",
+        "tone": "inquire",
+        "callback": "giveSigns",
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "wont_help": {
+        "slug": "wont_help",
+        "characterSays": "Mógłbyś rozdać mi te znaki?",
+        "tone": "inquire",
+        "callback": "giveSigns",
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "will_leave": {
+        "slug": "will_leave",
+        "characterSays": "Skoro wyjeżdżasz, czy mógłbyś rozdać mi te znaki?",
+        "tone": "inquire",
+        "callback": "giveSigns",
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "wont_leave": {
+        "slug": "wont_leave",
+        "characterSays": "Skoro zostajesz, czy mógłbyś rozdać mi te znaki?",
+        "tone": "inquire",
+        "callback": "giveSigns",
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "what_is_meaning": {
+        "slug": "what_is_meaning",
+        "characterSays": "Jest to ważny symbol, który reprezentuje opór przeciwko królowi i jego licznym planom.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "ask_trouble",
+                "text": "Czy będę miał kłopoty za ich rozpowszechnianie?",
+                "class": ""
+            }
+        ]
+    },
+    "ask_trouble": {
+        "slug": "ask_trouble",
+        "characterSays": "Tak, posiadanie lub wyświetlanie tego symbolu w Shikyomo jest nielegalne. Uważaj, komu je dajesz.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "will_distribute",
+                "text": "Jasne, rozdam je",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "wont_distribute",
+                "text": "Nie będę miał z tym nic wspólnego",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_meaning",
+                "text": "Co to oznacza?",
+                "class": ""
+            }
+        ]
+    },
+    "wont_distribute": {
+        "slug": "wont_distribute",
+        "characterSays": "Rozumiem. Jeśli zmienisz zdanie, przyjdź do mnie, a dostarczę ci wszelkie potrzebne symbole.",
+        "tone": "rejected",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "will_distribute": {
+        "slug": "will_distribute",
+        "characterSays": "Dziękuję. Pamiętaj, nie daj się złapać i nie dostałeś tego ode mnie. Ale jeśli ci się skończą, znajdź mnie po więcej.",
+        "tone": "generic",
+        "callback": "clearOffers",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

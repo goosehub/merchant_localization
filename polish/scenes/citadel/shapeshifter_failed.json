@@ -1,0 +1,20 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Sprzedałeś swój tracker niewłaściwej osobie. Mogę sprzedać ci nowy ze zniżką.",
+        "tone": "bothered",
+        "callback": "offerTracker",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

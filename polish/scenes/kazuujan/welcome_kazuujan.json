@@ -1,0 +1,238 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witamy w Kazuujan Merchant. Jestem Kris, przyjaciel Smoka z Kazuujan. Co sprowadza cię tak daleko na zachód?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "want_to_meet_dragon",
+                "text": "Chcę poznać smoka",
+                "class": ""
+            },
+            {
+                "nextStep": "who_is_the_dragon",
+                "text": "Kim jest Smok?",
+                "class": ""
+            },
+            {
+                "nextStep": "just_passing_through",
+                "text": "Jestem tylko przejazdem",
+                "class": "red_button"
+            }
+        ]
+    },
+    "just_passing_through": {
+        "slug": "just_passing_through",
+        "characterSays": "W porządku, tylko nie sprawiaj kłopotów. Jeśli kiedykolwiek będziesz zainteresowany spotkaniem ze Smokiem, daj mi znać, a zobaczę, co da się zrobić.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "who_is_the_dragon",
+                "text": "Kim jest Smok?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "who_is_the_dragon": {
+        "slug": "who_is_the_dragon",
+        "characterSays": "Smoczyca Kazuujan prowadzi Bank Kazuujan. Kupcy i królowie przybywają z całego królestwa, szukając pożyczek, których tylko ona może udzielić.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "want_to_meet_dragon",
+                "text": "Czy mogę spotkać smoka?",
+                "class": ""
+            }
+        ]
+    },
+    "want_to_meet_dragon": {
+        "slug": "want_to_meet_dragon",
+        "characterSays": "Wielu pragnie ją poznać. Jako jej przyjaciel zapewniam, że tylko godni mogą to zrobić. Nie interesują jej zwykli kupcy.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai potrzebuje pożyczki",
+                "class": "blue_button seeking_kai_loan"
+            },
+            {
+                "nextStep": "seeking_loan",
+                "text": "Potrzebuję pożyczki",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam jej mądrości",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "bribe",
+                "text": "Zapłacę",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_loan": {
+        "slug": "seeking_loan",
+        "characterSays": "Oczywiście. Jeśli jednak nie jesteś wielkim władcą lub Królem Monet, nie interesują jej twoje skromne transakcje.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai potrzebuje pożyczki",
+                "class": "blue_button seeking_kai_loan"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam jej mądrości",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "bribe",
+                "text": "Zapłacę",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_kai_loan": {
+        "slug": "seeking_kai_loan",
+        "characterSays": "Powiedziałem Natii, że jej plany oznaczają kłopoty. Radzę nie mieszać się w ich sprawy.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Potrzebuję pożyczki",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam jej mądrości",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "bribe",
+                "text": "Zapłacę",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "seeking_wisdom": {
+        "slug": "seeking_wisdom",
+        "characterSays": "I szuka dłużników. Nie ma czasu na twoje płytkie pytania.",
+        "tone": "offerBad",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_kai_loan",
+                "text": "Natia z Kai potrzebuje pożyczki",
+                "class": "blue_button seeking_kai_loan"
+            },
+            {
+                "nextStep": "seeking_loan",
+                "text": "Potrzebuję pożyczki",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "bribe",
+                "text": "Zapłacę",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "nevermind": {
+        "slug": "nevermind",
+        "characterSays": "Jej czas jest bardzo cenny. Sugeruję, abyś wrócił, kiedy będziesz gotowy.",
+        "tone": "rejected",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "seeking_loan",
+                "text": "Potrzebuję pożyczki",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "seeking_wisdom",
+                "text": "Szukam jej mądrości",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "bribe",
+                "text": "Zapłacę",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "bribe": {
+        "slug": "bribe",
+        "characterSays": "Moglibyśmy coś razem ustalić. Co oferujesz?",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "nevermind",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "deal_bribe": {
+        "slug": "deal_bribe",
+        "characterSays": "Umowa. Chodź ze mną.",
+        "tone": "deal",
+        "callback": false,
+        "responses": []
+    },
+    "accept": {
+        "slug": "accept",
+        "characterSays": "Chodź ze mną.",
+        "tone": "ah",
+        "callback": "triggerTakePlayertoDragon",
+        "responses": []
+    }
+}

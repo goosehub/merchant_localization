@@ -1,0 +1,110 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witaj kupcze. Masz ochotę na grę w mit?",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_play",
+                "text": "Zagrajmy",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no_thanks",
+                "text": "Nie, dziękuję",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "what_is_myth",
+                "text": "Co jest mitem?",
+                "class": ""
+            }
+        ]
+    },
+    "no_thanks": {
+        "slug": "no_thanks",
+        "characterSays": "Widzę, że wszystko dla ciebie. Mamy turniej w każdą środę. Wpisowe wynosi 10 miedziaków. Nagroda to 150 miedziaków. Warto wziąć udział.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_play",
+                "text": "Właściwie to zagrajmy",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_is_myth": {
+        "slug": "what_is_myth",
+        "characterSays": "Nie wiesz? To obecnie najpopularniejsza gra karciana w całym królestwie. Chcesz, żebym pokazał ci, jak grać?",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "lets_play_first_time",
+                "text": "Zagrajmy",
+                "class": "green_button"
+            },
+            {
+                "nextStep": "no_thanks",
+                "text": "Nie, dziękuję",
+                "class": "red_button"
+            },
+            {
+                "nextStep": "lets_play_first_time",
+                "text": "Nie mam talii",
+                "class": ""
+            }
+        ]
+    },
+    "lets_play": {
+        "slug": "lets_play",
+        "characterSays": "W porządku, czy masz wystarczająco dużo kart na talię?",
+        "tone": "laugh",
+        "callback": "requestDeck",
+        "responses": [
+            {
+                "nextStep": "lets_play_first_time",
+                "text": "Nie mam talii",
+                "class": ""
+            }
+        ]
+    },
+    "lets_play_first_time": {
+        "slug": "lets_play_first_time",
+        "characterSays": "Pozwolę ci pożyczyć moją talię Harvest. Gotowy, by zacząć?",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "start_game",
+                "text": "Zagrajmy",
+                "class": "green_button",
+                "callback": "startGame"
+            },
+            {
+                "nextStep": "no_thanks",
+                "text": "Nie, dziękuję",
+                "class": "red_button"
+            }
+        ]
+    },
+    "start_game": {
+        "slug": "start_game",
+        "characterSays": "...",
+        "tone": "ah",
+        "callback": false,
+        "responses": []
+    }
+}

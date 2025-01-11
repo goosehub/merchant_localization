@@ -1,0 +1,20 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Dzięki za pożyczenie mi ich. Cena spadła tak, jak się spodziewałem i osiągnąłem niezły zysk. Ale w każdej chwili możesz skorzystać z mojej księgi.",
+        "tone": "laugh",
+        "callback": "giveReward",
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}

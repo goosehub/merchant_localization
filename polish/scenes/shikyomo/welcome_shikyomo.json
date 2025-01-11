@@ -1,0 +1,336 @@
+{
+    "init": {
+        "slug": "init",
+        "characterSays": "Witamy w sklepie Shikyomo. Nie sprawiaj kłopotów, a być może opuścisz to miejsce bogatszy niż przybyłeś.",
+        "tone": "greeting",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_to_know",
+                "text": "Co muszę wiedzieć?",
+                "class": ""
+            },
+            {
+                "nextStep": "hold_on",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "hold_on",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "hold_on": {
+        "slug": "hold_on",
+        "characterSays": "Zaczekaj kupcze. Mamy kilka praw w Shikyomo, o których powinieneś wiedzieć.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_to_know",
+                "text": "Co muszę wiedzieć?",
+                "class": ""
+            }
+        ]
+    },
+    "what_to_know": {
+        "slug": "what_to_know",
+        "characterSays": "Handel magią, częściami potworów, monetami lub bronią jest nielegalny.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_magic",
+                "text": "Dlaczego magia jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_monster",
+                "text": "Dlaczego części potworów są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_coins",
+                "text": "Dlaczego monety są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_weapons",
+                "text": "Dlaczego broń jest nielegalna?",
+                "class": ""
+            }
+        ]
+    },
+    "why_magic": {
+        "slug": "why_magic",
+        "characterSays": "Magia prawie zniszczyła królestwo. Nikt nie wie o tym lepiej niż Shikyomo.",
+        "tone": "offended",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_monster",
+                "text": "Dlaczego części potworów są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_coins",
+                "text": "Dlaczego monety są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_weapons",
+                "text": "Dlaczego broń jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "why_monster": {
+        "slug": "why_monster",
+        "characterSays": "Nie chcemy, aby kupcy importowali potwory na naszą wyspę, powodując chaos.",
+        "tone": "uninterested",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_magic",
+                "text": "Dlaczego magia jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_coins",
+                "text": "Dlaczego monety są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_weapons",
+                "text": "Dlaczego broń jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "why_coins": {
+        "slug": "why_coins",
+        "characterSays": "Nasz przywódca zdecydował, że monety nie stanowią prawdziwej wartości dla naszego królestwa. Możesz zatrzymać swoje monety, ale nie wymieniaj ich ani nie pokazuj.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_magic",
+                "text": "Dlaczego magia jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_monster",
+                "text": "Dlaczego części potworów są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_weapons",
+                "text": "Dlaczego broń jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "why_weapons": {
+        "slug": "why_weapons",
+        "characterSays": "Po niedawnym buncie przywódca zdecydował, że broń stanowi zagrożenie dla pokoju.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "why_magic",
+                "text": "Dlaczego magia jest nielegalna?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_monster",
+                "text": "Dlaczego części potworów są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "why_coins",
+                "text": "Dlaczego monety są nielegalne?",
+                "class": ""
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "last_thing",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "last_thing": {
+        "slug": "last_thing",
+        "characterSays": "Ostatnia rzecz. Za wydanie członków ruchu oporu Shikyomo przewidziana jest nagroda w wysokości trzech szafirów.",
+        "tone": "generic",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "what_is_resistance",
+                "text": "Jaki jest opór?",
+                "class": ""
+            },
+            {
+                "nextStep": "no_barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "change_character",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_is_resistance": {
+        "slug": "what_is_resistance",
+        "characterSays": "Grupa wichrzycieli, którzy chcą podważyć legalność króla. Nie należy im ufać.",
+        "tone": "bothered",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "no_barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "change_character",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "no_barter": {
+        "slug": "no_barter",
+        "characterSays": "Nie.",
+        "tone": "no",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "change_character",
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "change_character": {
+        "slug": "change_character",
+        "characterSays": "...",
+        "tone": "goodbye",
+        "callback": "changeCharacter",
+        "responses": []
+    },
+    "resumed": {
+        "slug": "resumed",
+        "characterSays": "Doskonale. Powiedz nam, kto to jest, a zostaniesz nagrodzony trzema szafirami.",
+        "tone": "ah",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "turn_in",
+                "text": "To Ryuko, kupiec",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": "nevermind_turn_in",
+                "text": "Nevermind",
+                "class": "red_button"
+            }
+        ]
+    },
+    "nevermind_turn_in": {
+        "slug": "nevermind_turn_in",
+        "characterSays": "Nie marnuj naszego czasu. To poważna sprawa.",
+        "tone": "offended",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "turn_in": {
+        "slug": "turn_in",
+        "characterSays": "Dokonałeś wielkiego czynu. Jestem jednak pewien, że bardziej interesuje cię ta nagroda niż moja pochwała. W drogę kupcze.",
+        "tone": "generic",
+        "callback": "snitchReward",
+        "responses": [
+            {
+                "nextStep": "what_happens_to_merchant",
+                "text": "Co się stanie z Ryuko?",
+                "class": ""
+            },
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    },
+    "what_happens_to_merchant": {
+        "slug": "what_happens_to_merchant",
+        "characterSays": "Groźbą jest oczywiście śmierć. Nie jesteś tym zaskoczony, prawda?",
+        "tone": "laugh",
+        "callback": false,
+        "responses": [
+            {
+                "nextStep": "barter",
+                "text": "Możliwość wymiany",
+                "class": "blue_button"
+            },
+            {
+                "nextStep": false,
+                "text": "Do widzenia",
+                "class": "red_button"
+            }
+        ]
+    }
+}
